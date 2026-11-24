@@ -2,55 +2,54 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<link rel="icon" href="brand/unc_navy.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NEPSE Market Valuation Report</title>
 <meta name="description" content="What is NEPSE pricing in at 2,623? Valuation against history, world markets and earnings. English and Nepali.">
+<meta property="og:description" content="NEPSE Market Valuation Report, November 2026. English and Nepali.">
 <link rel="canonical" href="https://www.unicitizens.org/nepse-report">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="UNI Citizens">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Financial Literacy Movement · UNI CITIZENS">
 <meta property="og:url" content="https://www.unicitizens.org/nepse-report">
 <meta property="og:title" content="NEPSE at 2,623: what is the market pricing in?">
 <meta property="og:description" content="NEPSE valuation report, November 2026: history, world markets and the 3-year earnings test. English and Nepali. For study and research only.">
-<meta property="og:image" content="https://bishnupr0sah.github.io/nepse-report/og-image.png">
-<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image" content="https://bishnupr0sah.github.io/nepse-report/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://bishnupr0sah.github.io/nepse-report/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Mukta:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Mukta:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 /* VOICE: a sell-side strategy note made readable for a first-time investor: calm, exact, plain words.
    IDEA: the cover and inside pages of a printed market-strategy report.
    PICTURE: a P/E "thermometer" on the cover: cycle low → normal → 2021 bubble peak, with today's marker.
-   COLOUR and TYPE: ink cover, ice pages, hot-pink accent for "today"; Space Grotesk + Inter, Mukta for Nepali.
+   COLOUR and TYPE: UNI CITIZENS brand: deep navy cover, mist pages, Citizen Gold accent; Poppins + Inter, Mukta for Nepali.
    LAYOUT: full-bleed cover, sticky section nav, one finding per section with a chart, then plain-language boxes. */
-:root{color-scheme:light dark;--bg:light-dark(#eef7fa,#06222e);--paper:light-dark(#ffffff,#0b2f3d);--ink:light-dark(#06222e,#e3f3f8);--mut:light-dark(#46636f,#9cc3cf);--line:light-dark(#c9e2ea,#1d4a5a);--acc:#ff2e7e;--ice:#dff1f7;--deep:#06222e;--up:light-dark(#0b7a57,#3fd3a1);--dn:light-dark(#b8322a,#ff7a6e);--amb:#c98a12;--bar:light-dark(#9bb4bd,#4d7584)}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+:root{color-scheme:light;--bg:#EEF2F6;--paper:#FFFFFF;--ink:#1F2937;--mut:#4B5563;--line:#D6E0EA;--acc:#C8A24A;--navy:#11375D;--ice:#EEF2F6;--deep:#0B2540;--up:#1B7A55;--dn:#B3362C;--amb:#C8A24A;--bar:#A9BACB}
 *{box-sizing:border-box;min-width:0}
 html{scroll-behavior:smooth;scroll-padding-top:64px}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
 body.np{font-family:Mukta,Inter,system-ui,sans-serif;font-size:18px}
-h1,h2,h3,.num-big{font-family:"Space Grotesk",Inter,sans-serif;font-weight:700;line-height:1.08;text-wrap:balance;margin:0}
-body.np h1,body.np h2,body.np h3,body.np .num-big{font-family:Mukta,"Space Grotesk",sans-serif;font-weight:700;line-height:1.2}
+h1,h2,h3,.num-big{font-family:Poppins,Inter,sans-serif;font-weight:600;line-height:1.12;color:var(--navy);text-wrap:balance;margin:0}
+body.np h1,body.np h2,body.np h3,body.np .num-big{font-family:Mukta,Poppins,sans-serif;font-weight:700;line-height:1.2}
 a{color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 max(4vw,18px)}
 /* cover */
-.cover{background:var(--deep);color:var(--ice);padding:clamp(28px,5vw,64px) 0 clamp(36px,5vw,72px);position:relative;overflow:hidden}
+.cover{background:linear-gradient(160deg,#0B2540 0%,#11375D 100%);color:var(--ice);padding:clamp(28px,5vw,64px) 0 clamp(36px,5vw,72px);position:relative;overflow:hidden}
 .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:clamp(28px,5vw,56px)}
-.brand{font-size:14px;letter-spacing:.02em;opacity:.85}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff}.brand img{height:48px;width:auto}.brand .bn{font-family:Poppins,Mukta,sans-serif;font-weight:600;font-size:17px;line-height:1.1;color:#fff}.brand .en{display:flex;align-items:center;gap:8px;margin-top:6px}.brand .en i{width:18px;height:2px;background:#C8A24A}.brand .en img{height:14px}.brand .en span{font-family:Poppins,Mukta,sans-serif;font-weight:500;font-size:10.5px;letter-spacing:.22em;color:#C8A24A;text-transform:uppercase}
+.endorse{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.endorse img{height:40px}.endorse b{font-family:Poppins,sans-serif;font-weight:600;color:var(--navy);font-size:15px}.legal{border-top:1px solid var(--line);margin-top:20px;padding-top:16px}
 .tools{display:flex;gap:8px;flex-wrap:wrap}
-.btn{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid #2a5b6b;background:transparent;color:inherit;font:inherit;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
-.btn:hover{border-color:var(--ice)}.btn.on{background:var(--ice);color:var(--deep);border-color:var(--ice)}
-.seg{display:inline-flex;border:1px solid #2a5b6b;border-radius:999px;overflow:hidden}.seg .btn{border:0;border-radius:0}
+.btn{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid #2C4F73;background:transparent;color:inherit;font:inherit;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+.btn:hover{border-color:#C8A24A}.btn.on{background:#fff;color:var(--deep);border-color:#fff}
+.seg{display:inline-flex;border:1px solid #2C4F73;border-radius:999px;overflow:hidden}.seg .btn{border:0;border-radius:0}
 :focus-visible{outline:3px solid var(--acc);outline-offset:2px}
-.kicker{color:#9fd8ea;font-size:15px;font-weight:600}
-.cover h1{font-size:clamp(40px,7vw,78px);margin:12px 0 16px;color:#fff}
+.kicker{color:#C8A24A;font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:12px}.kicker::before{content:"";width:40px;height:3px;background:#C8A24A}
+.cover h1{font-size:clamp(40px,7vw,76px);margin:12px 0 16px;color:#fff}.cover .wm{position:absolute;right:-60px;top:40px;width:min(520px,55vw);opacity:.06;pointer-events:none}.cover .wrap{position:relative}
 .cover h1 em{font-style:normal;color:var(--acc)}
-.lede{font-size:clamp(17px,2vw,21px);max-width:62ch;color:#cfe7ef;margin:0}
-.byline{margin-top:18px;font-size:14px;color:#9fc3cf}
+.lede{font-size:clamp(17px,2vw,21px);max-width:62ch;color:#D6E0EA;margin:0}
+.byline{margin-top:18px;font-size:14px;color:#A9BACB}
 .therm{margin:clamp(28px,5vw,48px) 0 0;position:relative}
 .therm svg{width:100%;height:auto;display:block}
-.chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#1d4a5a;border:1px solid #1d4a5a;border-radius:14px;overflow:hidden;margin-top:28px}
-.chips div{background:#0a2c3a;padding:16px 18px}.chips span{display:block;font-size:13px;color:#9fc3cf}.chips b{display:block;font-family:"Space Grotesk",Mukta,sans-serif;font-size:clamp(22px,3vw,32px);color:#fff;margin-top:4px;white-space:nowrap}.chips small{color:#9fc3cf;font-size:13px}
+.chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#24486E;border:1px solid #24486E;border-radius:14px;overflow:hidden;margin-top:28px}
+.chips div{background:#0F2F50;padding:16px 18px}.chips span{display:block;font-size:13px;color:#A9BACB}.chips b{display:block;font-family:Poppins,Mukta,sans-serif;font-size:clamp(22px,3vw,32px);color:#fff;margin-top:4px;white-space:nowrap}.chips small{color:#A9BACB;font-size:13px}
 body.np .chips b{font-family:Mukta,sans-serif}
 /* nav */
 nav.toc{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
@@ -59,18 +58,18 @@ nav.toc a{flex:none;padding:14px 12px;text-decoration:none;color:var(--mut);font
 nav.toc a:hover,nav.toc a.cur{color:var(--ink);border-color:var(--acc)}
 /* sections */
 section{padding:clamp(40px,6vw,80px) 0;border-bottom:1px solid var(--line)}
-.sec-n{font-family:"Space Grotesk",sans-serif;color:var(--acc);font-weight:700;font-size:15px}
+.sec-n{font-family:Poppins,sans-serif;color:var(--navy);font-weight:600;font-size:14px;letter-spacing:.12em;display:flex;align-items:center;gap:10px}.sec-n::before{content:"";width:28px;height:3px;background:var(--acc)}
 section h2{font-size:clamp(28px,4vw,44px);margin:6px 0 14px;max-width:24ch}
 .lead{font-size:clamp(18px,2vw,21px);max-width:66ch;margin:0 0 24px}
 p{max-width:70ch}
 .grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,3vw,36px);align-items:start}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,2.5vw,28px)}
 .takeaways{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.takeaways .card b.n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--deep);color:#fff;font-family:"Space Grotesk",sans-serif;margin-bottom:10px}
+.takeaways .card b.n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-family:Poppins,sans-serif;margin-bottom:10px}
 .takeaways h3{font-size:21px;margin-bottom:6px}
 .takeaways p{margin:0;color:var(--mut)}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:8px 0 24px}
-.stats div{background:var(--paper);padding:16px 18px}.stats span{display:block;font-size:14px;color:var(--mut)}.stats b{font-family:"Space Grotesk",Mukta,sans-serif;font-size:clamp(24px,3vw,34px)}
+.stats div{background:var(--paper);padding:16px 18px}.stats span{display:block;font-size:14px;color:var(--mut)}.stats b{font-family:Poppins,Mukta,sans-serif;font-size:clamp(24px,3vw,34px)}
 .explain{background:color-mix(in srgb,var(--acc) 8%,var(--paper));border-left:4px solid var(--acc);border-radius:0 12px 12px 0;padding:14px 18px;margin:16px 0;font-size:16px}
 .explain>b:first-child{display:block;margin-bottom:2px}
 .fig{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 16px 10px;margin:10px 0 18px}
@@ -78,33 +77,33 @@ p{max-width:70ch}
 .fig svg{width:100%;height:auto;display:block}
 .src{font-size:13px;color:var(--mut);margin:6px 4px 0}
 .vs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:8px 0 24px}
-.vs .card{padding:16px}.vs span{font-size:14px;color:var(--mut);display:block}.vs .then{font-size:15px;color:var(--mut)}.vs .now{font-family:"Space Grotesk",Mukta,sans-serif;font-size:26px;font-weight:700;display:block;margin:2px 0}.vs .chg{font-weight:600;font-size:15px}.chg.up{color:var(--up)}.chg.dn{color:var(--dn)}
+.vs .card{padding:16px}.vs span{font-size:14px;color:var(--mut);display:block}.vs .then{font-size:15px;color:var(--mut)}.vs .now{font-family:Poppins,Mukta,sans-serif;font-size:26px;font-weight:700;display:block;margin:2px 0}.vs .chg{font-weight:600;font-size:15px}.chg.up{color:var(--up)}.chg.dn{color:var(--dn)}
 ol.reasons{counter-reset:r;list-style:none;padding:0;display:grid;gap:12px;margin:0}
 ol.reasons li{counter-increment:r;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 62px;position:relative}
-ol.reasons li::before{content:counter(r);position:absolute;left:18px;top:16px;width:30px;height:30px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:700;font-family:"Space Grotesk",sans-serif}
+ol.reasons li::before{content:counter(r);position:absolute;left:18px;top:16px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:600;font-family:Poppins,sans-serif}
 ol.reasons b{display:block;font-size:18px;margin-bottom:2px}
 .timeline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.timeline .card{padding:16px}.timeline .yr{font-family:"Space Grotesk",sans-serif;font-weight:700;color:var(--acc)}.timeline .ix{font-family:"Space Grotesk",Mukta,sans-serif;font-size:20px;font-weight:700;display:block;margin:2px 0}.timeline p{margin:0;font-size:15px;color:var(--mut)}
+.timeline .card{padding:16px}.timeline .yr{font-family:Poppins,sans-serif;font-weight:600;color:var(--navy)}.timeline .ix{font-family:Poppins,Mukta,sans-serif;font-size:20px;font-weight:700;display:block;margin:2px 0}.timeline p{margin:0;font-size:15px;color:var(--mut)}
 table{border-collapse:collapse;width:100%;font-size:15px}th,td{padding:10px 10px;border-bottom:1px solid var(--line);text-align:left}th{font-size:13px;color:var(--mut);font-weight:600}.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 tr.hl td{background:color-mix(in srgb,var(--acc) 9%,transparent);font-weight:600}
 .scroll{overflow-x:auto}
 .calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:center}
-.calc label{display:block;font-size:15px;margin:12px 0 4px}.calc input[type=range]{width:100%;accent-color:var(--acc);height:32px}
-.calc output{font-family:"Space Grotesk",Mukta,sans-serif;font-weight:700}
+.calc label{display:block;font-size:15px;margin:12px 0 4px}.calc input[type=range]{width:100%;accent-color:var(--navy);height:32px}
+.calc output{font-family:Poppins,Mukta,sans-serif;font-weight:700}
 .result{text-align:center}.result .num-big{font-size:clamp(44px,7vw,72px);color:var(--ink)}.result p{margin:4px auto;color:var(--mut)}
 .pill{display:inline-block;padding:4px 12px;border-radius:999px;font-weight:600;font-size:15px}.pill.dn{background:color-mix(in srgb,var(--dn) 16%,transparent);color:var(--dn)}.pill.up{background:color-mix(in srgb,var(--up) 16%,transparent);color:var(--up)}
 .cond{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
 .cond .card h3{font-size:18px;margin-bottom:4px}.cond p{margin:0;color:var(--mut);font-size:16px}
-.verdict{background:var(--deep);color:var(--ice);border-radius:18px;padding:clamp(20px,3vw,34px);margin-top:20px}.verdict h3{color:#fff;font-size:clamp(22px,2.6vw,28px);margin-bottom:8px}.verdict p{margin:0;color:#cfe7ef}
+.verdict{background:var(--navy);border-left:6px solid var(--acc);color:var(--ice);border-radius:18px;padding:clamp(20px,3vw,34px);margin-top:20px}.verdict h3{color:#fff;font-size:clamp(22px,2.6vw,28px);margin-bottom:8px}.verdict p{margin:0;color:#D6E0EA}
 .aud{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .aud .card h3{font-size:22px;margin-bottom:10px}.aud ul{margin:0;padding-left:20px}.aud li{margin:8px 0}
 .tag{display:inline-block;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line);margin-bottom:10px}
 .disc{font-size:14px;color:var(--mut)}
-.notice{margin:14px 0 0;max-width:70ch;font-size:14px;color:#cfe7ef;background:#0b3342;border:1px solid #1d4a5a;border-radius:10px;padding:10px 14px}.notice a{color:#9fd8ea}
-.instbtn{margin-top:16px;border-color:#ff2e7e;background:#ff2e7e;color:#fff;font-weight:600}.instbtn::after,.instbtn2::after{content:' →'}
+.notice{margin:14px 0 0;max-width:70ch;font-size:14px;color:#D6E0EA;background:#0F2F50;border:1px solid #24486E;border-radius:10px;padding:10px 14px}.notice a{color:#C8A24A}
+.instbtn{margin-top:16px;border-radius:8px;border-color:#C8A24A;background:#C8A24A;color:#0B2540;font-weight:600}.instbtn::after,.instbtn2::after{content:' →'}
 .instcard{margin-top:22px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}.instcard p{margin:0;flex:1 1 320px}
-.instbtn2{background:var(--deep);color:#fff;border-color:var(--deep);font-weight:600}
-.noticebox{border:2px solid var(--ink);border-radius:16px;padding:clamp(18px,3vw,30px);background:var(--paper)}.noticebox h2{font-size:clamp(22px,3vw,30px)}.noticebox p{max-width:none;margin:10px 0 0}
+.instbtn2{border-radius:8px;background:var(--navy);color:#fff;border-color:var(--navy);font-weight:600}
+.noticebox{border:2px solid var(--navy);border-radius:16px;padding:clamp(18px,3vw,30px);background:var(--paper)}.noticebox h2{color:var(--navy);font-size:clamp(22px,3vw,30px)}.noticebox p{max-width:none;margin:10px 0 0}
 footer{padding:36px 0 60px;font-size:14px;color:var(--mut)}
 footer ul{padding-left:18px}footer li{margin:4px 0}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--deep);color:#fff;padding:10px 18px;border-radius:999px;font-size:15px;opacity:0;transition:opacity .2s;pointer-events:none}.toast.show{opacity:1}
@@ -117,9 +116,9 @@ svg text{font-family:Inter,Mukta,sans-serif}body.np svg text{font-family:Mukta,I
 </head>
 <body>
 <header class="cover">
-  <div class="wrap">
+  <div class="wrap"><img class="wm" src="brand/unc_white.png" alt="" aria-hidden="true">
     <div class="topbar">
-      <div class="brand" data-t="brand"></div>
+      <a class="brand" href="https://www.unicitizens.org" aria-label="Financial Literacy Movement"><img src="brand/flm_white.png" alt=""><span><span class="bn" data-t="flm"></span><span class="en"><i></i><span data-t="endorse"></span></span></span></a>
       <div class="tools">
         <div class="seg" role="group" aria-label="Language"><button class="btn" data-lang="en">English</button><button class="btn" data-lang="np">नेपाली</button></div>
         <button class="btn" id="copy" data-t="copy"></button>
@@ -212,7 +211,7 @@ svg text{font-family:Inter,Mukta,sans-serif}body.np svg text{font-family:Mukta,I
   </div></section>
   <section id="notice"><div class="wrap"><div class="noticebox"><h2 data-t="noticeH"></h2><p data-t="disc"></p></div></div></section>
 </main>
-<footer><div class="wrap">
+<footer><div class="wrap"><div class="endorse"><img src="brand/flm_navy.png" alt=""><span><b data-t="flm"></b><br><span data-t="endorseLong"></span></span><img src="brand/unc_navy.png" alt="UNI CITIZENS" style="height:34px;margin-left:auto"></div><div class="legal">
   <b data-t="srcH"></b>
   <ul>
     <li><a href="https://www.sharesansar.com/newsdetail/nepse-valuations-surge-pe-and-pb-ratios-near-record-highs-as-banking-sector-remains-undervalued-2025-11-02">Sharesansar: NEPSE P/E and P/B near record highs (Nov 2025)</a></li>
@@ -222,8 +221,9 @@ svg text{font-family:Inter,Mukta,sans-serif}body.np svg text{font-family:Mukta,I
     <li><a href="https://thehimalayantimes.com/ampArticle/1038388">The Himalayan Times: Rs 4,832.84 billion market cap, 294 companies (Apr 2026)</a> · <a href="https://ictframe.com/?p=116469">ICT Frame: sector shares of market value</a></li>
     <li><a href="https://siblisresearch.com/data/emerging-markets-valuations/">Siblis Research: global, developed and emerging P/E (Sept 2026)</a> · <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html">Damodaran: country risk premiums</a></li>
     <li><a href="https://nepsetrading.com/blog/nepal-rastra-bank-keeps-policy-rates-unchanged-signals-gradual-shift-toward-a-narrower-interest-rate-corridor">NRB policy rates</a> · <a href="https://www.globalimebank.com/blog/monetary-policy-of-nepal-2083-84-major-highlights/">Monetary Policy 2083/84</a> · <a href="https://nepsetrading.com/insights/nepal-stock-market-liquidity-analysis">Turnover and liquidity</a> · <a href="https://en.prothomalo.com/business/local/6fkojm488r">GDP per head (ADB)</a></li>
-    <li>Company data: nepselabs.com stock pages, 23 Nov 2026 (282 operating companies) · NEPSE Valuation Lab (UNI Citizens)</li>
+    <li>Company data: nepselabs.com stock pages, 23 Nov 2026 (282 operating companies)</li>
   </ul>
+  <p data-t="legal"></p></div>
 </div></footer>
 <div class="toast" id="toast" role="status"></div>
 <script>
@@ -231,7 +231,7 @@ svg text{font-family:Inter,Mukta,sans-serif}body.np svg text{font-family:Mukta,I
 const SHARE_URL = 'https://www.unicitizens.org/nepse-report';
 const T = {
 en: {
-  brand: 'UNI Citizens · Market Research', copy: 'Copy link', fb: 'Share on Facebook', copied: 'Link copied',
+  flm: 'Financial Literacy Movement', endorse: 'A UNI CITIZENS initiative', endorseLong: 'A UNI CITIZENS initiative · <a href="https://www.unicitizens.com">unicitizens.com</a>', legal: '© 2026 Bishnu Prasad Basyal, CFA · Financial Literacy Movement, an initiative of UNI CITIZENS. Research for study purposes only; not investment advice.', copy: 'Copy link', fb: 'Share on Facebook', copied: 'Link copied',
   kicker: 'NEPSE Market Valuation Report · November 2026',
   title: 'NEPSE at 2,623: <em>what is the market pricing in?</em>',
   lede: 'Market value has climbed past its 2021 high and the price-to-earnings multiple is back near the top of its historical range. Is that supported by profits, by liquidity, or by growth still to come? This study tests NEPSE against its own cycles, against world markets and against company earnings, and asks what would have to go right for today’s level to be supported by fundamentals.',
@@ -304,7 +304,7 @@ en: {
   notice: 'For study and research only. Not investment advice or a buy/sell recommendation. Markets are driven by many factors beyond fundamentals. <a href="#notice">Read the full notice</a>', inst: 'Read the full institutional report', noticeH: 'Important notice', instP: 'The institutional edition documents every formula, assumption, data step and sensitivity behind this summary, in research-paper format (English).',
 },
 np: {
-  brand: 'युनि सिटिजन्स · बजार अनुसन्धान', copy: 'लिङ्क कपी गर्नुहोस्', fb: 'फेसबुकमा सेयर गर्नुहोस्', copied: 'लिङ्क कपी भयो',
+  flm: 'वित्तीय साक्षरता अभियान', endorse: 'युनि सिटिजन्सको पहल', endorseLong: 'युनि सिटिजन्सको पहल · <a href="https://www.unicitizens.com">unicitizens.com</a>', legal: '© २०२६ विष्णुप्रसाद बस्याल, सीएफए · वित्तीय साक्षरता अभियान, युनि सिटिजन्सको पहल। अध्ययन प्रयोजनका लागि मात्र; लगानी सल्लाह होइन।', copy: 'लिङ्क कपी गर्नुहोस्', fb: 'फेसबुकमा सेयर गर्नुहोस्', copied: 'लिङ्क कपी भयो',
   kicker: 'नेप्से बजार मूल्याङ्कन प्रतिवेदन · मंसिर २०८३',
   title: '२,६२३ मा नेप्से: <em>बजारले के अपेक्षा गरिरहेको छ?</em>',
   lede: 'बजार पूँजीकरण सन् २०२१ को उच्च बिन्दु नाघेको छ र मूल्य–आम्दानी गुणक पनि ऐतिहासिक दायराको माथिल्लो छेउमा फर्किएको छ। के यो कम्पनीको नाफाले, तरलताले वा भविष्यमा हुने वृद्धिको अपेक्षाले धानेको हो? यस अध्ययनले नेप्सेलाई यसकै विगतका चक्र, विश्व बजार र कम्पनीको आम्दानीसँग तुलना गर्दै हालको स्तर आधारभूत पक्षबाट टिक्न के–के अनुकूल हुनुपर्छ भन्ने विश्लेषण गर्छ।',
@@ -417,12 +417,12 @@ function therm() {
   const s = $('#therm'), lab = L('th');
   const W = 1000, x0 = 40, x1 = 960, mn = 8, mx = 46, X = v => x0 + (v - mn) / (mx - mn) * (x1 - x0), y = 92;
   const stops = [[12.3, lab[0]], [18.5, lab[1]], [42.3, lab[2]]];
-  let o = `<defs><linearGradient id="tg" x1="0" x2="1"><stop offset="0" stop-color="#3fd3a1"/><stop offset=".3" stop-color="#9fe0f5"/><stop offset=".7" stop-color="#f1b24a"/><stop offset="1" stop-color="#ff5a4f"/></linearGradient></defs>`;
+  let o = `<defs><linearGradient id="tg" x1="0" x2="1"><stop offset="0" stop-color="#3E8E6A"/><stop offset=".3" stop-color="#7FA6C9"/><stop offset=".7" stop-color="#C8A24A"/><stop offset="1" stop-color="#B3362C"/></linearGradient></defs>`;
   o += `<rect x="${x0}" y="${y - 10}" width="${x1 - x0}" height="20" rx="10" fill="url(#tg)" opacity=".9"/>`;
-  stops.forEach(([v, t], i) => { const ab = i === 1; o += `<line x1="${X(v)}" x2="${X(v)}" y1="${ab ? y - 14 : y + 14}" y2="${ab ? y - 26 : y + 30}" stroke="#9fc3cf"/><text x="${X(v)}" y="${ab ? y - 34 : y + 50}" text-anchor="${i === 2 ? 'end' : 'middle'}" fill="#cfe7ef" font-size="17">${dn(t)} ${dn(v)}${XU()}</text>`; });
+  stops.forEach(([v, t], i) => { const ab = i === 1; o += `<line x1="${X(v)}" x2="${X(v)}" y1="${ab ? y - 14 : y + 14}" y2="${ab ? y - 26 : y + 30}" stroke="#A9BACB"/><text x="${X(v)}" y="${ab ? y - 34 : y + 50}" text-anchor="${i === 2 ? 'end' : 'middle'}" fill="#D6E0EA" font-size="17">${dn(t)} ${dn(v)}${XU()}</text>`; });
   const now = 36.9, nx = X(now);
-  o += `<circle cx="${nx}" cy="${y}" r="17" fill="#ff2e7e" stroke="#fff" stroke-width="4"/><line x1="${nx}" x2="${nx}" y1="${y - 20}" y2="${y - 44}" stroke="#ff2e7e" stroke-width="3"/><text x="${nx}" y="${y - 52}" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">${dn(lab[3])}: ${dn(36.9)}${XU()}</text>`;
-  o += `<text x="${x0}" y="${y - 52}" fill="#9fc3cf" font-size="15">${dn(lab[4])}</text>`;
+  o += `<circle cx="${nx}" cy="${y}" r="17" fill="#C8A24A" stroke="#fff" stroke-width="4"/><line x1="${nx}" x2="${nx}" y1="${y - 20}" y2="${y - 44}" stroke="#C8A24A" stroke-width="3"/><text x="${nx}" y="${y - 52}" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">${dn(lab[3])}: ${dn(36.9)}${XU()}</text>`;
+  o += `<text x="${x0}" y="${y - 52}" fill="#A9BACB" font-size="15">${dn(lab[4])}</text>`;
   s.innerHTML = o;
 }
 function hbars(sel, rows, opt) {
@@ -432,8 +432,8 @@ function hbars(sel, rows, opt) {
   let o = '';
   rows.forEach((r, i) => {
     const y = y0 + i * rh;
-    o += `<text x="${x0 - 10}" y="${y + rh / 2 + 5}" text-anchor="end" font-size="14" fill="${r.hl ? '#ff2e7e' : 'var(--ink)'}" font-weight="${r.hl ? 700 : 400}">${dn(r.label)}</text>`;
-    o += `<rect x="${x0}" y="${y + 5}" width="${Math.max(2, X(r.v) - x0)}" height="${rh - 11}" rx="3" fill="${r.hl ? '#ff2e7e' : r.c || 'var(--bar)'}"><title>${dn(r.label)}: ${dn(r.v)}${opt.unit}</title></rect>`;
+    o += `<text x="${x0 - 10}" y="${y + rh / 2 + 5}" text-anchor="end" font-size="14" fill="${r.hl ? '#11375D' : 'var(--ink)'}" font-weight="${r.hl ? 700 : 400}">${dn(r.label)}</text>`;
+    o += `<rect x="${x0}" y="${y + 5}" width="${Math.max(2, X(r.v) - x0)}" height="${rh - 11}" rx="3" fill="${r.hl ? '#C8A24A' : r.c || 'var(--bar)'}"><title>${dn(r.label)}: ${dn(r.v)}${opt.unit}</title></rect>`;
     o += `<text x="${X(r.v) + 6}" y="${y + rh / 2 + 5}" font-size="14" fill="var(--mut)">${fmt(r.v, opt.dec ?? 1)}${opt.unit}</text>`;
   });
   if (opt.ref) { const rx = X(opt.ref.v); o += `<line x1="${rx}" x2="${rx}" y1="${y0}" y2="${y0 + rows.length * rh}" stroke="var(--ink)" stroke-dasharray="4 4" opacity=".55"/><text x="${rx}" y="${H - 10}" text-anchor="middle" font-size="13" fill="var(--mut)">${dn(opt.ref.label)}</text>`; }
@@ -450,8 +450,8 @@ function cycles() {
   o += `<line x1="${x0}" x2="${x1}" y1="${Y(18.5)}" y2="${Y(18.5)}" stroke="var(--ink)" stroke-dasharray="5 4" opacity=".5"/><text x="${x0 + 6}" y="${Y(18.5) - 7}" font-size="13" fill="var(--mut)">${dn(L('normalLbl'))}</text>`;
   pts.forEach(([t, pe, ix, lx, ly, anc], i) => {
     const now = i === pts.length - 1;
-    o += `<circle cx="${X(t)}" cy="${Y(pe)}" r="${now ? 8 : 6}" fill="${now ? '#ff2e7e' : 'var(--bar)'}"><title>${dn(n[i])}: ${dn(pe)}${XU()}, NEPSE ${dn(ix)}</title></circle>`;
-    if (anc) o += `<text x="${X(t) + lx}" y="${Y(pe) + ly}" text-anchor="${anc}" font-size="14" font-weight="600" fill="${now ? '#ff2e7e' : 'var(--ink)'}">${dn(n[i])}: ${fmt(pe, pe % 1 ? 2 : 0)}${XU()}</text><text x="${X(t) + lx}" y="${Y(pe) + ly + 16}" text-anchor="${anc}" font-size="13" fill="var(--mut)">NEPSE ${fmt(ix)}</text>`;
+    o += `<circle cx="${X(t)}" cy="${Y(pe)}" r="${now ? 8 : 6}" fill="${now ? '#C8A24A' : 'var(--navy)'}"><title>${dn(n[i])}: ${dn(pe)}${XU()}, NEPSE ${dn(ix)}</title></circle>`;
+    if (anc) o += `<text x="${X(t) + lx}" y="${Y(pe) + ly}" text-anchor="${anc}" font-size="14" font-weight="600" fill="${now ? '#11375D' : 'var(--ink)'}">${dn(n[i])}: ${fmt(pe, pe % 1 ? 2 : 0)}${XU()}</text><text x="${X(t) + lx}" y="${Y(pe) + ly + 16}" text-anchor="${anc}" font-size="13" fill="var(--mut)">NEPSE ${fmt(ix)}</text>`;
   });
   s.innerHTML = o;
 }
@@ -459,13 +459,13 @@ function ladder() {
   const s = $('#ladder'), W = 760, H = 220, x0 = 30, x1 = 730, mn = 800, mx = 3700, X = v => x0 + (v - mn) / (mx - mn) * (x1 - x0), y = 120, lab = L('lad');
   const P = [[1030, 0], [1550, 1], [1859, 2], [2014, 3], [2169, 4], [2324, 5], [2624, 6], [3543, 7]];
   s.setAttribute('viewBox', `0 0 ${W} ${H}`); s.setAttribute('aria-label', L('ladTitle'));
-  let o = `<rect x="${X(1859)}" y="${y - 26}" width="${X(2014) - X(1859)}" height="52" rx="6" fill="#3fd3a1" opacity=".25"/><text x="${(X(1859) + X(2014)) / 2}" y="${y - 66}" text-anchor="middle" font-size="13" font-weight="700" fill="var(--up)">${dn(L('fairZone'))}</text>`;
+  let o = `<rect x="${X(1859)}" y="${y - 26}" width="${X(2014) - X(1859)}" height="52" rx="6" fill="#C8A24A" opacity=".22"/><text x="${(X(1859) + X(2014)) / 2}" y="${y - 66}" text-anchor="middle" font-size="13" font-weight="700" fill="#8A6B1F">${dn(L('fairZone'))}</text>`;
   o += `<line x1="${x0}" x2="${x1}" y1="${y}" y2="${y}" stroke="var(--line)" stroke-width="4" stroke-linecap="round"/>`;
   [1000, 1500, 2000, 2500, 3000, 3500].forEach(v => o += `<text x="${X(v)}" y="${H - 8}" text-anchor="middle" font-size="12" fill="var(--mut)">${fmt(v)}</text>`);
   P.forEach(([v, i]) => {
     const now = i === 6, up = i % 2 === 0 || now; const ly = now ? y - 50 : up ? y + 46 : y - 30;
-    o += `<circle cx="${X(v)}" cy="${y}" r="${now ? 11 : 7}" fill="${now ? '#ff2e7e' : i === 7 ? 'var(--dn)' : 'var(--ink)'}" stroke="var(--paper)" stroke-width="3"><title>${dn(lab[i])}: ${fmt(v)}</title></circle>`;
-    o += `<text x="${X(v)}" y="${ly}" text-anchor="middle" font-size="13" font-weight="${now ? 700 : 500}" fill="${now ? '#ff2e7e' : 'var(--ink)'}">${dn(lab[i])}</text><text x="${X(v)}" y="${ly + 16}" text-anchor="middle" font-size="13" fill="var(--mut)">${fmt(v)}</text>`;
+    o += `<circle cx="${X(v)}" cy="${y}" r="${now ? 11 : 7}" fill="${now ? '#C8A24A' : i === 7 ? 'var(--dn)' : 'var(--navy)'}" stroke="var(--paper)" stroke-width="3"><title>${dn(lab[i])}: ${fmt(v)}</title></circle>`;
+    o += `<text x="${X(v)}" y="${ly}" text-anchor="middle" font-size="13" font-weight="${now ? 700 : 500}" fill="${now ? '#11375D' : 'var(--ink)'}">${dn(lab[i])}</text><text x="${X(v)}" y="${ly + 16}" text-anchor="middle" font-size="13" fill="var(--mut)">${fmt(v)}</text>`;
   });
   s.innerHTML = o;
 }
@@ -476,7 +476,7 @@ function drawAll() {
   const wp = [36.95, 22.96, 21.6, 20, 16, 15.95, 13.3, 11, 10.1, 10, 8.7, 7.3];
   hbars('#wChart', L('mk').map((l, i) => ({ label: l, v: wp[i], hl: i === 0 })), { max: 40, unit: XU(), title: L('wTitle'), ref: { v: 18.5, label: L('normalLbl') }, x0: 150, rh: 28 });
   const gv = [9.2, 15.4, 21.2, 28.1, 2.6, 12.5, 11];
-  hbars('#gChart', L('gBars').map((l, i) => ({ label: l, v: gv[i], hl: false, c: i < 4 ? '#ff2e7e' : 'var(--bar)' })), { max: 32, unit: '%', title: L('gTitle'), x0: 270, rh: 30 });
+  hbars('#gChart', L('gBars').map((l, i) => ({ label: l, v: gv[i], hl: false, c: i < 4 ? '#11375D' : i === 4 ? '#C8A24A' : 'var(--bar)' })), { max: 32, unit: '%', title: L('gTitle'), x0: 270, rh: 30 });
 }
 /* ---------- calculator ---------- */
 function calc() {
