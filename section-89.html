@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>दफा ८९: प्रस्तावित १% सेयर हस्तान्तरण शुल्क · नीति विश्लेषण · Financial Literacy Movement</title>
+<meta name="description" content="कम्पनी ऐन, २०८३ को मस्यौदाको दफा ८९ मा प्रस्तावित १% सेयर हस्तान्तरण शुल्कको कानूनी, नियामकीय र बजार प्रभाव विश्लेषण। विष्णुप्रसाद बस्याल, सीएफए (आईसीएफएआई)।">
+<meta property="og:title" content="दफा ८९: १% सेयर हस्तान्तरण शुल्क — पूँजी बजारका लागि के अर्थ राख्छ?">
+<meta property="og:description" content="कानूनी पठन, लागत तुलना, बजार प्रभाव र नीतिगत विकल्प। नीति विश्लेषण · Financial Literacy Movement, A UNI CITIZENS initiative.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Mukta:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a formal Nepali policy brief, calm and exact, in the register of SEBON circulars and Karobar/Onlinekhabar business desks.
+   IDEA: the same printed-report system as the NEPSE valuation report: navy cover, mist pages, one finding per section.
+   PICTURE: the "cliff" chart: the fee jumps from zero to Rs 25,000 at exactly Rs 25 lakh.
+   COLOUR and TYPE: UNI CITIZENS brand: Deep Navy cover, Mist pages, Citizen Gold accent; Poppins/Inter, Mukta for Nepali. */
+:root{color-scheme:light;--bg:#EEF2F6;--paper:#fff;--ink:#1F2937;--mut:#4B5563;--line:#D6E0EA;--acc:#C8A24A;--navy:#11375D;--deep:#0B2540;--ice:#EEF2F6;--dn:#B3362C;--up:#1B7A55}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.75 Mukta,Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Mukta,'Noto Sans Devanagari',sans-serif;font-weight:700;line-height:1.25;color:var(--navy);text-wrap:balance;margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 max(4vw,18px)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+/* site chrome (hidden when the page is embedded in unicitizens.org, which supplies its own header and footer) */
+.embedded .site-head,.embedded .site-foot,.embedded .related{display:none}
+.site-head{background:var(--deep);border-bottom:1px solid #1C3D60;position:relative;z-index:6}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;flex-wrap:wrap}
+.site-head nav{display:flex;gap:4px;flex-wrap:wrap}
+.site-head nav a{font:500 14px Inter,sans-serif;color:#D6E0EA;text-decoration:none;padding:10px 12px;border-radius:999px}
+.site-head nav a:hover{color:#fff;background:#163E66}.site-head nav a[aria-current]{color:var(--deep);background:var(--acc)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}.brand img{height:44px;width:auto}
+.brand .bn{display:block;font:600 16px/1.1 Poppins,sans-serif;color:#fff}
+.brand .en{display:block;margin-top:6px;padding-top:5px;border-top:1px solid rgba(200,162,74,.55);font:500 10px Poppins,sans-serif;letter-spacing:.22em;color:var(--acc);text-transform:uppercase}
+/* cover */
+.cover{background:linear-gradient(160deg,#0B2540 0%,#11375D 100%);color:var(--ice);padding:clamp(36px,6vw,72px) 0 clamp(36px,5vw,64px);position:relative;overflow:hidden}
+.cover .wm{position:absolute;right:-70px;top:30px;width:min(480px,55vw);opacity:.06;pointer-events:none}
+.kicker{color:var(--acc);font:600 16px Mukta,Poppins,sans-serif;letter-spacing:.04em;text-transform:uppercase;display:flex;align-items:center;gap:12px}.kicker::before{content:"";width:40px;height:3px;background:var(--acc)}
+.cover h1{font-size:clamp(34px,5.6vw,62px);color:#fff;margin:14px 0 16px;max-width:20ch}
+.cover h1 em{font-style:normal;color:var(--acc)}
+.lede{font-size:clamp(18px,2vw,22px);color:#D6E0EA;max-width:60ch;margin:0}
+.byline{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:22px;font-size:15px;color:#A9BACB}.byline b{color:#fff;font-weight:600}
+.chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#24486E;border:1px solid #24486E;border-radius:14px;overflow:hidden;margin-top:30px}
+.chips div{background:#0F2F50;padding:16px 18px}.chips span{display:block;font-size:14px;color:#A9BACB}.chips b{display:block;font-size:clamp(22px,3vw,32px);color:#fff;margin-top:2px;font-weight:700}.chips small{color:#A9BACB;font-size:14px;line-height:1.4;display:block}
+/* status update */
+.status{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--acc);border-radius:0 14px 14px 0;padding:18px 22px;margin:28px 0 0}
+.status b.t{display:flex;align-items:center;gap:8px;color:var(--navy);font-size:17px}.status b.t::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--acc)}
+.status p{margin:6px 0 0;font-size:16.5px}
+/* toc */
+nav.toc{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav.toc a{flex:none;padding:14px 11px;text-decoration:none;color:var(--mut);font-size:15.5px;border-bottom:3px solid transparent}
+nav.toc a:hover,nav.toc a.cur{color:var(--ink);border-color:var(--acc)}
+/* sections */
+section{padding:clamp(40px,6vw,76px) 0;border-bottom:1px solid var(--line)}
+.sec-n{color:var(--navy);font:600 16px Mukta,sans-serif;letter-spacing:.02em;display:flex;align-items:center;gap:10px}.sec-n::before{content:"";width:28px;height:3px;background:var(--acc)}
+section h2{font-size:clamp(28px,4vw,42px);margin:6px 0 14px;max-width:26ch}
+section h3{font-size:22px;margin:26px 0 8px}
+.lead{font-size:clamp(19px,2vw,22px);max-width:64ch;margin:0 0 22px}
+p{max-width:68ch}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,3vw,32px);align-items:start}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,2.5vw,26px)}
+.card h3{margin-top:0}
+.law{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:18px 0}
+.law .hd{background:var(--navy);color:#fff;padding:12px 20px;font-weight:600;font-size:16px}
+.law ol{margin:0;padding:18px 22px 18px 22px;list-style:none;display:grid;gap:12px}
+.law li{padding-left:44px;position:relative}.law li b{position:absolute;left:0;top:0;color:var(--navy)}
+.law li.hot{background:color-mix(in srgb,var(--acc) 10%,transparent);border-radius:10px;padding:10px 12px 10px 56px;margin:0 -12px}.law li.hot b{left:12px;top:10px}
+.explain{background:color-mix(in srgb,var(--acc) 8%,var(--paper));border-left:4px solid var(--acc);border-radius:0 12px 12px 0;padding:14px 18px;margin:16px 0;font-size:17px}
+.explain>b:first-child{display:block;margin-bottom:2px;color:var(--navy)}
+.formula{font-family:Mukta,sans-serif;font-weight:700;font-size:clamp(20px,2.6vw,26px);color:var(--navy);background:var(--paper);border:1px dashed #A9BACB;border-radius:12px;padding:12px 16px;display:inline-block;margin:6px 0}
+.vs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin:18px 0}
+.vs .card span{display:block;font-size:14px;color:var(--mut);font-weight:600;letter-spacing:.04em}
+.vs .card b{display:block;font-size:22px;color:var(--navy);margin:2px 0 4px}
+.vs .card.bad{border-color:color-mix(in srgb,var(--dn) 40%,var(--line))}.vs .card.bad b{color:var(--dn)}
+/* figure */
+.fig{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px 18px 12px;margin:14px 0 18px}
+.fig h3{font-size:20px;margin:0 2px 2px}.fig .sub{font-size:15px;color:var(--mut);margin:0 2px 8px}
+.fig svg{width:100%;height:auto;display:block}
+.src{font-size:14px;color:var(--mut);margin:8px 2px 0;line-height:1.5}
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:24px;align-items:start}
+.calc label{display:block;font-size:16px;font-weight:600;margin:4px 0 6px}
+.calc input[type=range]{width:100%;accent-color:var(--navy);height:32px}
+.calc .amt{font-size:clamp(28px,4vw,40px);font-weight:700;color:var(--navy);line-height:1.1}
+.rows{display:grid;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:16px}
+.rows div{display:flex;justify-content:space-between;gap:12px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--paper)}
+.rows div:last-child{border-bottom:0}.rows .tot{font-weight:700;background:var(--bg)}.rows .fee{font-weight:700;color:var(--dn);background:color-mix(in srgb,var(--dn) 6%,var(--paper))}
+.rows span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.mult{margin-top:12px;font-size:17px}
+/* impacts */
+.impacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:8px}
+.impacts .card{position:relative;padding-left:72px}
+.impacts .n{position:absolute;left:20px;top:22px;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;font-size:16px}
+.impacts h3{font-size:20px;margin:0 0 4px}.impacts p{margin:0;color:var(--mut);font-size:16.5px}
+.impacts ul{margin:8px 0 0;padding-left:20px;color:var(--mut);font-size:16px}
+table{border-collapse:collapse;width:100%;font-size:16px}th,td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:14px;color:var(--mut);font-weight:600;background:var(--bg)}
+tr.hl td{background:color-mix(in srgb,var(--dn) 7%,transparent);font-weight:600}
+.scroll{overflow-x:auto}
+.q{font-size:clamp(20px,2.4vw,24px);font-weight:600;color:var(--navy);border-left:4px solid var(--acc);padding:4px 0 4px 18px;margin:18px 0;max-width:60ch}
+.opts{display:grid;gap:14px;margin-top:10px}
+.opts .card{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 18px;align-items:start}
+.opts .tag{grid-row:span 2;font:700 16px Mukta,sans-serif;color:var(--deep);background:var(--acc);border-radius:10px;padding:6px 10px;white-space:nowrap}
+.opts h3{margin:0;font-size:20px}.opts p{margin:0;color:var(--mut);font-size:16.5px}
+blockquote.proviso{margin:10px 0 0;grid-column:2;background:var(--bg);border-radius:10px;padding:12px 16px;font-size:16.5px;color:var(--ink)}
+.checks{list-style:none;padding:0;margin:12px 0;display:grid;gap:8px}
+.checks li{padding-left:34px;position:relative}.checks li::before{content:"";position:absolute;left:4px;top:.55em;width:16px;height:9px;border-left:3px solid var(--acc);border-bottom:3px solid var(--acc);transform:rotate(-45deg)}
+.risks{list-style:none;padding:0;margin:12px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.risks li{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 42px;position:relative;font-size:16.5px}
+.risks li::before{content:"";position:absolute;left:16px;top:21px;width:12px;height:3px;background:var(--dn)}
+/* disclaimer */
+.disc{background:var(--deep);color:#D6E0EA;border-radius:18px;padding:clamp(22px,3vw,34px)}
+.disc h2{color:#fff;font-size:clamp(24px,3vw,32px);margin-bottom:10px}
+.disc ul{margin:0;padding-left:22px;display:grid;gap:6px;max-width:72ch}.disc b{color:#fff}
+/* related */
+.related{padding:clamp(40px,6vw,72px) 0;background:var(--paper);border-bottom:1px solid var(--line)}
+.related h2{font-size:clamp(26px,3.4vw,36px);margin:6px 0 18px}
+.rel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.rel a{display:flex;flex-direction:column;text-decoration:none;background:var(--bg);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .15s,border-color .15s}
+.rel a:hover{transform:translateY(-2px);border-color:var(--acc)}
+.rel .thumb{aspect-ratio:1200/630;background:linear-gradient(160deg,#0B2540,#11375D);display:flex;align-items:flex-end;padding:14px;color:#fff;font:700 clamp(18px,2vw,22px)/1.2 Poppins,Mukta,sans-serif}
+.rel .thumb img{width:100%;height:100%;object-fit:cover;display:block}.rel .thumb.img{padding:0}
+.rel .body{padding:14px 16px 18px;display:grid;gap:4px}
+.rel .type{font:600 12px Poppins,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8A6A1F}
+.rel .ttl{font-weight:700;color:var(--navy);font-size:19px;line-height:1.3}
+.rel .go{font:600 14px Inter,sans-serif;color:var(--navy);margin-top:6px}
+.rel .cur{border-style:dashed;pointer-events:none;opacity:.6}
+/* footer */
+.site-foot{background:var(--paper);padding:34px 0 40px}
+.endorse{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.endorse>img{height:44px}.endorse b{display:block;font:600 15px Poppins,sans-serif;color:var(--navy)}
+.endorse .en2{display:block;margin-top:6px;padding-top:5px;border-top:1px solid var(--acc);font:500 10.5px Poppins,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--navy)}
+.foot-nav{display:flex;flex-wrap:wrap;gap:6px 18px;margin:18px 0 0;font:500 14px Inter,sans-serif}.foot-nav a{color:var(--navy);text-decoration:none}.foot-nav a:hover{text-decoration:underline}
+.legal{border-top:1px solid var(--line);margin-top:18px;padding-top:14px;font-size:14px;color:var(--mut);line-height:1.6}.legal a{color:var(--navy)}
+@media (max-width:860px){.grid2,.calc,.vs{grid-template-columns:minmax(0,1fr)}.chips{grid-template-columns:repeat(2,minmax(0,1fr))}.rel{grid-template-columns:minmax(0,1fr)}.impacts,.risks{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){body{font-size:17px}.site-head nav{display:none}.opts .card{grid-template-columns:minmax(0,1fr)}.opts .tag{grid-row:auto;justify-self:start}blockquote.proviso{grid-column:1}.impacts .card{padding-left:20px;padding-top:66px}.impacts .n{top:18px}}
+@media print{.site-head,nav.toc,.related{display:none}.cover{background:#0B2540;-webkit-print-color-adjust:exact;print-color-adjust:exact}section{break-inside:avoid-page}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rel a{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="https://www.unicitizens.org" target="_top" aria-label="Financial Literacy Movement, home">
+      <img src="brand/flm_white.png" alt="">
+      <span><span class="bn">Financial Literacy Movement</span><span class="en">A UNI CITIZENS initiative</span></span>
+    </a>
+    <nav aria-label="Site">
+      <a href="https://www.unicitizens.org" target="_top">Home</a>
+      <a href="https://www.unicitizens.org/curriculum" target="_top">Curriculum</a>
+      <a href="https://www.unicitizens.org/articles-research" target="_top" aria-current="page">Articles &amp; Research</a>
+      <a href="https://www.unicitizens.org/nepse-report" target="_top">NEPSE Report</a>
+    </nav>
+  </div>
+</header>
+
+<header class="cover">
+  <svg class="wm" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 90 27v46L50 96 10 73V27Z" fill="none" stroke="#fff" stroke-width="6"/></svg>
+  <div class="wrap">
+    <div class="kicker">नीति विश्लेषण · Policy Analysis</div>
+    <h1>कम्पनी ऐन, २०८३ को मस्यौदा: <em>१% सेयर हस्तान्तरण शुल्क</em> पूँजी बजारका लागि के अर्थ राख्छ?</h1>
+    <p class="lede">दफा ८९ को कानूनी पठन, लगानीकर्ताको लागतमा पर्ने असर, नेप्सेको तरलतामाथिको जोखिम र कानून बन्नुअघि विचार गर्नुपर्ने नीतिगत विकल्पहरू।</p>
+    <div class="byline">
+      <span>लेखक: <b>विष्णुप्रसाद बस्याल, सीएफए (आईसीएफएआई)</b></span>
+      <span>अध्यक्ष, युनि सिटिजन्स</span>
+      <span>अद्यावधिक: मंसिर २०८३</span>
+      <span>पढ्न लाग्ने समय: करिब १२ मिनेट</span>
+    </div>
+    <div class="chips" role="list">
+      <div role="listitem"><span>प्रस्तावित शुल्क दर</span><b>१%</b><small>कारोबार रकममा, नाफा भए वा नभए पनि</small></div>
+      <div role="listitem"><span>लागू हुने सीमा</span><b>रु. २५ लाख</b><small>वा सोभन्दा बढीको हस्तान्तरण</small></div>
+      <div role="listitem"><span>सम्बन्धित व्यवस्था</span><b>दफा ८९</b><small>मस्यौदाको मुद्रित पृष्ठ ३६</small></div>
+      <div role="listitem"><span>संवेदनशील पक्ष</span><b>उपदफा (२)</b><small>धितोपत्र बजारको कारोबारसम्म विस्तार</small></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="लेखका खण्डहरू">
+  <div class="wrap">
+    <a href="#saar">सारसंक्षेप</a><a href="#s1">भूमिका</a><a href="#s2">कानूनी पठन</a><a href="#s3">लागत</a><a href="#s4">प्रभाव</a><a href="#s5">विरोधाभास</a><a href="#s6">विकल्प</a><a href="#s7">संशोधन</a><a href="#s8">निष्कर्ष</a><a href="#disc">अस्वीकरण</a>
+  </div>
+</nav>
+
+<main>
+<section id="saar">
+  <div class="wrap">
+    <div class="sec-n">सारसंक्षेप</div>
+    <h2>सुधारको मस्यौदामा एउटा प्रतिगामी व्यवस्था</h2>
+    <p class="lead">कम्पनी ऐन, २०८३ को मस्यौदाले कर्पोरेट सुशासन, डिजिटल दर्ता र लाभग्राही स्वामित्व पहिचानमा स्वागतयोग्य सुधार प्रस्ताव गरेको छ। तर दफा ८९ ले रु. २५ लाख वा सोभन्दा बढी मूल्यको सेयर हस्तान्तरणमा १% शुल्क लगाउने र उपदफा (२) मार्फत यसलाई धितोपत्र विनिमय बजारको कारोबारसम्म विस्तार गर्ने प्रस्ताव गरेको छ।</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>यस विश्लेषणले के देखाउँछ</h3>
+        <ul class="checks">
+          <li>प्रस्तावित शुल्क नाफामा होइन, कारोबारको पूरै रकममा लाग्छ; घाटामा बेच्दा पनि फिर्ता हुँदैन।</li>
+          <li>रु. ३० लाखको खरिदमा यो शुल्क हालको खरिदपक्षीय कुल लागतभन्दा करिब <b>साढे तीन गुणा</b> बढी हुन्छ।</li>
+          <li>रु. २५ लाखको सीमामा शुल्क शून्यबाट एकैपटक रु. २५,००० पुग्छ, जसले कारोबार टुक्र्याउने प्रोत्साहन दिन्छ।</li>
+          <li>पारदर्शिताको उद्देश्य खुलासा र कडा कार्यान्वयनबाट कम लागतमा पूरा गर्न सकिन्छ।</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>नीतिगत सिफारिस</h3>
+        <ul class="checks">
+          <li>उपदफा (२) हटाउने वा सूचीकृत धितोपत्रलाई स्पष्ट छूट दिने परन्तुक थप्ने।</li>
+          <li>निजी कम्पनीको हस्तान्तरणमा प्रतिशत–आधारित शुल्कको सट्टा निश्चित प्रशासनिक शुल्क राख्ने।</li>
+          <li>ठूला हस्तान्तरणमा अनिवार्य लाभग्राही स्वामित्व खुलासा र लुकाउने कार्यमा कडा दण्ड।</li>
+          <li>सेबोन, नेप्से र सीडीएस एन्ड क्लियरिङसँग समन्वय गरेर मात्र अन्तिम व्यवस्था तय गर्ने।</li>
+        </ul>
+      </div>
+    </div>
+    <div class="status" role="note">
+      <b class="t">नीतिगत अद्यावधिक</b>
+      <p>मस्यौदा सार्वजनिक भएपछि चौतर्फी विरोध भएको र उद्योग, वाणिज्य तथा आपूर्ति मन्त्रालयले असार १५, २०८३ मा यो व्यवस्था हटाउने प्रक्रिया सुरु गरेको सार्वजनिक भएको छ। तर संशोधित अन्तिम मस्यौदा सार्वजनिक नभएसम्म व्यवस्था औपचारिक रूपमा हटेको पुष्टि हुँदैन। मस्यौदा कानून मन्त्रालय, मन्त्रिपरिषद् हुँदै संसद्मा जाने भएकाले यो विश्लेषण अन्तिम विधेयक परीक्षण गर्ने आधारका रूपमा उपयोगी रहन्छ।</p>
+    </div>
+  </div>
+</section>
+
+<section id="s1">
+  <div class="wrap">
+    <div class="sec-n">१ · भूमिका</div>
+    <h2>आवश्यक सुधार, तर एउटा व्यवस्थामा कडा छानबिन जरुरी</h2>
+    <p>नेपालको कर्पोरेट कानूनी ढाँचा लामो समयदेखि आधुनिकीकरणको प्रतीक्षामा थियो। कम्पनी ऐन, २०८३ को मस्यौदाले कम्पनी दर्ता प्रक्रिया, डिजिटल शासन, लाभग्राही स्वामित्व पहिचान, सेयरधनी संरक्षण संयन्त्र र संस्थागत सुशासन मापदण्डमा सुधार गर्ने प्रयास गरेको छ। यीमध्ये धेरै सुधार आवश्यक र स्वागतयोग्य छन्।</p>
+    <p>तथापि, मस्यौदामा समावेश दफा ८९, “एक प्रतिशत सेयर हस्तान्तरण शुल्क तिर्नुपर्ने” व्यवस्थाले पूँजी बजारमा महत्त्वपूर्ण अनपेक्षित परिणाम ल्याउन सक्छ। यो सामान्य प्राविधिक प्रावधान होइन; यसले लगानीकर्ता, धितोपत्र व्यवसायी, सामूहिक लगानी कोष, सूचीकृत कम्पनी र समग्र पूँजी बजार समुदायलाई प्रभावित गर्छ। त्यसैले कानून बन्नुअघि यसको गहन छानबिन आवश्यक छ।</p>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="wrap">
+    <div class="sec-n">२ · कानूनी पठन</div>
+    <h2>मस्यौदामा के लेखिएको छ</h2>
+    <p>कम्पनी ऐन, २०८३ को मस्यौदाको दफा ८९ (मुद्रित पृष्ठ ३६) मा यस्तो व्यवस्था छ:</p>
+    <div class="law">
+      <div class="hd">मूल कानूनी पाठ — दफा ८९. एक प्रतिशत सेयर हस्तान्तरण शुल्क तिर्नुपर्ने</div>
+      <ol>
+        <li><b>(१)</b>यस ऐनबमोजिम पच्चीस लाख रुपैयाँ वा सोभन्दा बढी मूल्यको सेयर हस्तान्तरण वा खरिद बिक्री गरेमा, त्यस्तो सेयर विवरण कार्यालयमा अभिलेख गर्दा, त्यस्तो सेयरमा हक प्राप्त गर्ने व्यक्तिले एक प्रतिशतका दरले सेयर हस्तान्तरण शुल्क बुझाउनु पर्नेछ।</li>
+        <li class="hot"><b>(२)</b>धितोपत्र विनिमय बजारको प्रणालीमार्फत सेयर खरिद बिक्री भएकोमा, त्यस्तो सेयर कारोबार गर्ने धितोपत्र व्यवसायीले उपदफा (१) बमोजिम शुल्क सङ्कलन गरी संघीय सञ्चित कोषमा जम्मा गर्नुपर्नेछ।</li>
+      </ol>
+    </div>
+    <div class="grid2">
+      <div>
+        <h3>उपदफा (१): अफ–मार्केट हस्तान्तरण</h3>
+        <p>कम्पनी रजिष्ट्रारको कार्यालयमा अभिलेख हुने हस्तान्तरणमा सेयरको हक प्राप्त गर्ने व्यक्तिले शुल्क तिर्नुपर्छ।</p>
+        <div class="explain"><b>उदाहरण</b>रु. ५० लाख बराबरको सेयर प्राप्त गर्ने लगानीकर्ताले:<br><span class="formula">रु. ५०,००,००० × १% = रु. ५०,०००</span></div>
+      </div>
+      <div>
+        <h3>उपदफा (२): सबैभन्दा संवेदनशील पक्ष</h3>
+        <p>यसले शुल्कको दायित्व धितोपत्र विनिमय बजारको प्रणालीमार्फत हुने कारोबारमा पनि विस्तार गर्छ। यसलाई नेप्सेमा हुने कारोबारमा लागू गरियो भने रु. २५ लाखभन्दा माथिका नियमित दोस्रो बजार कारोबारमा प्रभावकारी रूपमा १% कारोबार शुल्क लाग्नेछ, जुन धितोपत्र व्यवसायीले सङ्कलन गर्नेछन्।</p>
+        <div class="explain"><b>पढ्दा ध्यान दिनुपर्ने</b>केही सांसद तथा जानकारहरूले यो शुल्क टीएमएसमार्फत हुने नियमित कारोबारमा नभई सिधै नामसारी (बकसपत्र, अंशबन्डा, आन्तरिक ठूलो हस्तान्तरण) मा मात्र लाग्ने बताएका छन्। तर उपदफा (२) को शब्दले धितोपत्र विनिमय बजारको कारोबार स्पष्ट रूपमा समेट्छ। यही अस्पष्टता हटाउन कानूनको पाठ नै सच्याउनुपर्छ।</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="wrap">
+    <div class="sec-n">३ · मौलिक भिन्नता र लागत</div>
+    <h2>नाफामा लाग्ने कर होइन, कारोबार रकममा लाग्ने शुल्क</h2>
+    <div class="vs">
+      <div class="card"><span>पूँजीगत लाभकर</span><b>नाफा भएमा मात्र</b>बिक्रीबाट वास्तविक नाफा भएको अवस्थामा नाफाको रकममा लाग्छ।</div>
+      <div class="card bad"><span>प्रस्तावित हस्तान्तरण शुल्क</span><b>पूरै रकममा, सधैँ</b>कारोबारको पूर्ण मूल्यमा लाग्छ; पछि घाटामा बेचे पनि फिर्ता हुँदैन।</div>
+    </div>
+    <div class="explain"><b>व्यावहारिक उदाहरण</b>एक लगानीकर्ताले सूचीकृत कम्पनीको रु. ३० लाखको सेयर खरिद गर्छन् भने तत्काल रु. ३०,००० शुल्क लाग्छ। पछि बजार घटेर घाटामा बेचे पनि यो रकम फिर्ता हुँदैन।</div>
+
+    <div class="fig">
+      <h3>लागत गणक: हालको खरिदपक्षीय लागत र प्रस्तावित शुल्क</h3>
+      <p class="sub">कारोबार रकम सार्नुहोस्। रु. २५ लाखमा पुग्नासाथ शुल्क एकैपटक लाग्छ।</p>
+      <div class="calc">
+        <div>
+          <label for="amt">खरिद रकम</label>
+          <div class="amt" id="amtOut">रु. ३०,००,०००</div>
+          <input id="amt" type="range" min="500000" max="10000000" step="100000" value="3000000" aria-describedby="amtOut">
+          <p class="mult" id="mult"></p>
+        </div>
+        <div class="rows" id="rows" aria-live="polite"></div>
+      </div>
+      <p class="src">हालको लागत: इक्विटी सेयरको धितोपत्र दलाल कमिसन दर (रु. २० लाखदेखि १ करोडसम्म ०.२७%, रु. ५ लाखदेखि २० लाखसम्म ०.३१%, १ करोडमाथि ०.२४%), सेबोन शुल्क ०.०१५% र डीपी शुल्क रु. २५। स्रोत: ShareHub Nepal, कात्तिक २०८३ मा प्रकाशित दर तालिका। पूँजीगत लाभकर बिक्रीमा नाफा भएमा मात्र लाग्ने भएकाले खरिद लागतमा समावेश छैन।</p>
+    </div>
+
+    <div class="fig">
+      <h3>“सीमा चट्टान”: रु. २५ लाखमा शुल्क शून्यबाट रु. २५,००० पुग्छ</h3>
+      <p class="sub">कारोबार रकमअनुसार प्रस्तावित शुल्क (गाढा) र हालको खरिदपक्षीय लागत (हल्का)</p>
+      <svg id="cliff" viewBox="0 0 720 300" role="img" aria-label="रु. २५ लाखभन्दा कम कारोबारमा शुल्क शून्य, रु. २५ लाखमा एकैपटक रु. २५,००० र त्यसपछि कारोबार रकमको १% का दरले बढ्ने चित्र"></svg>
+      <p class="src">गणना: लेखकको, दफा ८९ को पाठ र माथिको दर तालिकामा आधारित।</p>
+    </div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="wrap">
+    <div class="sec-n">४ · सम्भावित प्रभाव</div>
+    <h2>नेपालको पूँजी बजारमा आठ सम्भावित प्रभाव</h2>
+    <div class="impacts">
+      <div class="card"><span class="n">१</span><h3>कारोबार लागतमा उल्लेखनीय वृद्धि</h3><p>लगानीकर्ताले पहिले नै दलाल कमिसन, सेबोन शुल्क, नेप्से र सीडीएस एन्ड क्लियरिङको हिस्सा, डीपी शुल्क र पूँजीगत लाभकर तिर्छन्। थप १% ले सहभागिताको कुल लागत कैयौँ गुणा बढाउँछ।</p></div>
+      <div class="card"><span class="n">२</span><h3>बजार तरलतामा प्रतिकूल असर</h3><p>ठूला कारोबार महँगो भए:</p><ul><li>दैनिक कारोबार रकम घट्न सक्छ</li><li>खरिद–बिक्री मूल्य अन्तर (स्प्रेड) फराकिलो हुन सक्छ</li><li>मूल्य निर्धारण कमजोर र अस्थिरता बढ्न सक्छ</li></ul></div>
+      <div class="card"><span class="n">३</span><h3>संस्थागत लगानीकर्तामाथि असमान भार</h3><p>सामूहिक लगानी कोष, बीमा कम्पनी, पोर्टफोलियो व्यवस्थापक र बैंक तथा वित्तीय संस्थाका कारोबार प्रायः रु. २५ लाखभन्दा माथि हुन्छन्। बजारलाई कम होइन, बढी संस्थागत गहिराइ चाहिन्छ।</p></div>
+      <div class="card"><span class="n">४</span><h3>दीर्घकालीन पूँजी निर्माण निरुत्साहित</h3><p>स्वामित्व हस्तान्तरणमा भारी शुल्कले असर पार्न सक्ने क्षेत्र:</p><ul><li>स्टार्टअप र संस्थापक सेयर पुनर्संरचना</li><li>निजी इक्विटी तथा उद्यम पूँजी लगानी र निकास</li><li>रणनीतिक लगानी, गाभिने तथा प्राप्ति</li><li>कर्मचारी सेयर योजना र श्रम सेयर</li></ul></div>
+      <div class="card"><span class="n">५</span><h3>कारोबार टुक्र्याउने र छल्ने प्रवृत्ति</h3><p>रु. २५ लाखको सीमाले कारोबार सीमाभन्दा तल राख्ने तर्कसङ्गत प्रोत्साहन दिन्छ: ठूला कारोबार टुक्र्याउने, बहुविध खाता र नामधारी (नोमिनी) व्यवस्था प्रयोग गर्ने। यसले सेबोन र नेप्सेको निगरानीलाई झन् जटिल बनाउँछ।</p></div>
+      <div class="card"><span class="n">६</span><h3>दोहोरो शुल्कको समस्या</h3><p>प्रस्तावित शुल्क पूँजीगत लाभकरको विकल्प होइन, थप भार हो। नाफामा बेच्ने लगानीकर्ताले हस्तान्तरण शुल्क र लाभकर दुवै तिर्नुपर्छ (तलको तालिका)।</p></div>
+      <div class="card"><span class="n">७</span><h3>लगानीकर्ताको विश्वासमा क्षरण</h3><p>पूँजी बजार नीतिगत अनिश्चितताप्रति अत्यन्त संवेदनशील हुन्छ। यस्तो व्यवस्थाले आत्तिएर गरिने बिक्री, परिसूचकमा दबाब र सरकारले बजारलाई मुख्यतः राजस्व स्रोतका रूपमा हेरेको धारणा निम्त्याउन सक्छ।</p></div>
+      <div class="card"><span class="n">८</span><h3>कानूनी र नियामकीय अस्पष्टता</h3><p>रु. २५ लाखको सीमा प्रतिकारोबार कि प्रतिदिन गणना हुने? शुल्क क्रेताले कि दलालले तिर्ने? सामूहिक लगानी कोषका इकाइ र बोनस सेयरमा लाग्ने कि नलाग्ने? यी प्रश्न अनुत्तरित छन्।</p></div>
+    </div>
+
+    <h3>सञ्चित भार: एउटै कारोबारमा लाग्ने शुल्क र कर</h3>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>शुल्क वा कर</th><th>आधार</th><th>कहिले लाग्छ</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td>सेयर हस्तान्तरण शुल्क (प्रस्तावित)</td><td>कारोबार रकमको १%</td><td>हक प्राप्त गर्दा, सधैँ</td></tr>
+          <tr><td>धितोपत्र दलाल कमिसन</td><td>कारोबार रकमको प्रतिशत</td><td>खरिद र बिक्री दुवैमा</td></tr>
+          <tr><td>सेबोन शुल्क</td><td>कारोबार रकमको ०.०१५%</td><td>खरिद र बिक्री दुवैमा</td></tr>
+          <tr><td>डीपी शुल्क</td><td>प्रतिकम्पनी निश्चित रकम</td><td>राफसाफ हुँदा</td></tr>
+          <tr><td>पूँजीगत लाभकर</td><td>प्राप्त नाफा</td><td>नाफामा बिक्री गर्दा मात्र</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="q">के कम्पनी ऐनको एउटा दफाले इजाजतप्राप्त स्टक एक्सचेन्जमार्फत कारोबार हुने धितोपत्रमा कारोबार शुल्क लगाउन मिल्छ?</p>
+    <p>दफा ८९ ले कम्पनी रजिष्ट्रारको कार्यालय, सेबोन, नेप्से, सीडीएस एन्ड क्लियरिङ, आन्तरिक राजस्व विभाग, धितोपत्र व्यवसायी र लगानीकर्ताबीच क्षेत्राधिकार र कार्यान्वयनको अस्पष्टता सिर्जना गर्न सक्छ।</p>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="wrap">
+    <div class="sec-n">५ · सुधार उद्देश्यसँग विरोधाभास</div>
+    <h2>साध्य पारदर्शिता हो भने साधन शुल्क होइन</h2>
+    <p class="lead">मस्यौदाको व्यापक उद्देश्य (कम्पनी प्रशासनको आधुनिकीकरण, व्यवसाय सहजीकरण, लगानी प्रवर्द्धन, डिजिटल शासन र नियामकीय सरलीकरण) सँग दफा ८९ मेल खाँदैन।</p>
+    <div class="grid2">
+      <div class="card"><h3>एकमुष्ट शुल्कले के गर्दैन</h3><p>यसले जालसाजी, संस्थापकको दुरुपयोग वा लुकाइएको स्वामित्वलाई प्रत्यक्ष सम्बोधन गर्दैन। बरु कानूनको पालना गर्ने दीर्घकालीन लगानीकर्तासहित सबैका लागि कारोबार घर्षण थप्छ।</p></div>
+      <div class="card"><h3>उपयुक्त साधन के हो</h3><p>यदि अन्तर्निहित उद्देश्य पारदर्शिता र जवाफदेहिता हो भने उपयुक्त साधन सुदृढ खुलासा र बलियो कार्यान्वयन हो, उच्च एकमुष्ट हस्तान्तरण शुल्क होइन।</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="wrap">
+    <div class="sec-n">६ · नीतिगत विकल्प</div>
+    <h2>उद्देश्य पूरा गर्ने कम लागतका पाँच विकल्प</h2>
+    <div class="opts">
+      <div class="card"><span class="tag">६.१</span><h3>निजी कम्पनीका लागि नाममात्रको प्रशासनिक शुल्क</h3><p>निजी कम्पनी र असूचीकृत पब्लिक कम्पनीको हस्तान्तरण अभिलेखमा कम्पनी रजिष्ट्रारको कार्यालयले उचित निश्चित शुल्क लिन सक्छ; प्रतिशत–आधारित शुल्क होइन।</p></div>
+      <div class="card"><span class="tag">६.२</span><h3>सूचीकृत धितोपत्रलाई स्पष्ट छूट</h3><p>उपदफा (२) हटाउने वा देहायको परन्तुक थप्ने:</p>
+        <blockquote class="proviso">“तर प्रचलित धितोपत्रसम्बन्धी कानूनबमोजिम इजाजतप्राप्त धितोपत्र विनिमय बजारमार्फत कारोबार भई धितोपत्र निक्षेप प्रणालीमार्फत राफसाफ तथा फर्छ्यौट हुने धितोपत्रमा यो दफा लागू हुने छैन।”</blockquote></div>
+      <div class="card"><span class="tag">६.३</span><h3>अनिवार्य लाभग्राही स्वामित्व खुलासा</h3><p>हस्तान्तरण शुल्कको सट्टा, निर्धारित सीमाभन्दा ठूला हस्तान्तरणमा अन्तिम लाभग्राही धनीको अनिवार्य खुलासा गराउने।</p></div>
+      <div class="card"><span class="tag">६.४</span><h3>लुकाउने र गलत प्रस्तुतिमा कडा दण्ड</h3><p>सबै सहभागीमाथि शुल्क लगाउनुको सट्टा, जालसाजीपूर्ण मूल्याङ्कन, लाभग्राही स्वामित्व लुकाउने र भित्री सूचनामा आधारित हस्तान्तरणमा लक्षित देवानी तथा फौजदारी दण्ड।</p></div>
+      <div class="card"><span class="tag">६.५</span><h3>सेबोन, नेप्से र सीडीएस एन्ड क्लियरिङसँग समन्वय</h3><p>सूचीकृत कम्पनीको सेयर हस्तान्तरणसम्बन्धी नीतिगत चिन्ता विद्यमान धितोपत्र बजार पूर्वाधार र नियामकमार्फत सम्बोधन गर्ने।</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="wrap">
+    <div class="sec-n">७ · सिफारिस गरिएको संशोधन</div>
+    <h2>कानून बन्नुअघि गर्नुपर्ने न्यूनतम संशोधन</h2>
+    <p class="lead">दफा ८९ व्यापक समीक्षा र परामर्शको विषय हुनुपर्छ। कम्तीमा उपदफा (२) हटाउनु वा संशोधन गर्नुपर्छ, र निजी कम्पनीको सेयर हस्तान्तरणमा १% शुल्कको सट्टा देहायको व्यवस्था गर्नुपर्छ:</p>
+    <ul class="checks">
+      <li>नाममात्रको, निश्चित प्रशासनिक प्रशोधन शुल्क</li>
+      <li>निर्धारित सीमाभन्दा माथिका हस्तान्तरणमा अनिवार्य लाभग्राही स्वामित्व खुलासा</li>
+      <li>गलत प्रस्तुति र स्वामित्व लुकाउने कार्यलाई लक्षित सुदृढ कार्यान्वयन व्यवस्था</li>
+    </ul>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="wrap">
+    <div class="sec-n">८ · निष्कर्ष</div>
+    <h2>दफा ८९ हालकै रूपमा अघि बढ्नु हुँदैन</h2>
+    <p class="lead">पूँजी बजारको दृष्टिकोणबाट दफा ८९ सम्पूर्ण मस्यौदाका सबैभन्दा परिणामकारी व्यवस्थामध्ये एक हो। प्रस्तावित १% शुल्कले देहायका जोखिम निम्त्याउँछ:</p>
+    <ul class="risks">
+      <li>लगानीकर्ताको प्रतिफल घटाउने बढ्दो कारोबार लागत</li>
+      <li>नेप्सेमा घट्दो तरलता</li>
+      <li>दोस्रो बजारमा संस्थागत सहभागिता निरुत्साहित</li>
+      <li>निजी र असूचीकृत कम्पनीमा कमजोर पूँजी निर्माण</li>
+      <li>कारोबार टुक्र्याउने र छल्ने विपरीत प्रोत्साहन</li>
+      <li>लगानीकर्ताको विश्वास र बजार मनोबलमा क्षति</li>
+      <li>कम्पनी कानून र धितोपत्र कानूनबीच नियामकीय अस्पष्टता</li>
+    </ul>
+    <p>मन्त्रालयले यो व्यवस्था हटाउने संकेत दिएको सकारात्मक छ। अब आवश्यक छ, अन्तिम विधेयकमा व्यापक सरोकारवाला परामर्श, स्वतन्त्र आर्थिक प्रभाव मूल्याङ्कन र स्पष्ट पाठसहित यसको औपचारिक संशोधन।</p>
+  </div>
+</section>
+
+<section id="disc">
+  <div class="wrap">
+    <div class="disc">
+      <h2>अस्वीकरण</h2>
+      <ul>
+        <li><b>यो कानूनी वा लगानी सल्लाह होइन।</b> यो लेख वित्तीय शिक्षा र सार्वजनिक विमर्शका लागि लेखकको स्वतन्त्र नीति विश्लेषण हो; यसमा कुनै सेयर खरिद वा बिक्रीको सिफारिस छैन।</li>
+        <li><b>मस्यौदा परिवर्तन हुन सक्छ।</b> उल्लेखित व्यवस्था सार्वजनिक परामर्शका लागि जारी मस्यौदामा आधारित छ; अन्तिम कानून फरक हुन सक्छ। निर्णय गर्नुअघि आधिकारिक मस्यौदा र सरकारी सूचना हेर्नुहोस्।</li>
+        <li><b>बजार धेरै कारणले चल्छ।</b> नीतिगत विश्लेषणले मात्र बजारको दिशा निर्धारण गर्दैन; यसबाट प्रभावित भएर लगानी निर्णय नगर्नुहोस्।</li>
+        <li><b>शुल्क दर परिवर्तनशील छन्।</b> लागत गणकमा प्रयोग गरिएका दलाल कमिसन, सेबोन र डीपी शुल्कका दर सन्दर्भका लागि मात्र हुन्; हालको दर आफ्नो धितोपत्र दलाल वा सेबोनबाट पुष्टि गर्नुहोस्।</li>
+        <li>आवश्यक परे योग्य कानूनी वा वित्तीय पेशेवरको परामर्श लिनुहोस्।</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<aside class="related" aria-labelledby="relh">
+  <div class="wrap">
+    <div class="sec-n">लेख तथा अनुसन्धान</div>
+    <h2 id="relh">थप लेख तथा अनुसन्धान</h2>
+    <div class="rel">
+      <a href="https://www.unicitizens.org/nepse-report" target="_top">
+        <div class="thumb img"><img src="og-image.png" alt="" loading="lazy"></div>
+        <div class="body"><span class="type">Research report · EN | नेपाली</span><span class="ttl">NEPSE at 2,623: What is the market pricing in?</span><span class="go">रिपोर्ट पढ्नुहोस् →</span></div>
+      </a>
+      <a href="https://www.unicitizens.org/nepse-report" target="_top">
+        <div class="thumb">संस्थागत संस्करण: मूल्याङ्कन विधि र सूत्र</div>
+        <div class="body"><span class="type">Research report · English</span><span class="ttl">NEPSE Valuation Report — Institutional edition</span><span class="go">पूरा विधि हेर्नुहोस् →</span></div>
+      </a>
+      <a href="https://www.unicitizens.org/articles-research" target="_top">
+        <div class="thumb">सबै लेख, नीति विश्लेषण र अनुसन्धान एकै ठाउँमा</div>
+        <div class="body"><span class="type">Articles &amp; Research</span><span class="ttl">सबै प्रकाशन हेर्नुहोस्</span><span class="go">संग्रहमा जानुहोस् →</span></div>
+      </a>
+    </div>
+  </div>
+</aside>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="endorse"><img src="brand/flm_navy.png" alt=""><span><b>Financial Literacy Movement</b><span class="en2">A UNI CITIZENS initiative</span></span></div>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="https://www.unicitizens.org" target="_top">Home</a>
+      <a href="https://www.unicitizens.org/curriculum" target="_top">Curriculum</a>
+      <a href="https://www.unicitizens.org/articles-research" target="_top">Articles &amp; Research</a>
+      <a href="https://www.unicitizens.org/nepse-report" target="_top">NEPSE Report</a>
+      <a href="mailto:info@unicitizens.org">info@unicitizens.org</a>
+    </nav>
+    <p class="legal">© २०२६ विष्णुप्रसाद बस्याल, सीएफए (आईसीएफएआई) · Financial Literacy Movement, युनि सिटिजन्सको पहल। अध्ययन र अनुसन्धान प्रयोजनका लागि मात्र; कानूनी वा लगानी सल्लाह होइन। · युनि सिटिजन्सका समूह कम्पनी: <a href="https://www.unicitizens.com" target="_top">unicitizens.com</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* embedded in unicitizens.org: hide own header/footer, report height to the parent page */
+  var embedded=false;try{embedded=window.self!==window.top}catch(e){embedded=true}
+  if(embedded){document.documentElement.classList.add('embedded');
+    var send=function(){parent.postMessage({type:'uc-height',h:document.documentElement.scrollHeight},'*')};
+    new ResizeObserver(send).observe(document.body);window.addEventListener('load',send);setTimeout(send,1500);}
+
+  var D='०१२३४५६७८९';
+  function dn(s){return String(s).replace(/[0-9]/g,function(d){return D[d]})}
+  function npr(n){n=Math.round(n);var s=String(n),last3=s.slice(-3),rest=s.slice(0,-3);
+    if(rest)rest=rest.replace(/\B(?=(\d{2})+(?!\d))/g,',')+',';return 'रु. '+dn(rest+last3)}
+  function rate(v){return v<=50000?.0036:v<=500000?.0033:v<=2000000?.0031:v<=10000000?.0027:.0024}
+  function cost(v){return v*rate(v)+v*.00015+25}
+  function fee(v){return v>=2500000?v*.01:0}
+
+  var amt=document.getElementById('amt'),out=document.getElementById('amtOut'),rows=document.getElementById('rows'),mult=document.getElementById('mult');
+  function upd(){var v=+amt.value,c=cost(v),f=fee(v),r=rate(v);
+    out.textContent=npr(v);
+    rows.innerHTML='<div><span>दलाल कमिसन ('+dn((r*100).toFixed(2))+'%)</span><span>'+npr(v*r)+'</span></div>'+
+      '<div><span>सेबोन शुल्क (०.०१५%)</span><span>'+npr(v*.00015)+'</span></div>'+
+      '<div><span>डीपी शुल्क</span><span>'+npr(25)+'</span></div>'+
+      '<div class="tot"><span>हालको खरिदपक्षीय कुल लागत</span><span>'+npr(c)+'</span></div>'+
+      '<div class="fee"><span>प्रस्तावित हस्तान्तरण शुल्क (१%)</span><span>'+npr(f)+'</span></div>';
+    mult.innerHTML=f?'प्रस्तावित शुल्क हालको कुल लागतको करिब <b>'+dn((f/c).toFixed(1))+' गुणा</b> हुन्छ।':'रु. २५ लाखभन्दा कम: प्रस्तावित शुल्क लाग्दैन। <b>रु. १ मात्र बढी</b> रु. २५ लाखमा पुग्दा रु. २५,००० लाग्छ।';}
+  amt.addEventListener('input',upd);upd();
+
+  /* cliff chart */
+  var svg=document.getElementById('cliff'),W=720,H=300,L=78,R=16,T=18,B=46,max=6000000,ymax=60000;
+  function X(v){return L+(W-L-R)*v/max}function Y(v){return T+(H-T-B)*(1-v/ymax)}
+  var g='';
+  for(var y=0;y<=ymax;y+=10000){g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(y)+'" y2="'+Y(y)+'" stroke="#D6E0EA"/><text x="'+(L-8)+'" y="'+(Y(y)+5)+'" text-anchor="end" font-size="13" fill="#4B5563">'+(y?dn(y/1000)+' हजार':'०')+'</text>'}
+  for(var x=0;x<=max;x+=1000000){g+='<text x="'+X(x)+'" y="'+(H-B+22)+'" text-anchor="'+(x===0?'start':x===max?'end':'middle')+'" font-size="13" fill="#4B5563">'+dn(x/100000)+' लाख</text>'}
+  var pc='';for(var v=100000;v<=max;v+=50000){pc+=(pc?'L':'M')+X(v).toFixed(1)+' '+Y(cost(v)).toFixed(1)}
+  g+='<path d="'+pc+'" fill="none" stroke="#A9BACB" stroke-width="3"/>';
+  g+='<path d="M'+X(0)+' '+Y(0)+'L'+X(2500000)+' '+Y(0)+'" stroke="#B3362C" stroke-width="4"/>';
+  g+='<path d="M'+X(2500000)+' '+Y(0)+'L'+X(2500000)+' '+Y(25000)+'" stroke="#B3362C" stroke-width="2" stroke-dasharray="4 4"/>';
+  g+='<path d="M'+X(2500000)+' '+Y(25000)+'L'+X(max)+' '+Y(max*.01)+'" stroke="#B3362C" stroke-width="4"/>';
+  g+='<circle cx="'+X(2500000)+'" cy="'+Y(25000)+'" r="6" fill="#B3362C"/>';
+  g+='<text x="'+(X(2500000)-10)+'" y="'+(Y(25000)-12)+'" text-anchor="end" font-size="15" font-weight="700" fill="#B3362C">२५ लाखमा: रु. २५,०००</text>';
+  g+='<text x="'+X(4200000)+'" y="'+(Y(42000)-14)+'" text-anchor="end" font-size="14" font-weight="600" fill="#B3362C">प्रस्तावित शुल्क (१%)</text>';
+  g+='<text x="'+(X(max)-4)+'" y="'+(Y(cost(max))-10)+'" text-anchor="end" font-size="14" font-weight="600" fill="#4B5563">हालको खरिद लागत</text>';
+  g+='<text x="'+((L+W-R)/2)+'" y="'+(H-4)+'" text-anchor="middle" font-size="13" fill="#4B5563">कारोबार रकम (रुपैयाँ)</text>';
+  svg.innerHTML=g;
+
+  /* toc highlight */
+  var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('cur',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+  links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)io.observe(s)});
+})();
+</script>
+</body>
+</html>
