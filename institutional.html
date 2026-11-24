@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEPSE Equity Market Valuation and Outlook — Institutional Edition</title>
+<meta name="description" content="Institutional research paper: normalised-earnings, cycle-anchored valuation of the NEPSE equity market, with full methodology, formulas, sensitivities and scenarios.">
+<link rel="canonical" href="https://bishnupr0sah.github.io/nepse-report/institutional.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="UNI Citizens">
+<meta property="og:url" content="https://bishnupr0sah.github.io/nepse-report/institutional.html">
+<meta property="og:title" content="NEPSE Equity Market Valuation and Outlook — Institutional Edition">
+<meta property="og:description" content="Full methodology, formulas, sensitivities and scenarios behind the NEPSE valuation report, November 2026. For study and research only.">
+<meta property="og:image" content="https://bishnupr0sah.github.io/nepse-report/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bishnupr0sah.github.io/nepse-report/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a top-tier strategy research paper: precise, sourced, every number traceable to a formula.
+   IDEA: a printed research publication — cover sheet, numbered sections, exhibits, equations, appendices.
+   COLOUR and TYPE: ink and ice from the retail edition; Source Serif 4 body, Inter for tables, Space Grotesk headings. */
+:root{color-scheme:light;--ink:#0c1d24;--mut:#4c616a;--line:#cfdde2;--deep:#06222e;--ice:#dff1f7;--acc:#d81b60;--bg:#e9eff1;--paper:#fff;--soft:#f4f8f9}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.62 "Source Serif 4",Georgia,serif;overflow-x:clip}
+.sheet{max-width:900px;margin:28px auto;background:var(--paper);box-shadow:0 1px 3px rgba(0,0,0,.08),0 8px 30px rgba(6,34,46,.08)}
+.pad{padding:clamp(26px,6vw,72px)}
+h1,h2,h3,h4{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15;text-wrap:balance;color:var(--deep)}
+h2{font-size:clamp(23px,3vw,28px);margin:2.2em 0 .5em;padding-top:.6em;border-top:2px solid var(--deep)}
+h2 .no{color:var(--acc);margin-right:.4em}
+h3{font-size:19px;margin:1.6em 0 .4em}
+h4{font-size:16px;margin:1.2em 0 .3em}
+p{margin:.7em 0;hyphens:auto}
+a{color:#0b5f7a}
+.small,.note{font-size:14px;color:var(--mut)}
+/* cover */
+.cover{background:var(--deep);color:var(--ice);padding:clamp(28px,6vw,72px);position:relative}
+.cover .top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:600 13px/1.4 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#9fd8ea}
+.cover h1{color:#fff;font-size:clamp(32px,5.4vw,52px);margin:42px 0 14px;max-width:18ch}
+.cover .subt{font-size:clamp(18px,2.2vw,22px);color:#cfe7ef;max-width:46ch;margin:0}
+.cover .meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#1d4a5a;border:1px solid #1d4a5a;margin-top:42px;font-family:Inter,sans-serif}
+.cover .meta div{background:#0a2c3a;padding:14px 16px}.cover .meta span{display:block;font-size:12px;color:#9fc3cf;text-transform:uppercase;letter-spacing:.06em}.cover .meta b{font:700 22px "Space Grotesk",sans-serif;color:#fff}
+.cover .auth{margin-top:34px;font:15px/1.5 Inter,sans-serif;color:#cfe7ef}
+.cover .back{position:absolute;right:clamp(20px,4vw,40px);bottom:20px;font:600 14px Inter,sans-serif;color:#9fd8ea;text-decoration:none}
+.warn{border:1.5px solid var(--deep);background:var(--soft);padding:16px 20px;font:14.5px/1.55 Inter,sans-serif;margin:1.2em 0}
+.warn b{display:block;font-size:15px;margin-bottom:4px;text-transform:uppercase;letter-spacing:.05em}
+/* key findings */
+.kf{background:var(--soft);border-left:4px solid var(--acc);padding:18px 22px;margin:1.4em 0}
+.kf h3{margin-top:0}
+.kf ol{margin:.4em 0 0;padding-left:1.2em}.kf li{margin:.45em 0}
+.abstract{font-style:italic}
+.toc{columns:2;column-gap:36px;font:15px/1.7 Inter,sans-serif;padding:0;list-style:none}
+.toc a{text-decoration:none;color:var(--ink)}.toc span{color:var(--acc);font-weight:600;margin-right:6px}
+/* equations */
+.eq{display:flex;align-items:center;justify-content:center;gap:12px;margin:1.1em 0;padding:12px 48px 12px 8px;background:var(--soft);font-size:18px;position:relative;flex-wrap:wrap;overflow-x:auto}
+.eq .n{position:absolute;right:12px;font:13px Inter,sans-serif;color:var(--mut)}
+.f{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 3px}
+.f>span:first-child{border-bottom:1px solid currentColor;padding:0 4px 2px}.f>span:last-child{padding:2px 4px 0}
+var{font-style:italic}
+.where{font-size:15px;color:var(--mut);margin:-.3em 0 1em}
+/* exhibits */
+.ex{margin:1.6em 0}
+.ex .cap{font:700 14px/1.4 Inter,sans-serif;color:var(--deep);margin-bottom:6px}.ex .cap span{color:var(--acc)}
+.ex .src{font:12.5px/1.45 Inter,sans-serif;color:var(--mut);margin-top:6px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font:14px/1.4 Inter,sans-serif}
+th,td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+thead th{background:var(--deep);color:#fff;font-weight:600;font-size:12.5px}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.hl td{background:#fdeef4;font-weight:600}
+tr.tot td{border-top:2px solid var(--deep);font-weight:700}
+svg{width:100%;height:auto;display:block}
+svg text{font-family:Inter,sans-serif}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+.callout{border:1px solid var(--line);padding:14px 18px;margin:1em 0;font-size:16px}
+.callout b{font-family:Inter,sans-serif}
+.fn{font-size:13.5px;color:var(--mut);border-top:1px solid var(--line);margin-top:2em;padding-top:.8em}
+footer.legal{font:13.5px/1.55 Inter,sans-serif;color:var(--mut)}
+@media(max-width:700px){.toc{columns:1}.two{grid-template-columns:minmax(0,1fr)}.cover .meta{grid-template-columns:minmax(0,1fr)}body{font-size:16px}.eq{font-size:16px}.eq .n{position:static}}
+@media print{body{background:#fff}.sheet{box-shadow:none;margin:0;max-width:none}.cover{-webkit-print-color-adjust:exact;print-color-adjust:exact}h2{break-before:page}h2.nobreak{break-before:auto}.ex,table,.eq{break-inside:avoid}.back{display:none}}
+</style>
+</head>
+<body>
+<article class="sheet">
+<header class="cover">
+  <div class="top"><span>UNI Citizens · Capital Market Research</span><span>Institutional edition · Strategy research</span></div>
+  <h1>NEPSE Equity Market Valuation and Outlook</h1>
+  <p class="subt">A normalised-earnings, cycle-anchored assessment of the Nepal Stock Exchange, with full methodology</p>
+  <div class="meta">
+    <div><span>NEPSE index</span><b>2,623.56</b></div>
+    <div><span>Market P/E (reported / normalised)</span><b>36.9× / 31.3×</b></div>
+    <div><span>Data as of</span><b>23 Nov 2026</b></div>
+  </div>
+  <p class="auth">Bishnu Prasad Basyal, CFA<br>November 2026 · Coverage: 282 NEPSE-listed operating companies, 12 sectors</p>
+  <a class="back" href="index.html">← Summary edition (English / नेपाली)</a>
+</header>
+
+<div class="pad">
+<div class="warn"><b>Important notice</b>This paper is the author’s independent analysis, prepared for study and research purposes only. It is not investment advice and is not a recommendation to buy, sell or hold any security or the market as a whole. Equity prices are driven by many factors beyond the fundamentals modelled here, including liquidity, interest rates, regulation, policy, investor sentiment and global events. There is no guarantee that the market will move toward any value, range or scenario discussed. Readers should not rely on this paper in making investment decisions. Full disclosures appear in the <a href="#disclosures">final section</a>.</div>
+
+<h2 class="nobreak" id="abstract"><span class="no">§</span>Abstract</h2>
+<p class="abstract">We estimate the fundamental value of the NEPSE equity market from the bottom up, using 282 operating companies across 12 sectors. Reported earnings are normalised by mean-reverting each company’s return on equity toward its sector’s through-cycle level, with additional discounting of one-off earnings shocks and credit-cost adjustments for banks. Company values are derived from sector-appropriate models — residual income, justified price-to-book, two-stage dividend discount, free cash flow to the firm, licence-bound project cash flows, appraisal value and sum-of-the-parts — under a build-up cost of equity that adds sector and liquidity premia to a Damodaran-based country risk premium. At the market level we anchor valuation to NEPSE’s own cycle multiples (12.3× trough, 18.5× cycle-normal, 42.3× 2021 peak) and compare it with global, emerging, frontier and macro-peer markets. We find that NEPSE trades at 36.9× reported and 31.3× normalised earnings, within 13% of its 2021 peak multiple and above developed-market levels, while normalised return on equity is 8.7%. The market-implied cost of equity is about 6.4%, against a bottom-up estimate of 13.8%. A cycle-normal multiple with a 20–30% structural “Nepal premium” implies an index range of about 1,860–2,015. For today’s level to be consistent with that range within three years, aggregate earnings would need to compound at 9–19% a year with the index flat, against about 2.6% a year since 2021. We discuss the structural reasons for the premium, the conditions under which it could persist, and the limitations of the method.</p>
+
+<div class="kf">
+<h3>Key findings</h3>
+<ol>
+<li><b>Valuation level.</b> Market P/E is 36.9× (31.3× normalised) and P/B 2.71×, against a 2019 trough of 12.3× and 1.78× and a 2021 peak of 42.3×. The current multiple is 87% of the 2021 peak.</li>
+<li><b>Supply, not earnings, explains market-cap growth.</b> Market capitalisation per index point is about 20% higher than in 2021, while index-level earnings are about 6% lower. New listings, mostly hydropower, added value at high multiples and low returns.</li>
+<li><b>Breadth is weaker than the headline.</b> Excluding commercial banks, the market trades at about 55× earnings; 182 of 282 stocks sit above the 2021 peak multiple on normalised earnings.</li>
+<li><b>Global position.</b> NEPSE’s multiple exceeds developed markets (23.0×), emerging markets (16.0×) and MSCI Frontier (13.3×), and is three to five times the level of macro peers such as Pakistan, Bangladesh and Kenya.</li>
+<li><b>Fair-value range.</b> At 18.5× normalised earnings the index-equivalent is about 1,550; with a 20–30% structural premium, 1,860–2,015. Today embeds a 69% premium on normalised (100% on reported) earnings.</li>
+<li><b>Required growth.</b> To validate 2,623 at a 30% premium in three years requires 9.2% a year earnings growth with the index flat (normalised basis), or 21.2% a year if the index is also to deliver an 11% annual price return.</li>
+</ol>
+</div>
+
+<h3>Contents</h3>
+<ul class="toc">
+<li><a href="#s1"><span>1</span>Introduction and research questions</a></li>
+<li><a href="#s2"><span>2</span>Data and sample construction</a></li>
+<li><a href="#s3"><span>3</span>Market aggregates</a></li>
+<li><a href="#s4"><span>4</span>Earnings normalisation</a></li>
+<li><a href="#s5"><span>5</span>Cost of equity</a></li>
+<li><a href="#s6"><span>6</span>Company valuation models</a></li>
+<li><a href="#s7"><span>7</span>Market cycle analysis</a></li>
+<li><a href="#s8"><span>8</span>Why valuations returned to 2021 levels</a></li>
+<li><a href="#s9"><span>9</span>International and macro-peer comparison</a></li>
+<li><a href="#s10"><span>10</span>Theoretical versus empirical anchors</a></li>
+<li><a href="#s11"><span>11</span>Fair index estimation</a></li>
+<li><a href="#s12"><span>12</span>Required earnings growth</a></li>
+<li><a href="#s13"><span>13</span>Scenario analysis and outlook</a></li>
+<li><a href="#s14"><span>14</span>Risks and catalysts</a></li>
+<li><a href="#s15"><span>15</span>Limitations and robustness</a></li>
+<li><a href="#s16"><span>16</span>Conclusion</a></li>
+<li><a href="#appA"><span>A</span>Appendices</a></li>
+<li><a href="#disclosures"><span>D</span>Disclosures and sources</a></li>
+</ul>
+
+<!-- 1 -->
+<h2 id="s1"><span class="no">1</span>Introduction and research questions</h2>
+<p>NEPSE closed at 2,623.56 on 23 November 2026, about 18% below its all-time high of 3,198.60 (18 August 2021). Market capitalisation, however, has exceeded its 2021 level, reaching a record of about Rs 5 trillion in July 2025 and Rs 4.83 trillion (73% of GDP, 294 companies) in mid-April 2026. The divergence between the index and aggregate market value, and the return of the market multiple to near-record levels, motivate four questions:</p>
+<ol>
+<li>How is the NEPSE market valued today, on reported and on normalised earnings?</li>
+<li>Why have valuations returned close to the 2021 peak, despite many new listings?</li>
+<li>How does NEPSE compare with its own past cycles, with global markets and with economies at a similar stage of development?</li>
+<li>What earnings path would be needed over the next three years for the current index level to be consistent with fundamental value?</li>
+</ol>
+<p>The paper is structured as follows. Sections 2–6 describe the data, normalisation procedure, cost of capital and company-level models. Sections 7–10 place the market in historical and international context. Sections 11–13 derive fair-value ranges, required growth and scenarios. Sections 14–16 discuss risks, limitations and conclusions.</p>
+
+<!-- 2 -->
+<h2 id="s2"><span class="no">2</span>Data and sample construction</h2>
+<h3>2.1 Universe</h3>
+<p>The sample comprises 282 NEPSE-listed operating companies as of 23 November 2026. Mutual funds, debentures and preference shares are excluded because their values are not driven by operating earnings. Company data (price, shares outstanding, face value, promoter holding, EPS, book value per share, ROE, ROA, operating margin, leverage, dividends, and sector-specific metrics such as NPL, net interest margin, CD ratio, solvency and loss ratios) were collected from the company pages of nepselabs.com, which compile the latest published quarterly or annual statements.</p>
+<h3>2.2 Sector classification</h3>
+<p>Companies are grouped into NEPSE’s twelve operating sectors: commercial banks (19), development banks (16), finance (15), microfinance (50), life insurance (14), non-life insurance (13), hydropower (111), manufacturing and processing (18), hotels and tourism (8), investment (7), trading (2) and others (9).</p>
+<h3>2.3 Data validation</h3>
+<p>Each record passes automated consistency checks before valuation: payout ratios above 100% of earnings, price-to-book ratios inconsistent with price and book value, combined ratios below loss ratios for non-life insurers, missing or negative book value, and EPS swings above 100% year on year. Flagged items were reviewed; where a source field was evidently erroneous (for example, a reported payout of 5,729%), the derived figure is recomputed from primary inputs. The aggregate reported P/E (36.95×) and P/B (2.71×) are consistent with independent market-level estimates published by Sharesansar (38.3× and 2.78× in late 2025), allowing for date and sample differences.</p>
+<h3>2.4 Units and conventions</h3>
+<p>Monetary values are in Nepalese rupees; 1 Arba = Rs 1 billion; 1 crore = Rs 10 million. Ratios are expressed as multiples (×) or percentages. All market aggregates are capitalisation-weighted, computed as ratios of sums rather than averages of ratios (Section 3).</p>
+
+<!-- 3 -->
+<h2 id="s3"><span class="no">3</span>Market aggregates</h2>
+<p>Aggregate multiples are computed as the ratio of summed market value to summed fundamentals. This is equivalent to a capitalisation-weighted harmonic mean of company multiples and avoids the upward bias from loss-making or near-zero-earnings companies that afflicts simple averages.</p>
+<div class="eq"><span>P/E<sub>mkt</sub> =</span><span class="f"><span>Σ<sub>i</sub> <var>P<sub>i</sub></var> · <var>N<sub>i</sub></var></span><span>Σ<sub>i</sub> <var>EPS<sub>i</sub></var> · <var>N<sub>i</sub></var></span></span><span>,&nbsp;&nbsp; P/B<sub>mkt</sub> =</span><span class="f"><span>Σ<sub>i</sub> <var>P<sub>i</sub></var> · <var>N<sub>i</sub></var></span><span>Σ<sub>i</sub> <var>BVPS<sub>i</sub></var> · <var>N<sub>i</sub></var></span></span><span class="n">(1)</span></div>
+<p class="where">where <var>P<sub>i</sub></var> is the share price, <var>N<sub>i</sub></var> shares outstanding, <var>EPS<sub>i</sub></var> trailing earnings per share and <var>BVPS<sub>i</sub></var> book value per share. The normalised P/E substitutes normalised EPS (Section 4). Aggregate ROE is Σ earnings ÷ Σ book value.</p>
+
+<div class="ex"><div class="cap"><span>Exhibit 1.</span> NEPSE market aggregates, 23 November 2026</div>
+<div class="tw"><table><thead><tr><th>Measure</th><th class="r">Value</th><th>Note</th></tr></thead><tbody>
+<tr><td>Companies in sample</td><td class="r">282</td><td>Operating companies, 12 sectors</td></tr>
+<tr><td>Market capitalisation</td><td class="r">Rs 4,457 Arba</td><td>Sum of price × shares</td></tr>
+<tr><td>Reported trailing earnings</td><td class="r">Rs 120.6 Arba</td><td>Latest annualised</td></tr>
+<tr><td>Reported P/E</td><td class="r">36.95×</td><td>Equation (1)</td></tr>
+<tr><td>Normalised P/E</td><td class="r">31.32×</td><td>Section 4</td></tr>
+<tr><td>P/B</td><td class="r">2.71×</td><td></td></tr>
+<tr><td>Normalised ROE</td><td class="r">8.66%</td><td>Σ normalised earnings ÷ Σ book</td></tr>
+<tr><td>Bottom-up cost of equity (cap-weighted)</td><td class="r">13.83%</td><td>Section 5</td></tr>
+<tr><td>Market-implied cost of equity</td><td class="r">≈ 6.4%</td><td>Section 10</td></tr>
+</tbody></table></div>
+<div class="src">Source: author’s calculations from nepselabs.com company data.</div></div>
+
+<div class="ex"><div class="cap"><span>Exhibit 2.</span> Sector aggregates</div>
+<div class="tw"><table><thead><tr><th>Sector</th><th class="r">Cos</th><th class="r">Mkt cap (Rs Arba)</th><th class="r">Weight</th><th class="r">P/E rep.</th><th class="r">P/E norm.</th><th class="r">P/B</th><th class="r">Norm. ROE</th><th class="r">Ke</th><th class="r">Median model gap</th></tr></thead><tbody>
+<tr><td>Commercial banks</td><td class="r">19</td><td class="r">1,210</td><td class="r">27.1%</td><td class="r">19.6</td><td class="r">18.8</td><td class="r">1.71</td><td class="r">9.1%</td><td class="r">11.4%</td><td class="r">−50%</td></tr>
+<tr><td>Hydropower</td><td class="r">111</td><td class="r">782</td><td class="r">17.5%</td><td class="r">78.6</td><td class="r">48.5</td><td class="r">3.69</td><td class="r">7.6%</td><td class="r">16.4%</td><td class="r">−85%</td></tr>
+<tr><td>Manufacturing</td><td class="r">18</td><td class="r">381</td><td class="r">8.5%</td><td class="r">57.6</td><td class="r">52.6</td><td class="r">4.83</td><td class="r">9.2%</td><td class="r">14.5%</td><td class="r">−89%</td></tr>
+<tr><td>Others</td><td class="r">9</td><td class="r">360</td><td class="r">8.1%</td><td class="r">44.1</td><td class="r">35.6</td><td class="r">2.79</td><td class="r">7.8%</td><td class="r">12.5%</td><td class="r">−92%</td></tr>
+<tr><td>Life insurance</td><td class="r">14</td><td class="r">354</td><td class="r">7.9%</td><td class="r">69.3</td><td class="r">54.2</td><td class="r">4.05</td><td class="r">7.5%</td><td class="r">14.2%</td><td class="r">−70%</td></tr>
+<tr><td>Microfinance</td><td class="r">50</td><td class="r">333</td><td class="r">7.5%</td><td class="r">27.6</td><td class="r">35.3</td><td class="r">3.94</td><td class="r">11.2%</td><td class="r">15.4%</td><td class="r">−84%</td></tr>
+<tr><td>Investment</td><td class="r">7</td><td class="r">293</td><td class="r">6.6%</td><td class="r">82.2</td><td class="r">66.7</td><td class="r">3.30</td><td class="r">4.9%</td><td class="r">14.0%</td><td class="r">−90%</td></tr>
+<tr><td>Development banks</td><td class="r">16</td><td class="r">194</td><td class="r">4.3%</td><td class="r">20.8</td><td class="r">23.3</td><td class="r">2.60</td><td class="r">11.2%</td><td class="r">13.5%</td><td class="r">−67%</td></tr>
+<tr><td>Non-life insurance</td><td class="r">13</td><td class="r">176</td><td class="r">4.0%</td><td class="r">73.1</td><td class="r">38.4</td><td class="r">2.36</td><td class="r">6.1%</td><td class="r">13.7%</td><td class="r">−77%</td></tr>
+<tr><td>Trading</td><td class="r">2</td><td class="r">173</td><td class="r">3.9%</td><td class="r">n/m</td><td class="r">20.3</td><td class="r">2.59</td><td class="r">12.7%</td><td class="r">15.1%</td><td class="r">−58%</td></tr>
+<tr><td>Hotels &amp; tourism</td><td class="r">8</td><td class="r">136</td><td class="r">3.1%</td><td class="r">n/m</td><td class="r">103.5</td><td class="r">6.96</td><td class="r">6.7%</td><td class="r">15.2%</td><td class="r">−90%</td></tr>
+<tr><td>Finance</td><td class="r">15</td><td class="r">67</td><td class="r">1.5%</td><td class="r">42.0</td><td class="r">49.3</td><td class="r">3.61</td><td class="r">7.3%</td><td class="r">15.8%</td><td class="r">−88%</td></tr>
+<tr class="tot"><td>Market</td><td class="r">282</td><td class="r">4,457</td><td class="r">100%</td><td class="r">36.95</td><td class="r">31.32</td><td class="r">2.71</td><td class="r">8.66%</td><td class="r">13.8%</td><td class="r"></td></tr>
+</tbody></table></div>
+<div class="src">Ke is the capitalisation-weighted build-up cost of equity (Section 5). “Median model gap” is the median of (blended intrinsic value ÷ price − 1) across companies in the sector, using the strict intrinsic models of Section 6; it measures distance to textbook intrinsic value, not expected return. n/m: not meaningful (aggregate reported earnings near zero or negative).</div></div>
+
+<!-- 4 -->
+<h2 id="s4"><span class="no">4</span>Earnings normalisation</h2>
+<p>Reported earnings in Nepal are volatile for reasons unrelated to sustainable profitability: loan-loss provision charges and write-backs under changing NRB rules, one-off investment gains, regulatory dividend restrictions, and the commissioning phase of hydropower projects. Valuing a company on one year’s reported EPS can therefore materially misstate its value. For example, Kumari Bank’s reported EPS rose about 249% in one year largely because a Rs 3.45 Arba provision charge turned into a Rs 1.44 Arba write-back; on normalised earnings its EPS is about Rs 17.6 rather than the reported figure.</p>
+<h3>4.1 Return-on-equity mean reversion</h3>
+<p>Normalised ROE is a weighted average of reported ROE and the sector’s through-cycle ROE, with a lower weight on the reported figure when earnings show signs of a shock:</p>
+<div class="eq"><span><var>ROE</var><sup>N</sup><sub><var>i</var></sub> = <var>w</var> · <var>ROE</var><sup>R</sup><sub><var>i</var></sub> + (1 − <var>w</var>) · <var>ROE</var><sup>TC</sup><sub><var>s</var></sub> − <var>δ</var><sub><var>i</var></sub></span><span class="n">(2)</span></div>
+<div class="eq"><span><var>w</var> = 0.15 if shock<sub><var>i</var></sub>, otherwise 0.50; &nbsp; shock<sub><var>i</var></sub> ⇔ |Δ<var>EPS</var>| &gt; 100% ∨ <var>ROE</var><sup>R</sup> &lt; 0 ∨ <var>ROE</var><sup>R</sup> &gt; 2 · <var>ROE</var><sup>TC</sup><sub><var>s</var></sub></span><span class="n">(3)</span></div>
+<p class="where">where <var>ROE</var><sup>TC</sup><sub><var>s</var></sub> is the through-cycle ROE of sector <var>s</var> (Appendix A) and <var>δ</var><sub><var>i</var></sub> is a credit-cost drag for banks and financial institutions.</p>
+<h3>4.2 Credit-cost adjustment</h3>
+<p>For banks, development banks, finance companies and microfinance institutions, non-performing loans above 4% signal that current provisioning may understate future credit costs:</p>
+<div class="eq"><span><var>δ</var><sub><var>i</var></sub> = 0.5 · max(0, <var>NPL</var><sub><var>i</var></sub> − 4%)</span><span class="n">(4)</span></div>
+<p class="where">i.e. each percentage point of NPL above 4% reduces normalised ROE by 0.5 percentage points. Normalised ROE is floored at zero.</p>
+<h3>4.3 Normalised EPS and near-term growth</h3>
+<div class="eq"><span><var>EPS</var><sup>N</sup><sub><var>i</var></sub> = <var>ROE</var><sup>N</sup><sub><var>i</var></sub> · <var>BVPS</var><sub><var>i</var></sub>;&nbsp;&nbsp; <var>g</var><sub>1</sub> = max[2%, min(<var>g</var><sup>cap</sup><sub><var>s</var></sub>, <var>ROE</var><sup>N</sup><sub><var>i</var></sub> · (1 − <var>b</var><sub><var>s</var></sub>))]</span><span class="n">(5)</span></div>
+<p class="where">where <var>b</var><sub><var>s</var></sub> is the sector’s normal payout ratio and <var>g</var><sup>cap</sup><sub><var>s</var></sub> a five-year nominal growth cap. Book value is used as the anchor because it is far more stable than earnings and, for financial companies, is the regulatory capital base. Using book value assumes reported equity is fairly stated; companies with large unrecognised losses would be overvalued by this step.</p>
+<h3>4.4 Effect on the market</h3>
+<p>Normalisation lowers the market P/E from 36.95× to 31.32×, because aggregate normalised earnings (about Rs 142 Arba) exceed reported earnings: several sectors — notably hydropower, non-life and life insurance, and investment companies — reported earnings below their through-cycle levels. In microfinance, finance and development banks, normalisation raises the multiple because recent earnings were above sustainable levels or NPLs are elevated.</p>
+
+<!-- 5 -->
+<h2 id="s5"><span class="no">5</span>Cost of equity</h2>
+<h3>5.1 Build-up model</h3>
+<p>We use a capital asset pricing model extended for country, sector and liquidity risk:</p>
+<div class="eq"><span><var>K</var><sub><var>e</var>,<var>i</var></sub> = <var>R</var><sub><var>f</var></sub> + <var>β</var><sub><var>s</var></sub> · <var>ERP</var><sub>Nepal</sub> + <var>SRP</var><sub><var>s</var></sub> + <var>LP</var><sub><var>i</var></sub></span><span class="n">(6)</span></div>
+<p class="where">where <var>R</var><sub><var>f</var></sub> is the risk-free rate, <var>β</var><sub><var>s</var></sub> a sector beta, <var>ERP</var> the equity risk premium for Nepal, <var>SRP</var><sub><var>s</var></sub> a sector-specific premium for risks not captured by beta (regulatory, hydrological, concentration), and <var>LP</var><sub><var>i</var></sub> a company liquidity premium.</p>
+<h3>5.2 Risk-free rate and equity risk premium</h3>
+<p>We adopt Damodaran’s country risk framework (latest available update) for a consistent, internationally comparable discount rate:</p>
+<div class="eq"><span><var>ERP</var><sub>Nepal</sub> = <var>ERP</var><sub>mature</sub> + <var>CRP</var><sub>Nepal</sub> = 4.23% + 4.66% = 8.89%</span><span class="n">(7)</span></div>
+<div class="eq"><span><var>CRP</var> = Default spread<sub>rating</sub> ×</span><span class="f"><span><var>σ</var><sub>equity</sub></span><span><var>σ</var><sub>gov. bond</sub></span></span><span class="n">(8)</span></div>
+<p class="where">The default spread corresponds to Nepal’s sovereign rating (Moody’s Ba3; Fitch BB−). The rupee is pegged to the Indian rupee and the analysis uses a USD-equivalent risk-free rate of 2.94% for consistency with the Damodaran ERP. A local-currency alternative (Nepal government bond yields of about 3% and NRB’s 4.5% policy rate) gives similar results because Nepal’s nominal yields are currently close to USD levels. The tool allows the user to switch between this default and alternative rate sets.</p>
+<h3>5.3 Liquidity premium</h3>
+<p>Thin trading in small free floats imposes real costs on investors. We add a premium scaled by free-float market capitalisation (price × shares × (1 − promoter holding)):</p>
+<div class="ex"><div class="cap"><span>Exhibit 3.</span> Liquidity premium schedule</div>
+<div class="tw"><table><thead><tr><th>Free-float market cap (Rs Arba)</th><th class="r">≥ 50</th><th class="r">20–50</th><th class="r">5–20</th><th class="r">1–5</th><th class="r">&lt; 1</th></tr></thead><tbody>
+<tr><td>Liquidity premium (pp)</td><td class="r">0.0</td><td class="r">0.5</td><td class="r">1.0</td><td class="r">2.0</td><td class="r">3.0</td></tr></tbody></table></div></div>
+<h3>5.4 Worked examples</h3>
+<p>A large commercial bank: 2.94% + 0.90 × 8.89% + 0 + 0 = <b>10.94%</b>. A small hydropower company with Rs 2 Arba free float: 2.94% + 1.20 × 8.89% + 1.0% + 2.0% = <b>16.61%</b>. The capitalisation-weighted market cost of equity is <b>13.83%</b>; sector values appear in Exhibit 2.</p>
+<div class="callout"><b>Interpretation.</b> These are required returns for a globally diversified investor pricing Nepal’s risk. Domestic investors face a closed capital account and few alternatives, so the return they accept in practice is lower (Section 10). This gap is the single most important judgment in valuing NEPSE.</div>
+
+<!-- 6 -->
+<h2 id="s6"><span class="no">6</span>Company valuation models</h2>
+<p>Each company is valued with two to four models suited to its sector, then blended with sector weights (Appendix A). All models use normalised inputs by default. Long-term growth <var>g</var><sub><var>T</var></sub> is 5% nominal (4% for “others”, 0% for licence-bound hydropower).</p>
+
+<h3>6.1 Multi-stage residual income model (banks, insurers, financials)</h3>
+<p>Value equals current book value plus the present value of future earnings in excess of the cost of equity. ROE fades linearly from its normalised level to its long-term level over <var>n</var> = 5 years; thereafter residual income decays at persistence rate <var>ω</var> = 0.7:</p>
+<div class="eq"><span><var>V</var><sub>0</sub> = <var>B</var><sub>0</sub> + Σ<sub><var>t</var>=1</sub><sup><var>n</var></sup></span><span class="f"><span>(<var>ROE</var><sub><var>t</var></sub> − <var>K</var><sub><var>e</var></sub>) · <var>B</var><sub><var>t</var>−1</sub></span><span>(1 + <var>K</var><sub><var>e</var></sub>)<sup><var>t</var></sup></span></span><span>+</span><span class="f"><span>(<var>ROE</var><sub>LT</sub> − <var>K</var><sub><var>e</var></sub>) · <var>B</var><sub><var>n</var></sub></span><span>(1 + <var>K</var><sub><var>e</var></sub> − <var>ω</var>)(1 + <var>K</var><sub><var>e</var></sub>)<sup><var>n</var></sup></span></span><span class="n">(9)</span></div>
+<p class="where">with <var>B</var><sub><var>t</var></sub> = <var>B</var><sub><var>t</var>−1</sub>(1 + <var>ROE</var><sub><var>t</var></sub>(1 − payout)). Residual income is preferred for financial companies because it anchors on regulatory book value and is less sensitive to terminal assumptions than a DCF.</p>
+
+<h3>6.2 Justified price-to-book (Gordon form)</h3>
+<div class="eq"><span><var>V</var><sub>0</sub> = <var>B</var><sub>0</sub> ·</span><span class="f"><span><var>ROE</var> − <var>g</var><sub><var>T</var></sub></span><span><var>K</var><sub><var>e</var></sub> − <var>g</var><sub><var>T</var></sub></span></span><span class="n">(10)</span></div>
+<p class="where">A company earning exactly its cost of equity is worth book value; the model is undefined when <var>K</var><sub><var>e</var></sub> ≤ <var>g</var><sub><var>T</var></sub>.</p>
+
+<h3>6.3 Two-stage dividend discount model</h3>
+<div class="eq"><span><var>V</var><sub>0</sub> = Σ<sub><var>t</var>=1</sub><sup><var>n</var></sup></span><span class="f"><span><var>EPS</var><sub>0</sub>(1 + <var>g</var><sub>1</sub>)<sup><var>t</var></sup> · <var>p</var><sub>1</sub></span><span>(1 + <var>K</var><sub><var>e</var></sub>)<sup><var>t</var></sup></span></span><span>+</span><span class="f"><span><var>EPS</var><sub><var>n</var></sub>(1 + <var>g</var><sub><var>T</var></sub>) · <var>p</var><sub><var>T</var></sub></span><span>(<var>K</var><sub><var>e</var></sub> − <var>g</var><sub><var>T</var></sub>)(1 + <var>K</var><sub><var>e</var></sub>)<sup><var>n</var></sup></span></span><span>,&nbsp; <var>p</var><sub><var>T</var></sub> = 1 −</span><span class="f"><span><var>g</var><sub><var>T</var></sub></span><span><var>ROE</var><sub>LT</sub></span></span><span class="n">(11)</span></div>
+<p class="where">The terminal payout is set consistently with sustainable growth, so that growth is funded by retained earnings at the long-term ROE. First-stage payout <var>p</var><sub>1</sub> is the current cash payout, floored at 10%. Bonus shares are not treated as dividends; they change share count but not value.</p>
+
+<h3>6.4 Free cash flow to the firm (manufacturing, hotels, trading, others)</h3>
+<div class="eq"><span><var>FCFF</var><sub><var>t</var></sub> = <var>Rev</var><sub><var>t</var></sub>[<var>m</var>(1 − <var>τ</var>) + <var>d</var> − <var>c</var>] − <var>w</var>(<var>Rev</var><sub><var>t</var></sub> − <var>Rev</var><sub><var>t</var>−1</sub>)</span><span class="n">(12)</span></div>
+<div class="eq"><span><var>WACC</var> =</span><span class="f"><span><var>E</var></span><span><var>E</var> + <var>D</var></span></span><span><var>K</var><sub><var>e</var></sub> +</span><span class="f"><span><var>D</var></span><span><var>E</var> + <var>D</var></span></span><span><var>K</var><sub><var>d</var></sub>(1 − <var>τ</var>);&nbsp;&nbsp; <var>V</var><sub>equity</sub> = Σ</span><span class="f"><span><var>FCFF</var><sub><var>t</var></sub></span><span>(1+<var>WACC</var>)<sup><var>t</var></sup></span></span><span>+ <var>TV</var> − <var>Debt</var> + <var>Cash</var></span><span class="n">(13)</span></div>
+<p class="where"><var>m</var> is EBIT margin, <var>d</var> and <var>c</var> depreciation and capital expenditure as shares of revenue, <var>w</var> net working capital intensity, <var>τ</var> tax rate. Revenue growth fades linearly from <var>g</var><sub>1</sub> to <var>g</var><sub><var>T</var></sub> over five years. Terminal reinvestment is set to maintenance capex plus the growth component, avoiding the common error of a terminal value that grows without reinvestment.</p>
+
+<h3>6.5 Licence-bound project FCFE (hydropower)</h3>
+<p>Hydropower companies operate under generation licences of typically 30–35 years, after which assets revert to the Government of Nepal. A perpetuity model is therefore inappropriate. We discount free cash flow to equity until licence expiry with zero terminal value:</p>
+<div class="eq"><span><var>V</var><sub>0</sub> = Σ<sub><var>t</var>=1</sub><sup><var>L</var></sup></span><span class="f"><span><var>NI</var><sub><var>t</var></sub> + <var>Dep</var><sub><var>t</var></sub> − <var>Capex</var><sub><var>t</var></sub> − <var>Principal</var><sub><var>t</var></sub></span><span>(1 + <var>K</var><sub><var>e</var></sub>)<sup><var>t</var></sup></span></span><span>+ <var>Cash</var><sub>0</sub></span><span class="n">(14)</span></div>
+<p class="where">Revenue = design energy × plant availability × PPA tariff (with contractual escalation); royalties combine a capacity charge per MW and an energy royalty that steps up after year 15; tax holidays and half-rate periods follow the Electricity Act; debt amortises over the loan tenor. Minimum debt-service cover is reported as a solvency check. Where project-level inputs are not available, the model falls back to the generic equity models in 6.1–6.3, which is the case for most companies in this market-level study.</p>
+
+<h3>6.6 Appraisal value (life insurance)</h3>
+<div class="eq"><span><var>V</var> = <var>ANW</var> + <var>VIF</var> + <var>k</var> · <var>VNB</var>;&nbsp;&nbsp; <var>VIF</var> ≈ <var>EPS</var><sup>N</sup> ·</span><span class="f"><span>1 − (1 + <var>K</var><sub><var>e</var></sub>)<sup>−<var>n</var></sup></span><span><var>K</var><sub><var>e</var></sub></span></span><span class="n">(15)</span></div>
+<p class="where">Adjusted net worth (book value) plus the value of in-force business plus a multiple of new-business value. Nepali insurers do not publish embedded value, so VIF is proxied as an annuity of normalised shareholder profit over a 10-year run-off; VNB is excluded unless supplied.</p>
+
+<h3>6.7 Normalised underwriting ROE (non-life insurance)</h3>
+<div class="eq"><span><var>ROE</var><sup>NL</sup> =</span><span class="f"><span>[<var>NEP</var> · (1 − <var>CR</var><sub>norm</sub>) + <var>IA</var> · <var>y</var>] · (1 − <var>τ</var>)</span><span><var>Equity</var></span></span><span class="n">(16)</span></div>
+<p class="where">Net earned premium times one minus the normalised combined ratio, plus investment assets times yield. This ROE then drives the residual income and justified P/B models.</p>
+
+<h3>6.8 Sum-of-the-parts NAV (investment companies)</h3>
+<div class="eq"><span><var>NAV</var> = <var>MV</var><sub>listed</sub> + <var>a</var> · <var>BV</var><sub>unlisted</sub> + <var>Loans</var> + <var>Cash</var> + <var>Other</var> − <var>Liabilities</var> − <var>t</var><sub><var>cg</var></sub> · max(0, <var>MV</var> − <var>BV</var>)<sub>listed</sub>;&nbsp; <var>V</var> = <var>NAV</var>(1 − <var>h</var>)</span><span class="n">(17)</span></div>
+<p class="where">Deferred capital gains tax at 25% is deducted on unrealised gains, and a 20% holding-company discount <var>h</var> reflects illiquidity, costs and governance. Because listed holdings are themselves marked at NEPSE prices, NAV inherits market overvaluation.</p>
+
+<h3>6.9 Cycle-normal relative valuation</h3>
+<div class="eq"><span><var>V</var><sup>rel</sup> = <var>EPS</var><sup>N</sup> × 18.5;&nbsp;&nbsp; <var>V</var><sup>EV/EBITDA</sup> = <var>EBITDA</var> × <var>M</var><sub><var>s</var></sub> − <var>Debt</var> + <var>Cash</var>;&nbsp;&nbsp; <var>V</var><sup>EV/MW</sup> = <var>Bench</var> × <var>MW</var> − <var>Debt</var> + <var>Cash</var></span><span class="n">(18)</span></div>
+<p class="where">Relative models use NEPSE’s own cycle-normal multiple (Section 7) rather than current peer multiples, which would only reproduce prevailing market levels.</p>
+
+<h3>6.10 Blending, dispersion and fallback</h3>
+<div class="eq"><span><var>V</var><sup>*</sup> =</span><span class="f"><span>Σ<sub><var>k</var></sub> <var>w</var><sub><var>k</var></sub> <var>V</var><sub><var>k</var></sub> · 𝟙(<var>V</var><sub><var>k</var></sub> &gt; 0)</span><span>Σ<sub><var>k</var></sub> <var>w</var><sub><var>k</var></sub> · 𝟙(<var>V</var><sub><var>k</var></sub> &gt; 0)</span></span><span>;&nbsp;&nbsp; <var>CV</var> =</span><span class="f"><span><var>σ</var>(<var>V</var><sub><var>k</var></sub>)</span><span><var>μ</var>(<var>V</var><sub><var>k</var></sub>)</span></span><span class="n">(19)</span></div>
+<p class="where">Models returning missing or non-positive values are excluded and weights re-scaled. The coefficient of variation across models is reported as a confidence measure. If a sector’s primary model lacks inputs (for example project data for hydropower), weights default to residual income 40%, justified P/B 25%, DDM 20%, relative P/E 15%. A Graham number √(22.5 · EPS · BVPS) is shown for reference only.</p>
+
+<h3>6.11 Classification and reverse valuation</h3>
+<p>Each company is placed in one of five zones by comparing price <var>P</var> with blended value <var>V</var><sup>*</sup> and cycle bands <var>EPS</var><sup>N</sup> × {12.3, 42.3}: below cycle-low (<var>P</var> ≤ 12.3 · <var>EPS</var><sup>N</sup>); below intrinsic (<var>P</var> ≤ 0.95<var>V</var><sup>*</sup>); near intrinsic (±5%); above intrinsic within NEPSE’s historical range; and above the 2021 peak multiple (<var>P</var> ≥ 42.3 · <var>EPS</var><sup>N</sup>). Reverse valuation solves for what the price implies:</p>
+<div class="eq"><span><var>K</var><sub><var>e</var></sub><sup>impl</sup> = <var>g</var> +</span><span class="f"><span><var>ROE</var> − <var>g</var></span><span><var>P</var>/<var>B</var></span></span><span>;&nbsp;&nbsp; <var>ROE</var><sup>req</sup> = <var>g</var> + <var>P</var>/<var>B</var> · (<var>K</var><sub><var>e</var></sub> − <var>g</var>);&nbsp;&nbsp; <var>g</var><sup>impl</sup> =</span><span class="f"><span><var>P</var> · <var>K</var><sub><var>e</var></sub> − <var>D</var></span><span><var>P</var> + <var>D</var></span></span><span class="n">(20)</span></div>
+
+<div class="ex"><div class="cap"><span>Exhibit 4.</span> Distribution of companies by valuation zone (normalised earnings)</div>
+<div class="tw"><table><thead><tr><th>Zone</th><th class="r">Companies</th><th class="r">Share</th></tr></thead><tbody>
+<tr><td>Below cycle-low valuation</td><td class="r">2</td><td class="r">0.7%</td></tr>
+<tr><td>Below / near intrinsic value</td><td class="r">0</td><td class="r">0.0%</td></tr>
+<tr><td>Above intrinsic, within NEPSE historical range</td><td class="r">96</td><td class="r">34.0%</td></tr>
+<tr class="hl"><td>Above 2021 peak multiple</td><td class="r">182</td><td class="r">64.5%</td></tr>
+<tr><td>Insufficient data</td><td class="r">2</td><td class="r">0.7%</td></tr>
+</tbody></table></div>
+<div class="src">The two companies below cycle-low valuation are NBL and NLO. Strict intrinsic values use the global-investor cost of equity of Section 5, which is why almost no company screens below intrinsic value; see Section 10 for the reconciliation with market-based anchors.</div></div>
+
+<!-- 7 -->
+<h2 id="s7"><span class="no">7</span>Market cycle analysis</h2>
+<p>NEPSE has completed several full cycles since 2008. Turning points share a consistent valuation signature: troughs at 12–13× earnings and peaks at 35–42×, with peaks coinciding with periods of abundant liquidity and low deposit rates, and troughs following credit tightening.</p>
+<div class="ex"><div class="cap"><span>Exhibit 5.</span> Market P/E at major turning points</div>
+<svg viewBox="0 0 760 300" role="img" aria-label="NEPSE P/E at turning points">
+<g font-size="12" fill="#4c616a">
+<line x1="60" x2="730" y1="250" y2="250" stroke="#cfdde2"/><text x="52" y="254" text-anchor="end">0×</text>
+<line x1="60" x2="730" y1="195.6" y2="195.6" stroke="#cfdde2"/><text x="52" y="199.6" text-anchor="end">10×</text>
+<line x1="60" x2="730" y1="141.1" y2="141.1" stroke="#cfdde2"/><text x="52" y="145.1" text-anchor="end">20×</text>
+<line x1="60" x2="730" y1="86.7" y2="86.7" stroke="#cfdde2"/><text x="52" y="90.7" text-anchor="end">30×</text>
+<line x1="60" x2="730" y1="32.2" y2="32.2" stroke="#cfdde2"/><text x="52" y="36.2" text-anchor="end">40×</text>
+<text x="101" y="272" text-anchor="middle">2012</text><text x="223" y="272" text-anchor="middle">2015</text><text x="345" y="272" text-anchor="middle">2018</text><text x="467" y="272" text-anchor="middle">2021</text><text x="589" y="272" text-anchor="middle">2024</text><text x="711" y="272" text-anchor="middle">2027</text>
+</g>
+<line x1="60" x2="730" y1="149.3" y2="149.3" stroke="#0c1d24" stroke-dasharray="5 4" opacity=".5"/><text x="66" y="143" font-size="12" fill="#4c616a">Cycle-normal 18.5×</text>
+<circle cx="109" cy="184.7" r="6" fill="#8aa4ad"/><text x="109" y="215" font-size="13" font-weight="600" text-anchor="middle" fill="#0c1d24">2011/12 low ≈12×</text><text x="109" y="230" font-size="12" text-anchor="middle" fill="#4c616a">NEPSE 292</text>
+<circle cx="389" cy="183.2" r="6" fill="#8aa4ad"/><text x="389" y="215" font-size="13" font-weight="600" text-anchor="middle" fill="#0c1d24">Feb 2019 low 12.27×</text><text x="389" y="230" font-size="12" text-anchor="middle" fill="#4c616a">NEPSE 1,112 · P/B 1.78×</text>
+<circle cx="491" cy="19.9" r="6" fill="#8aa4ad"/><text x="481" y="24" font-size="13" font-weight="600" text-anchor="end" fill="#0c1d24">Aug 2021 peak 42.28×</text><text x="481" y="39" font-size="12" text-anchor="end" fill="#4c616a">NEPSE 3,199</text>
+<circle cx="662" cy="41.4" r="6" fill="#8aa4ad"/><text x="650" y="64" font-size="12" text-anchor="end" fill="#4c616a">Oct 2025: 38.3×</text>
+<circle cx="707" cy="49" r="8" fill="#d81b60"/><text x="716" y="82" font-size="13" font-weight="700" text-anchor="end" fill="#d81b60">Nov 2026: 36.95×</text>
+</svg>
+<div class="src">Sources: The Himalayan Times (2019 trough), Sharesansar (2021 peak, Oct 2025), author’s calculation (Nov 2026). 2011/12 P/E approximate. Dots mark turning points only.</div></div>
+<div class="ex"><div class="cap"><span>Exhibit 6.</span> NEPSE cycles, 2008–2026</div>
+<div class="tw"><table><thead><tr><th>Phase</th><th class="r">Index move</th><th class="r">Change</th><th>Drivers</th></tr></thead><tbody>
+<tr><td>2008 → 2011/12 (bear)</td><td class="r">1,175 → 292</td><td class="r">−75%</td><td>End of credit and real-estate boom; liquidity freeze; P/E ≈ 12×</td></tr>
+<tr><td>2012 → 2016 (bull)</td><td class="r">298 → 1,881</td><td class="r">+531%</td><td>Excess liquidity, post-earthquake reconstruction, capital increase directives; bank P/E ≈ 35×</td></tr>
+<tr><td>2016 → 2019 (bear)</td><td class="r">1,881 → 1,112</td><td class="r">−41%</td><td>Credit crunch and higher rates; trough P/E 12.3×, P/B 1.78×</td></tr>
+<tr><td>2020 → 2021 (bull)</td><td class="r">≈1,100 → 3,199</td><td class="r">+190%</td><td>COVID-era rate cuts, retail account surge, margin lending; peak P/E 42.3×</td></tr>
+<tr><td>2021 → 2022 (bear)</td><td class="r">3,199 → 1,807</td><td class="r">−44%</td><td>Rate hikes, margin-loan caps, liquidity squeeze</td></tr>
+<tr class="hl"><td>2023 → 2026</td><td class="r">≈1,800 → 2,624</td><td class="r">+46%</td><td>Excess liquidity, policy-rate cuts, new listings; P/E back to 36.9×</td></tr>
+</tbody></table></div></div>
+<h3>7.1 Choice of anchors</h3>
+<p><b>Trough (12.3×, P/B 1.78×):</b> the February 2019 market low, consistent with the 2011/12 low. <b>Cycle-normal (18.5×):</b> set between the MSCI Frontier (13.3×) and broad emerging-market (16–19×) multiples, and close to the midpoint of NEPSE’s own trough-to-peak range on a log scale (√(12.3 × 42.3) ≈ 22.8× is the geometric midpoint; 18.5× is deliberately set below it because past peaks were liquidity-driven and transient). <b>Peak (42.3×):</b> the August 2021 high. Company-level cycle bands are <var>EPS</var><sup>N</sup> × {12.3, 18.5, 42.3}.</p>
+
+<!-- 8 -->
+<h2 id="s8"><span class="no">8</span>Why valuations returned to 2021 levels</h2>
+<p>The index is 18% below its peak, yet market value is higher. The two are reconciled by separating the price of the existing index basket from new supply. Define index-level earnings and market value per index point:</p>
+<div class="eq"><span><var>E</var><sup>idx</sup> =</span><span class="f"><span><var>I</var></span><span>P/E<sub>mkt</sub></span></span><span>;&nbsp;&nbsp; <var>MV</var><sup>pt</sup> =</span><span class="f"><span><var>MCap</var></span><span><var>I</var></span></span><span class="n">(21)</span></div>
+<div class="ex"><div class="cap"><span>Exhibit 7.</span> 2021 peak versus today</div>
+<div class="tw"><table><thead><tr><th>Measure</th><th class="r">2021 peak</th><th class="r">Now</th><th class="r">Change</th></tr></thead><tbody>
+<tr><td>NEPSE index</td><td class="r">3,198.60</td><td class="r">2,623.56</td><td class="r">−18%</td></tr>
+<tr><td>Market capitalisation</td><td class="r">Rs 4.34 tn (Aug 2021)</td><td class="r">Rs 4.83 tn (Apr 2026)</td><td class="r">+11%</td></tr>
+<tr><td>Market value per index point</td><td class="r">Rs 1.40 Arba</td><td class="r">Rs 1.67–1.70 Arba</td><td class="r">+20%</td></tr>
+<tr><td>Index-level earnings, <var>E</var><sup>idx</sup></td><td class="r">75.7</td><td class="r">71.0</td><td class="r">−6%</td></tr>
+<tr><td>Market P/E</td><td class="r">42.3×</td><td class="r">36.9×</td><td class="r">−13%</td></tr>
+<tr><td>Aggregate earnings</td><td class="r"></td><td class="r"></td><td class="r">≈ +14% (≈2.6% p.a.)</td></tr>
+</tbody></table></div>
+<div class="src">2021 earnings estimated as market capitalisation ÷ P/E. Sources: Sharesansar, The Himalayan Times, author’s calculations.</div></div>
+<p>Four mechanisms explain the pattern. <b>(i) Supply at high multiples.</b> Most listings since 2021 are hydropower companies; the sector now has 111 stocks at 78.6× reported earnings and a 7.6% normalised ROE (median ROE near 4%). These listings raise market value per index point without adding commensurate earnings. <b>(ii) Stalled incumbent earnings.</b> Banks absorbed heavy provisioning; insurers, microfinance and finance companies saw profits decline. <b>(iii) Liquidity.</b> NRB’s policy rate of 4.5%, development-bond yields near 3%, and a closed capital account channel remittance-driven savings into equities. <b>(iv) Bonus-share illusion.</b> Bonus issues raise share counts and dilute EPS, but are widely treated as returns, supporting demand without adding value.</p>
+<p>Breadth confirms that the typical stock is more expensive than in 2021: commercial banks (27% of market value at 19.6×) hold the aggregate multiple down, while the remaining 73% trades at roughly 55× earnings.</p>
+
+<!-- 9 -->
+<h2 id="s9"><span class="no">9</span>International and macro-peer comparison</h2>
+<div class="ex"><div class="cap"><span>Exhibit 8.</span> Trailing P/E: NEPSE and world markets</div>
+<svg viewBox="0 0 760 360" role="img" aria-label="Trailing P/E comparison">
+<g font-size="13">
+<text x="170" y="28" text-anchor="end" fill="#d81b60" font-weight="700">NEPSE (Nepal)</text><rect x="180" y="14" width="472" height="20" fill="#d81b60"/><text x="658" y="29" fill="#4c616a">36.9×</text>
+<text x="170" y="56" text-anchor="end" fill="#0c1d24">Developed markets</text><rect x="180" y="42" width="293" height="20" fill="#8aa4ad"/><text x="479" y="57" fill="#4c616a">23.0×</text>
+<text x="170" y="84" text-anchor="end" fill="#0c1d24">Global</text><rect x="180" y="70" width="276" height="20" fill="#8aa4ad"/><text x="462" y="85" fill="#4c616a">21.6×</text>
+<text x="170" y="112" text-anchor="end" fill="#0c1d24">India</text><rect x="180" y="98" width="255" height="20" fill="#8aa4ad"/><text x="441" y="113" fill="#4c616a">≈20×</text>
+<text x="170" y="140" text-anchor="end" fill="#0c1d24">Vietnam</text><rect x="180" y="126" width="204" height="20" fill="#8aa4ad"/><text x="390" y="141" fill="#4c616a">≈16×</text>
+<text x="170" y="168" text-anchor="end" fill="#0c1d24">Emerging markets</text><rect x="180" y="154" width="204" height="20" fill="#8aa4ad"/><text x="390" y="169" fill="#4c616a">16.0×</text>
+<text x="170" y="196" text-anchor="end" fill="#0c1d24">MSCI Frontier</text><rect x="180" y="182" width="170" height="20" fill="#8aa4ad"/><text x="356" y="197" fill="#4c616a">13.3×</text>
+<text x="170" y="224" text-anchor="end" fill="#0c1d24">Sri Lanka</text><rect x="180" y="210" width="140" height="20" fill="#8aa4ad"/><text x="326" y="225" fill="#4c616a">≈11×</text>
+<text x="170" y="252" text-anchor="end" fill="#0c1d24">Bangladesh</text><rect x="180" y="238" width="129" height="20" fill="#8aa4ad"/><text x="315" y="253" fill="#4c616a">10.1×</text>
+<text x="170" y="280" text-anchor="end" fill="#0c1d24">Nigeria</text><rect x="180" y="266" width="128" height="20" fill="#8aa4ad"/><text x="314" y="281" fill="#4c616a">≈10×</text>
+<text x="170" y="308" text-anchor="end" fill="#0c1d24">Pakistan</text><rect x="180" y="294" width="111" height="20" fill="#8aa4ad"/><text x="297" y="309" fill="#4c616a">8.7×</text>
+<text x="170" y="336" text-anchor="end" fill="#0c1d24">Kenya</text><rect x="180" y="322" width="93" height="20" fill="#8aa4ad"/><text x="279" y="337" fill="#4c616a">7.3×</text>
+</g></svg>
+<div class="src">Sources: Siblis Research (developed, global, emerging; September 2026); Sharesansar global survey (April 2026) and exchange data for country markets; MSCI Frontier factsheet. Country figures are approximate and dated within 2026.</div></div>
+<div class="ex"><div class="cap"><span>Exhibit 9.</span> Macro peers</div>
+<div class="tw"><table><thead><tr><th>Market</th><th class="r">GDP per head (US$)</th><th class="r">Trailing P/E</th><th class="r">Market cap / GDP</th><th class="r">Dividend yield</th></tr></thead><tbody>
+<tr class="hl"><td>Nepal</td><td class="r">≈1,430</td><td class="r">36.9×</td><td class="r">≈73%</td><td class="r">1–2%</td></tr>
+<tr><td>Pakistan</td><td class="r">≈1,580</td><td class="r">8.7×</td><td class="r">14–17%</td><td class="r">≈6.8%</td></tr>
+<tr><td>Kenya</td><td class="r">≈1,910</td><td class="r">7.3×</td><td class="r">≈21%</td><td class="r">4–6%</td></tr>
+<tr><td>Bangladesh</td><td class="r">≈2,630</td><td class="r">10.1×</td><td class="r">6–20%</td><td class="r">3–4%</td></tr>
+<tr><td>Sri Lanka</td><td class="r">≈4,520</td><td class="r">≈11×</td><td class="r">—</td><td class="r">3–3.2%</td></tr>
+<tr><td>MSCI Frontier</td><td class="r"></td><td class="r">13.3×</td><td class="r"></td><td class="r">3.1%</td></tr>
+</tbody></table></div>
+<div class="src">GDP per head: ADB, IMF (latest available). MSCI Frontier P/B 1.99×. Nepal is rated Ba3 (Moody’s) and BB− (Fitch).</div></div>
+<p>Across frontier and emerging markets, valuation multiples rise with income, institutional depth and openness to foreign capital; market capitalisation relative to GDP tends to rise with income as well. Nepal inverts these regularities: the lowest income per head in the peer group, the highest multiple, the highest market cap to GDP and the lowest dividend yield. The premium is not explained by profitability (normalised ROE 8.7%) or risk (ERP 8.89% versus 7.08% for India and 4.23% for mature markets). The most plausible explanation is structural: a closed capital account, captive remittance-fed domestic liquidity, near-zero real deposit rates, limited real-sector listings and minimal foreign participation.</p>
+
+<!-- 10 -->
+<h2 id="s10"><span class="no">10</span>Theoretical versus empirical anchors</h2>
+<p>For a market in steady state, the justified multiples follow from the sustainable-growth identity <var>g</var> = <var>ROE</var>(1 − payout):</p>
+<div class="eq"><span>P/E<sup>*</sup> =</span><span class="f"><span>(1 − <var>g</var>/<var>ROE</var>)(1 + <var>g</var>)</span><span><var>K</var><sub><var>e</var></sub> − <var>g</var></span></span><span>;&nbsp;&nbsp; P/B<sup>*</sup> =</span><span class="f"><span><var>ROE</var> − <var>g</var></span><span><var>K</var><sub><var>e</var></sub> − <var>g</var></span></span><span class="n">(22)</span></div>
+<div class="ex"><div class="cap"><span>Exhibit 10.</span> Justified market P/E by ROE and cost of equity (g = 5%)</div>
+<div class="tw"><table><thead><tr><th>ROE \ Ke</th><th class="r">11.0%</th><th class="r">12.5%</th><th class="r">13.8%</th><th class="r">15.0%</th></tr></thead><tbody>
+<tr class="hl"><td>8.7% (current)</td><td class="r">7.4×</td><td class="r">6.0×</td><td class="r">5.1×</td><td class="r">4.5×</td></tr>
+<tr><td>10%</td><td class="r">8.8×</td><td class="r">7.0×</td><td class="r">6.0×</td><td class="r">5.3×</td></tr>
+<tr><td>12%</td><td class="r">10.2×</td><td class="r">8.2×</td><td class="r">7.0×</td><td class="r">6.1×</td></tr>
+<tr><td>14%</td><td class="r">11.2×</td><td class="r">9.0×</td><td class="r">7.7×</td><td class="r">6.8×</td></tr>
+</tbody></table></div>
+<div class="src">At Ke = 13.8% and g = 5%, the justified P/B for ROE of 8.7% is 0.42×. No ROE can justify 31× at this cost of equity: the ceiling as ROE → ∞ is (1+g)/(Ke−g) = 11.9×.</div></div>
+<p>Inverting equation (22) at today’s P/B of 2.71× and normalised ROE of 8.66% gives a <b>market-implied cost of equity of about 6.4%</b> (6.35% from P/B; 6.42% from the normalised P/E). Equivalently, at a 13.8% cost of equity the market would require a sustainable ROE of about 29% to justify its book multiple. Investors are therefore pricing NEPSE equities to return roughly what bank deposits and government bonds yield, with little or no risk premium.</p>
+<p>NEPSE has never traded at these textbook values: even the 2019 trough was 1.78× book. This is why the paper uses two lenses. Company-level intrinsic values (Section 6) answer “what would a global investor pay?”, while market-level fair values (Section 11) answer “what has NEPSE itself sustained through cycles?”. The second lens is more relevant for the index; the first indicates how much of today’s price rests on Nepal-specific liquidity conditions.</p>
+
+<!-- 11 -->
+<h2 id="s11"><span class="no">11</span>Fair index estimation</h2>
+<p>Holding today’s earnings base fixed, the index level consistent with a target multiple scales linearly:</p>
+<div class="eq"><span><var>I</var><sup>fair</sup> = <var>I</var><sub>0</sub> ×</span><span class="f"><span>P/E<sup>target</sup></span><span>P/E<sub>0</sub></span></span><span>;&nbsp;&nbsp; Premium embedded =</span><span class="f"><span>P/E<sub>0</sub></span><span>18.5</span></span><span>− 1</span><span class="n">(23)</span></div>
+<p class="where">with <var>I</var><sub>0</sub> = 2,623.56 and P/E<sub>0</sub> = 31.32 (normalised) or 36.95 (reported). The assumption that the index moves proportionally with aggregate market value is discussed in Section 15.</p>
+<div class="ex"><div class="cap"><span>Exhibit 11.</span> Fair NEPSE index by target multiple</div>
+<div class="tw"><table><thead><tr><th>Basis</th><th class="r">Target P/E</th><th class="r">Fair index (normalised)</th><th class="r">vs today</th><th class="r">Fair index (reported)</th><th class="r">vs today</th></tr></thead><tbody>
+<tr><td>Cycle low</td><td class="r">12.30×</td><td class="r">1,030</td><td class="r">−61%</td><td class="r">873</td><td class="r">−67%</td></tr>
+<tr><td>Cycle-normal</td><td class="r">18.50×</td><td class="r">1,550</td><td class="r">−41%</td><td class="r">1,314</td><td class="r">−50%</td></tr>
+<tr><td>+20% premium</td><td class="r">22.20×</td><td class="r">1,859</td><td class="r">−29%</td><td class="r">1,576</td><td class="r">−40%</td></tr>
+<tr class="hl"><td>+30% premium</td><td class="r">24.05×</td><td class="r">2,014</td><td class="r">−23%</td><td class="r">1,708</td><td class="r">−35%</td></tr>
+<tr><td>+40% premium</td><td class="r">25.90×</td><td class="r">2,169</td><td class="r">−17%</td><td class="r">1,839</td><td class="r">−30%</td></tr>
+<tr><td>+50% premium</td><td class="r">27.75×</td><td class="r">2,324</td><td class="r">−11%</td><td class="r">1,970</td><td class="r">−25%</td></tr>
+<tr><td>2021 peak</td><td class="r">42.30×</td><td class="r">3,543</td><td class="r">+35%</td><td class="r">3,004</td><td class="r">+15%</td></tr>
+</tbody></table></div>
+<div class="src">Today embeds a premium of 69% over cycle-normal on normalised earnings (31.32/18.5) and 100% on reported earnings (36.95/18.5).</div></div>
+<h3>11.1 Why allow a premium</h3>
+<p>A 20–30% premium is defensible while the structural conditions of Section 9 persist: captive liquidity, negative or near-zero real deposit rates, scarcity of investable listed assets, and limited outward investment options. The premium should be expected to compress if deposit rates rise to double digits, foreign portfolio access opens, or listing supply accelerates.</p>
+
+<!-- 12 -->
+<h2 id="s12"><span class="no">12</span>Required earnings growth</h2>
+<p>We ask what annual earnings growth over three years would bring today’s multiple down to a target multiple, under two tests. <b>Test A</b> holds the index flat. <b>Test B</b> requires the index to deliver an 11% annual price return, a conservative proxy for the required return (bottom-up Ke of 13.8% less a dividend yield of about 1.5–2.5%).</p>
+<div class="eq"><span>Test A: &nbsp;<var>g</var><sup>req</sup> =</span><span>(</span><span class="f"><span>P/E<sub>0</sub></span><span>P/E<sup>target</sup></span></span><span>)<sup>1/3</sup> − 1</span><span>;&nbsp;&nbsp; Test B: &nbsp;<var>g</var><sup>req</sup> = (1 + <var>r</var>)</span><span>(</span><span class="f"><span>P/E<sub>0</sub></span><span>P/E<sup>target</sup></span></span><span>)<sup>1/3</sup> − 1</span><span class="n">(24)</span></div>
+<div class="ex"><div class="cap"><span>Exhibit 12.</span> Required annual earnings growth, 3 years</div>
+<div class="tw"><table><thead><tr><th>Target P/E in 3 years</th><th class="r">A: normalised</th><th class="r">A: reported</th><th class="r">B: normalised</th><th class="r">B: reported</th></tr></thead><tbody>
+<tr><td>18.50× (cycle-normal)</td><td class="r">19.2%</td><td class="r">25.9%</td><td class="r">32.3%</td><td class="r">39.8%</td></tr>
+<tr><td>22.20× (+20%)</td><td class="r">12.2%</td><td class="r">18.5%</td><td class="r">24.5%</td><td class="r">31.5%</td></tr>
+<tr class="hl"><td>24.05× (+30%)</td><td class="r">9.2%</td><td class="r">15.4%</td><td class="r">21.2%</td><td class="r">28.1%</td></tr>
+<tr><td>25.90× (+40%)</td><td class="r">6.5%</td><td class="r">12.6%</td><td class="r">18.3%</td><td class="r">25.0%</td></tr>
+<tr><td>27.75× (+50%)</td><td class="r">4.1%</td><td class="r">10.0%</td><td class="r">15.6%</td><td class="r">22.1%</td></tr>
+</tbody></table></div></div>
+<h3>12.1 Feasibility</h3>
+<p>Aggregate earnings have grown about 2.6% a year since 2021. Nominal GDP growth targets are about 12.5% and private credit growth about 11% (NRB Monetary Policy 2083/84). Earnings growth can be decomposed into balance-sheet growth and changes in profitability:</p>
+<div class="eq"><span>1 + <var>g</var><sub><var>E</var></sub> = (1 + <var>g</var><sub><var>B</var></sub>) ×</span><span class="f"><span><var>ROE</var><sub><var>t</var></sub></span><span><var>ROE</var><sub><var>t</var>−1</sub></span></span><span class="n">(25)</span></div>
+<p>With retention-funded book growth of roughly 4–6% a year, Test A at a 30% premium (9.2%) requires market ROE to rise from 8.7% to about 10% over three years, plausible if bank NPLs fall and hydropower projects reach full operation. Test B (21.2%) would require ROE to reach roughly 13–14%, a level not sustained by the market in the recent cycle. Validating today’s level with a normal equity return therefore rests on a combination of strong earnings recovery and the persistence of a large structural premium.</p>
+<div class="ex"><div class="cap"><span>Exhibit 13.</span> Sensitivity: index level in 3 years by structural premium and earnings growth (normalised basis)</div>
+<div class="tw"><table><thead><tr><th>Premium over 18.5× \ earnings growth p.a.</th><th class="r">0%</th><th class="r">4%</th><th class="r">8%</th><th class="r">12%</th><th class="r">16%</th></tr></thead><tbody>
+<tr><td>0% (18.5×)</td><td class="r">1,550</td><td class="r">1,743</td><td class="r">1,952</td><td class="r">2,177</td><td class="r">2,419</td></tr>
+<tr><td>20% (22.2×)</td><td class="r">1,860</td><td class="r">2,092</td><td class="r">2,343</td><td class="r">2,613</td><td class="r">2,903</td></tr>
+<tr class="hl"><td>30% (24.05×)</td><td class="r">2,015</td><td class="r">2,266</td><td class="r">2,538</td><td class="r">2,830</td><td class="r">3,145</td></tr>
+<tr><td>40% (25.9×)</td><td class="r">2,170</td><td class="r">2,440</td><td class="r">2,733</td><td class="r">3,048</td><td class="r">3,386</td></tr>
+<tr><td>50% (27.75×)</td><td class="r">2,325</td><td class="r">2,615</td><td class="r">2,928</td><td class="r">3,266</td><td class="r">3,628</td></tr>
+<tr><td>69% (today, 31.3×)</td><td class="r">2,619</td><td class="r">2,946</td><td class="r">3,299</td><td class="r">3,679</td><td class="r">4,088</td></tr>
+</tbody></table></div>
+<div class="src"><var>I</var><sub>3</sub> = 2,623.56 × (18.5 × (1+premium) / 31.32) × (1+g)<sup>3</sup>. Values are model-consistent index levels, not forecasts.</div></div>
+
+<!-- 13 -->
+<h2 id="s13"><span class="no">13</span>Scenario analysis and outlook</h2>
+<p>We frame the three-year outlook as illustrative scenarios combining an earnings path with an end-period multiple. They are not forecasts and carry no probabilities; they show how the outcome depends on the two drivers.</p>
+<div class="ex"><div class="cap"><span>Exhibit 14.</span> Illustrative three-year scenarios (normalised basis)</div>
+<div class="tw"><table><thead><tr><th>Scenario</th><th class="r">Earnings growth p.a.</th><th class="r">End P/E</th><th class="r">Model index level</th><th class="r">Implied annual price change</th><th>Conditions</th></tr></thead><tbody>
+<tr><td>Tightening</td><td class="r">3%</td><td class="r">18.5×</td><td class="r">≈1,690</td><td class="r">−13.6%</td><td>Rates rise, margin deleveraging, premium disappears</td></tr>
+<tr><td>Gradual normalisation</td><td class="r">6%</td><td class="r">24.05×</td><td class="r">≈2,400</td><td class="r">−2.9%</td><td>Moderate earnings recovery; premium compresses to 30%</td></tr>
+<tr class="hl"><td>Earnings catch-up</td><td class="r">8%</td><td class="r">25.9×</td><td class="r">≈2,730</td><td class="r">+1.4%</td><td>Bank ROE recovers, hydro matures; 40% premium holds</td></tr>
+<tr><td>Strong recovery</td><td class="r">12%</td><td class="r">27.75×</td><td class="r">≈3,270</td><td class="r">+7.6%</td><td>Credit and GDP growth above target; 50% premium</td></tr>
+<tr><td>Liquidity extension</td><td class="r">12%</td><td class="r">31.3×</td><td class="r">≈3,690</td><td class="r">+12.0%</td><td>Low rates persist; current premium unchanged</td></tr>
+</tbody></table></div>
+<div class="src">Model index = 2,623.56 × (End P/E ÷ 31.32) × (1 + g)<sup>3</sup>.</div></div>
+<p>The scenario set shows an asymmetric fundamental profile: the central scenarios cluster around today’s level over three years, implying low prospective returns relative to the cost of equity; meaningful upside requires both strong earnings and the persistence of the current premium; and a return of the premium to historical cycle-normal would imply a substantial decline even with moderate earnings growth. History (Section 7) suggests the multiple, not earnings, has determined the direction of NEPSE at each turning point, and that liquidity conditions have been its leading indicator.</p>
+<h3>13.1 Indicators to monitor</h3>
+<p>Deposit and lending rates and the interbank rate; banking-system CD ratio and excess liquidity; margin-loan exposure and NRB directives; market turnover; NPL trends at commercial banks; commissioning and generation of hydropower projects and power-export volumes; IPO and FPO pipeline and pricing; and any change to foreign portfolio investment rules.</p>
+
+<!-- 14 -->
+<h2 id="s14"><span class="no">14</span>Risks and catalysts</h2>
+<div class="two">
+<div><h4>Risks to valuation</h4><ul><li>Rise in deposit and policy rates, removing the liquidity premium</li><li>Forced selling from margin loans in a correction</li><li>Provision write-backs inflating reported earnings temporarily</li><li>A pipeline of richly priced IPOs adding supply</li><li>Turnover decline (−69% year on year by March 2026) reducing depth</li><li>Hydrological and transmission risk in hydropower</li><li>Regulatory changes on dividends, capital and margin lending</li></ul></div>
+<div><h4>Potential catalysts</h4><ul><li>Recovery in bank earnings as NPLs fall and credit grows</li><li>Hydropower projects reaching full operation and power exports to India and Bangladesh</li><li>Opening to foreign portfolio investment</li><li>More real-sector listings broadening the market</li><li>Sustained low interest rates and stable remittances</li><li>Improved disclosure, including embedded value for life insurers</li></ul></div>
+</div>
+
+<!-- 15 -->
+<h2 id="s15"><span class="no">15</span>Limitations and robustness</h2>
+<ol>
+<li><b>Index scaling.</b> NEPSE is a capitalisation-weighted index adjusted for new listings; equation (23) assumes the index moves proportionally with aggregate market value at a constant earnings base. Index divisor adjustments and composition differences between the index and our 282-company sample mean the mapping is approximate.</li>
+<li><b>2021 earnings.</b> Earnings at the 2021 peak are estimated as market capitalisation ÷ P/E, not compiled bottom-up.</li>
+<li><b>Normalisation parameters.</b> Through-cycle ROEs and shock weights are judgments. A ±1 pp change in all sector through-cycle ROEs changes normalised market earnings by roughly ±6–10%, and the fair index proportionally.</li>
+<li><b>Cost of equity.</b> Company intrinsic values are highly sensitive to Ke; a ±1 pp change moves residual-income values by roughly 10–20%. Market fair values in Section 11 do not depend on Ke.</li>
+<li><b>Data quality.</b> Source data are compiled by a third party from published statements and may contain errors or lags; automated checks reduce but do not eliminate this risk.</li>
+<li><b>Peer data.</b> International multiples come from different providers, dates and methodologies and should be read as indicative.</li>
+<li><b>Hydropower.</b> Project-level models were not populated for most companies; generic equity models were used, which may misstate value for projects in early operation.</li>
+<li><b>Structural change.</b> Cycle anchors assume Nepal’s market structure is broadly stable. A permanent change, such as capital-account liberalisation, could shift fair multiples in either direction.</li>
+</ol>
+<p><b>Robustness.</b> Conclusions about the level of valuation are robust across bases: on reported earnings the premium over cycle-normal is 100%, on normalised earnings 69%; on P/B the market is 52% above its 2019 trough. The direction of the findings does not change across the 20–50% premium range.</p>
+
+<!-- 16 -->
+<h2 id="s16"><span class="no">16</span>Conclusion</h2>
+<p>NEPSE’s current valuation is high by its own history, by international comparison and relative to the profitability of listed companies. The return of the multiple to near-2021 levels reflects new supply at high multiples, stalled earnings and abundant domestic liquidity, rather than a step change in returns on capital. The market is implicitly pricing equities to yield close to deposit rates. A structural premium is justified while Nepal’s capital account remains closed and liquidity remains abundant, and a 20–30% premium gives a model range of about 1,860–2,015. Consistency between today’s index and that range within three years would require aggregate earnings growth of 9–19% a year with a flat index, or substantially more if investors are to earn a normal return. Whether that occurs depends chiefly on bank earnings recovery, the maturation of hydropower, and above all the path of interest rates and liquidity. These conclusions describe fundamental value under stated assumptions; they do not predict the market’s path, which may diverge from fundamentals for extended periods.</p>
+
+<!-- Appendices -->
+<h2 id="appA"><span class="no">A</span>Appendix A — Sector parameters</h2>
+<div class="ex"><div class="cap"><span>Exhibit A1.</span> Sector parameters used in normalisation and cost of equity</div>
+<div class="tw"><table><thead><tr><th>Sector</th><th class="r">Beta</th><th class="r">SRP</th><th class="r">Tax</th><th class="r">ROE<sup>TC</sup></th><th class="r">Growth cap</th><th class="r">Normal payout</th><th class="r">g<sub>T</sub></th></tr></thead><tbody>
+<tr><td>Commercial banks</td><td class="r">0.90</td><td class="r">0.0</td><td class="r">30%</td><td class="r">11%</td><td class="r">8%</td><td class="r">50%</td><td class="r">5%</td></tr>
+<tr><td>Development banks</td><td class="r">1.00</td><td class="r">0.5</td><td class="r">30%</td><td class="r">11%</td><td class="r">8%</td><td class="r">50%</td><td class="r">5%</td></tr>
+<tr><td>Finance</td><td class="r">1.10</td><td class="r">1.0</td><td class="r">30%</td><td class="r">9%</td><td class="r">7%</td><td class="r">40%</td><td class="r">5%</td></tr>
+<tr><td>Microfinance</td><td class="r">1.10</td><td class="r">1.0</td><td class="r">30%</td><td class="r">13%</td><td class="r">7%</td><td class="r">50%</td><td class="r">5%</td></tr>
+<tr><td>Life insurance</td><td class="r">1.10</td><td class="r">0.5</td><td class="r">30%</td><td class="r">9%</td><td class="r">9%</td><td class="r">40%</td><td class="r">5%</td></tr>
+<tr><td>Non-life insurance</td><td class="r">1.00</td><td class="r">0.5</td><td class="r">30%</td><td class="r">9%</td><td class="r">8%</td><td class="r">50%</td><td class="r">5%</td></tr>
+<tr><td>Hydropower</td><td class="r">1.20</td><td class="r">1.0</td><td class="r">20%</td><td class="r">8%</td><td class="r">4%</td><td class="r">60%</td><td class="r">0%</td></tr>
+<tr><td>Hotels &amp; tourism</td><td class="r">1.10</td><td class="r">1.0</td><td class="r">25%</td><td class="r">8%</td><td class="r">9%</td><td class="r">40%</td><td class="r">5%</td></tr>
+<tr><td>Investment</td><td class="r">1.10</td><td class="r">0.5</td><td class="r">25%</td><td class="r">6%</td><td class="r">6%</td><td class="r">50%</td><td class="r">5%</td></tr>
+<tr><td>Trading</td><td class="r">1.10</td><td class="r">0.5</td><td class="r">25%</td><td class="r">10%</td><td class="r">6%</td><td class="r">50%</td><td class="r">5%</td></tr>
+<tr><td>Manufacturing</td><td class="r">1.10</td><td class="r">0.5</td><td class="r">25%</td><td class="r">10%</td><td class="r">7%</td><td class="r">50%</td><td class="r">5%</td></tr>
+<tr><td>Others</td><td class="r">0.90</td><td class="r">0.5</td><td class="r">25%</td><td class="r">8%</td><td class="r">4%</td><td class="r">60%</td><td class="r">4%</td></tr>
+</tbody></table></div></div>
+<div class="ex"><div class="cap"><span>Exhibit A2.</span> Model weights by sector (%)</div>
+<div class="tw"><table><thead><tr><th>Sector</th><th>Models and weights</th></tr></thead><tbody>
+<tr><td>Commercial and development banks</td><td>Residual income 40 · Justified P/B 25 · DDM 20 · Cycle-normal P/E 15</td></tr>
+<tr><td>Finance</td><td>Residual income 40 · Justified P/B 30 · DDM 15 · Cycle-normal P/E 15</td></tr>
+<tr><td>Microfinance</td><td>Residual income 35 · Justified P/B 25 · DDM 25 · Cycle-normal P/E 15</td></tr>
+<tr><td>Life insurance</td><td>Appraisal value 50 · Justified P/B 25 · DDM 10 · Cycle-normal P/E 15</td></tr>
+<tr><td>Non-life insurance</td><td>Residual income 40 · Justified P/B 30 · DDM 10 · Cycle-normal P/E 20</td></tr>
+<tr><td>Hydropower</td><td>Licence-bound FCFE 65 · EV per MW 20 · Cycle-normal P/E 15 (fallback: generic equity models)</td></tr>
+<tr><td>Hotels &amp; tourism</td><td>FCFF DCF 50 · EV/EBITDA 30 · Cycle-normal P/E 20</td></tr>
+<tr><td>Manufacturing, trading</td><td>FCFF DCF 50 · EV/EBITDA 25 · Cycle-normal P/E 25</td></tr>
+<tr><td>Others</td><td>FCFF DCF 40 · DDM 25 · EV/EBITDA 20 · Cycle-normal P/E 15</td></tr>
+<tr><td>Investment</td><td>Sum-of-the-parts NAV 65 · DDM 20 · Cycle-normal P/E 15</td></tr>
+</tbody></table></div></div>
+
+<h3>Appendix B — Glossary</h3>
+<div class="tw"><table><tbody>
+<tr><td><b>P/E</b></td><td>Price ÷ earnings per share; years of current earnings paid for a share.</td></tr>
+<tr><td><b>P/B</b></td><td>Price ÷ book value (net worth) per share.</td></tr>
+<tr><td><b>ROE</b></td><td>Net profit ÷ shareholders’ equity.</td></tr>
+<tr><td><b>Normalised earnings</b></td><td>Earnings at a sustainable ROE, excluding one-off swings (Section 4).</td></tr>
+<tr><td><b>Ke</b></td><td>Cost of equity: the annual return investors require for bearing equity risk.</td></tr>
+<tr><td><b>ERP / CRP</b></td><td>Equity risk premium / country risk premium over the risk-free rate.</td></tr>
+<tr><td><b>Residual income</b></td><td>Profit in excess of the charge for equity capital, (ROE − Ke) × book value.</td></tr>
+<tr><td><b>FCFF / FCFE</b></td><td>Free cash flow to the firm / to equity holders.</td></tr>
+<tr><td><b>Cycle-normal multiple</b></td><td>The P/E around which NEPSE has oscillated between troughs and peaks (18.5× in this study).</td></tr>
+<tr><td><b>Nepal premium</b></td><td>The valuation premium over cycle-normal attributed to structural liquidity conditions.</td></tr>
+<tr><td><b>NPL</b></td><td>Non-performing loans as a share of total loans.</td></tr>
+<tr><td><b>Arba</b></td><td>Rs 1 billion (100 crore).</td></tr>
+</tbody></table></div>
+
+<h2 id="disclosures" class="nobreak"><span class="no">D</span>Disclosures and sources</h2>
+<footer class="legal">
+<p><b>Purpose and nature.</b> This paper is the independent analysis of the author, Bishnu Prasad Basyal, CFA, prepared for study, education and research purposes only. It does not constitute investment advice, an offer or solicitation, or a recommendation to buy, sell or hold any security, sector or the market as a whole, and it does not take into account any reader’s objectives, financial situation or needs.</p>
+<p><b>No guarantee.</b> Market prices are determined by many factors beyond the fundamentals analysed here, including liquidity, interest rates, monetary and fiscal policy, government and regulatory decisions, investor sentiment and behaviour, geopolitical and global events. Markets can and do move contrary to fundamental logic for long periods. No value, range, scenario or outcome described in this paper is a forecast or guarantee. Past patterns may not repeat.</p>
+<p><b>Reader responsibility.</b> Readers should not be influenced by this paper in making investment decisions. They should conduct their own research and, where appropriate, consult an investment adviser licensed by the Securities Board of Nepal (SEBON). This paper has not been reviewed or approved by SEBON, Nepal Rastra Bank, Nepal Stock Exchange or any other authority.</p>
+<p><b>Data and liability.</b> Data are drawn from third-party and public sources believed to be reliable but not independently verified, and may contain errors, omissions or delays. Models rely on stated assumptions and simplifications. The author accepts no liability for any loss or damage arising from the use of this paper. Views expressed are the author’s own and may change without notice. Readers should not assume the author has no interest in NEPSE-listed securities.</p>
+<p><b>Sources.</b> Company data: nepselabs.com stock pages (23 November 2026). Market history: <a href="https://www.sharesansar.com/newsdetail/nepse-valuations-surge-pe-and-pb-ratios-near-record-highs-as-banking-sector-remains-undervalued-2025-11-02">Sharesansar, Nov 2025</a>; <a href="https://www.sharesansar.com/index.php/newsdetail/nepse-at-38-times-earnings-we-are-among-the-worlds-most-expensive-stock-markets-2026-04-10">Sharesansar, Apr 2026</a>; <a href="https://www.sharesansar.com/index.php/newsdetail/nepse-makes-new-all-time-high-at-319860-six-scrips-hit-10-positive-circuit-breaker-2021-08-18">Sharesansar, Aug 2021</a>; <a href="https://thehimalayantimes.com/opinion/share-market-is-this-the-right-time-to-enter">The Himalayan Times (2019 trough)</a>; <a href="https://thehimalayantimes.com/business/nepse-hits-3111-points-posts-new-all-time-high">The Himalayan Times (Aug 2021 market cap)</a>; <a href="https://thehimalayantimes.com/ampArticle/1038388">The Himalayan Times (Apr 2026 market cap)</a>; <a href="https://ictframe.com/?p=116469">ICT Frame</a>. International: <a href="https://siblisresearch.com/data/emerging-markets-valuations/">Siblis Research</a>; <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html">Damodaran country risk premiums</a>; <a href="https://en.prothomalo.com/business/local/6fkojm488r">ADB GDP per head</a>. Policy: <a href="https://nepsetrading.com/blog/nepal-rastra-bank-keeps-policy-rates-unchanged-signals-gradual-shift-toward-a-narrower-interest-rate-corridor">NRB policy rates</a>; <a href="https://www.globalimebank.com/blog/monetary-policy-of-nepal-2083-84-major-highlights/">Monetary Policy 2083/84</a>; <a href="https://nepsetrading.com/insights/nepal-stock-market-liquidity-analysis">turnover and liquidity</a>. Company-level models: NEPSE Valuation Lab (UNI Citizens).</p>
+<p>© 2026 Bishnu Prasad Basyal, CFA · UNI Citizens. <a href="index.html">Return to the summary edition (English / नेपाली)</a>.</p>
+</footer>
+</div>
+</article>
+</body>
+</html>

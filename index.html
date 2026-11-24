@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEPSE Market Valuation Report</title>
+<meta name="description" content="What is NEPSE pricing in at 2,623? Valuation against history, world markets and earnings. English and Nepali.">
+<link rel="canonical" href="https://bishnupr0sah.github.io/nepse-report/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="UNI Citizens">
+<meta property="og:url" content="https://bishnupr0sah.github.io/nepse-report/">
+<meta property="og:title" content="NEPSE at 2,623: what is the market pricing in?">
+<meta property="og:description" content="NEPSE valuation report, November 2026: history, world markets and the 3-year earnings test. English and Nepali. For study and research only.">
+<meta property="og:image" content="https://bishnupr0sah.github.io/nepse-report/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bishnupr0sah.github.io/nepse-report/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Mukta:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a sell-side strategy note made readable for a first-time investor: calm, exact, plain words.
+   IDEA: the cover and inside pages of a printed market-strategy report.
+   PICTURE: a P/E "thermometer" on the cover: cycle low → normal → 2021 bubble peak, with today's marker.
+   COLOUR and TYPE: ink cover, ice pages, hot-pink accent for "today"; Space Grotesk + Inter, Mukta for Nepali.
+   LAYOUT: full-bleed cover, sticky section nav, one finding per section with a chart, then plain-language boxes. */
+:root{color-scheme:light dark;--bg:light-dark(#eef7fa,#06222e);--paper:light-dark(#ffffff,#0b2f3d);--ink:light-dark(#06222e,#e3f3f8);--mut:light-dark(#46636f,#9cc3cf);--line:light-dark(#c9e2ea,#1d4a5a);--acc:#ff2e7e;--ice:#dff1f7;--deep:#06222e;--up:light-dark(#0b7a57,#3fd3a1);--dn:light-dark(#b8322a,#ff7a6e);--amb:#c98a12;--bar:light-dark(#9bb4bd,#4d7584)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+body.np{font-family:Mukta,Inter,system-ui,sans-serif;font-size:18px}
+h1,h2,h3,.num-big{font-family:"Space Grotesk",Inter,sans-serif;font-weight:700;line-height:1.08;text-wrap:balance;margin:0}
+body.np h1,body.np h2,body.np h3,body.np .num-big{font-family:Mukta,"Space Grotesk",sans-serif;font-weight:700;line-height:1.2}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 max(4vw,18px)}
+/* cover */
+.cover{background:var(--deep);color:var(--ice);padding:clamp(28px,5vw,64px) 0 clamp(36px,5vw,72px);position:relative;overflow:hidden}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:clamp(28px,5vw,56px)}
+.brand{font-size:14px;letter-spacing:.02em;opacity:.85}
+.tools{display:flex;gap:8px;flex-wrap:wrap}
+.btn{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid #2a5b6b;background:transparent;color:inherit;font:inherit;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+.btn:hover{border-color:var(--ice)}.btn.on{background:var(--ice);color:var(--deep);border-color:var(--ice)}
+.seg{display:inline-flex;border:1px solid #2a5b6b;border-radius:999px;overflow:hidden}.seg .btn{border:0;border-radius:0}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.kicker{color:#9fd8ea;font-size:15px;font-weight:600}
+.cover h1{font-size:clamp(40px,7vw,78px);margin:12px 0 16px;color:#fff}
+.cover h1 em{font-style:normal;color:var(--acc)}
+.lede{font-size:clamp(17px,2vw,21px);max-width:62ch;color:#cfe7ef;margin:0}
+.byline{margin-top:18px;font-size:14px;color:#9fc3cf}
+.therm{margin:clamp(28px,5vw,48px) 0 0;position:relative}
+.therm svg{width:100%;height:auto;display:block}
+.chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#1d4a5a;border:1px solid #1d4a5a;border-radius:14px;overflow:hidden;margin-top:28px}
+.chips div{background:#0a2c3a;padding:16px 18px}.chips span{display:block;font-size:13px;color:#9fc3cf}.chips b{display:block;font-family:"Space Grotesk",Mukta,sans-serif;font-size:clamp(22px,3vw,32px);color:#fff;margin-top:4px;white-space:nowrap}.chips small{color:#9fc3cf;font-size:13px}
+body.np .chips b{font-family:Mukta,sans-serif}
+/* nav */
+nav.toc{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav.toc a{flex:none;padding:14px 12px;text-decoration:none;color:var(--mut);font-size:15px;border-bottom:3px solid transparent}
+nav.toc a:hover,nav.toc a.cur{color:var(--ink);border-color:var(--acc)}
+/* sections */
+section{padding:clamp(40px,6vw,80px) 0;border-bottom:1px solid var(--line)}
+.sec-n{font-family:"Space Grotesk",sans-serif;color:var(--acc);font-weight:700;font-size:15px}
+section h2{font-size:clamp(28px,4vw,44px);margin:6px 0 14px;max-width:24ch}
+.lead{font-size:clamp(18px,2vw,21px);max-width:66ch;margin:0 0 24px}
+p{max-width:70ch}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,3vw,36px);align-items:start}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,2.5vw,28px)}
+.takeaways{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.takeaways .card b.n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--deep);color:#fff;font-family:"Space Grotesk",sans-serif;margin-bottom:10px}
+.takeaways h3{font-size:21px;margin-bottom:6px}
+.takeaways p{margin:0;color:var(--mut)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:8px 0 24px}
+.stats div{background:var(--paper);padding:16px 18px}.stats span{display:block;font-size:14px;color:var(--mut)}.stats b{font-family:"Space Grotesk",Mukta,sans-serif;font-size:clamp(24px,3vw,34px)}
+.explain{background:color-mix(in srgb,var(--acc) 8%,var(--paper));border-left:4px solid var(--acc);border-radius:0 12px 12px 0;padding:14px 18px;margin:16px 0;font-size:16px}
+.explain>b:first-child{display:block;margin-bottom:2px}
+.fig{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 16px 10px;margin:10px 0 18px}
+.fig h3{font-size:19px;margin:2px 4px 2px}.fig .sub{font-size:14px;color:var(--mut);margin:0 4px 6px}
+.fig svg{width:100%;height:auto;display:block}
+.src{font-size:13px;color:var(--mut);margin:6px 4px 0}
+.vs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:8px 0 24px}
+.vs .card{padding:16px}.vs span{font-size:14px;color:var(--mut);display:block}.vs .then{font-size:15px;color:var(--mut)}.vs .now{font-family:"Space Grotesk",Mukta,sans-serif;font-size:26px;font-weight:700;display:block;margin:2px 0}.vs .chg{font-weight:600;font-size:15px}.chg.up{color:var(--up)}.chg.dn{color:var(--dn)}
+ol.reasons{counter-reset:r;list-style:none;padding:0;display:grid;gap:12px;margin:0}
+ol.reasons li{counter-increment:r;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 62px;position:relative}
+ol.reasons li::before{content:counter(r);position:absolute;left:18px;top:16px;width:30px;height:30px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:700;font-family:"Space Grotesk",sans-serif}
+ol.reasons b{display:block;font-size:18px;margin-bottom:2px}
+.timeline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.timeline .card{padding:16px}.timeline .yr{font-family:"Space Grotesk",sans-serif;font-weight:700;color:var(--acc)}.timeline .ix{font-family:"Space Grotesk",Mukta,sans-serif;font-size:20px;font-weight:700;display:block;margin:2px 0}.timeline p{margin:0;font-size:15px;color:var(--mut)}
+table{border-collapse:collapse;width:100%;font-size:15px}th,td{padding:10px 10px;border-bottom:1px solid var(--line);text-align:left}th{font-size:13px;color:var(--mut);font-weight:600}.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.hl td{background:color-mix(in srgb,var(--acc) 9%,transparent);font-weight:600}
+.scroll{overflow-x:auto}
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:center}
+.calc label{display:block;font-size:15px;margin:12px 0 4px}.calc input[type=range]{width:100%;accent-color:var(--acc);height:32px}
+.calc output{font-family:"Space Grotesk",Mukta,sans-serif;font-weight:700}
+.result{text-align:center}.result .num-big{font-size:clamp(44px,7vw,72px);color:var(--ink)}.result p{margin:4px auto;color:var(--mut)}
+.pill{display:inline-block;padding:4px 12px;border-radius:999px;font-weight:600;font-size:15px}.pill.dn{background:color-mix(in srgb,var(--dn) 16%,transparent);color:var(--dn)}.pill.up{background:color-mix(in srgb,var(--up) 16%,transparent);color:var(--up)}
+.cond{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.cond .card h3{font-size:18px;margin-bottom:4px}.cond p{margin:0;color:var(--mut);font-size:16px}
+.verdict{background:var(--deep);color:var(--ice);border-radius:18px;padding:clamp(20px,3vw,34px);margin-top:20px}.verdict h3{color:#fff;font-size:clamp(22px,2.6vw,28px);margin-bottom:8px}.verdict p{margin:0;color:#cfe7ef}
+.aud{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.aud .card h3{font-size:22px;margin-bottom:10px}.aud ul{margin:0;padding-left:20px}.aud li{margin:8px 0}
+.tag{display:inline-block;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line);margin-bottom:10px}
+.disc{font-size:14px;color:var(--mut)}
+.notice{margin:14px 0 0;max-width:70ch;font-size:14px;color:#cfe7ef;background:#0b3342;border:1px solid #1d4a5a;border-radius:10px;padding:10px 14px}.notice a{color:#9fd8ea}
+.instbtn{margin-top:16px;border-color:#ff2e7e;background:#ff2e7e;color:#fff;font-weight:600}.instbtn::after,.instbtn2::after{content:' →'}
+.instcard{margin-top:22px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}.instcard p{margin:0;flex:1 1 320px}
+.instbtn2{background:var(--deep);color:#fff;border-color:var(--deep);font-weight:600}
+.noticebox{border:2px solid var(--ink);border-radius:16px;padding:clamp(18px,3vw,30px);background:var(--paper)}.noticebox h2{font-size:clamp(22px,3vw,30px)}.noticebox p{max-width:none;margin:10px 0 0}
+footer{padding:36px 0 60px;font-size:14px;color:var(--mut)}
+footer ul{padding-left:18px}footer li{margin:4px 0}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--deep);color:#fff;padding:10px 18px;border-radius:999px;font-size:15px;opacity:0;transition:opacity .2s;pointer-events:none}.toast.show{opacity:1}
+svg text{font-family:Inter,Mukta,sans-serif}body.np svg text{font-family:Mukta,Inter,sans-serif}
+@media(max-width:860px){.grid2,.calc,.aud{grid-template-columns:minmax(0,1fr)}.vs{grid-template-columns:repeat(2,minmax(0,1fr))}.timeline{grid-template-columns:repeat(2,minmax(0,1fr))}.chips{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.takeaways,.cond,.timeline,.stats{grid-template-columns:minmax(0,1fr)}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}table{font-size:14px}body{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{nav.toc,.tools{display:none}}
+</style>
+</head>
+<body>
+<header class="cover">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand" data-t="brand"></div>
+      <div class="tools">
+        <div class="seg" role="group" aria-label="Language"><button class="btn" data-lang="en">English</button><button class="btn" data-lang="np">नेपाली</button></div>
+        <button class="btn" id="copy" data-t="copy"></button>
+        <a class="btn" id="fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbishnupr0sah.github.io%2Fnepse-report%2F" target="_blank" rel="noopener" data-t="fb"></a>
+      </div>
+    </div>
+    <div class="kicker" data-t="kicker"></div>
+    <h1 data-t="title"></h1>
+    <p class="lede" data-t="lede"></p>
+    <div class="byline" data-t="byline"></div>
+    <p class="notice" data-t="notice"></p>
+    <a class="btn instbtn" href="institutional.html" data-t="inst"></a>
+    <div class="therm"><svg id="therm" viewBox="0 0 1000 170" role="img" aria-label="NEPSE P/E thermometer"></svg></div>
+    <div class="chips" id="chips"></div>
+  </div>
+</header>
+<nav class="toc" aria-label="Sections"><div class="wrap" id="toc"></div></nav>
+<main>
+  <section id="summary"><div class="wrap">
+    <div class="sec-n" data-t="s0n"></div><h2 data-t="s0h"></h2>
+    <div class="takeaways" id="takeaways"></div>
+  </div></section>
+
+  <section id="today"><div class="wrap">
+    <div class="sec-n">01</div><h2 data-t="s1h"></h2><p class="lead" data-t="s1lead"></p>
+    <div class="stats" id="stats"></div>
+    <div class="grid2">
+      <div><div class="explain" data-t="exPE"></div><div class="explain" data-t="exNorm"></div><div class="explain" data-t="exPB"></div></div>
+      <div class="fig"><h3 data-t="secTitle"></h3><p class="sub" data-t="secSub"></p><svg id="secChart" role="img"></svg><p class="src" data-t="secSrc"></p></div>
+    </div>
+  </div></section>
+
+  <section id="why"><div class="wrap">
+    <div class="sec-n">02</div><h2 data-t="s2h"></h2><p class="lead" data-t="s2lead"></p>
+    <div class="vs" id="vs"></div>
+    <ol class="reasons" id="reasons"></ol>
+    <div class="explain" data-t="breadth"></div>
+  </div></section>
+
+  <section id="history"><div class="wrap">
+    <div class="sec-n">03</div><h2 data-t="s3h"></h2><p class="lead" data-t="s3lead"></p>
+    <div class="fig"><h3 data-t="cycTitle"></h3><p class="sub" data-t="cycSub"></p><svg id="cycChart" role="img"></svg><p class="src" data-t="cycSrc"></p></div>
+    <div class="timeline" id="timeline"></div>
+    <div class="explain" data-t="lesson"></div>
+  </div></section>
+
+  <section id="world"><div class="wrap">
+    <div class="sec-n">04</div><h2 data-t="s4h"></h2><p class="lead" data-t="s4lead"></p>
+    <div class="fig"><h3 data-t="wTitle"></h3><p class="sub" data-t="wSub"></p><svg id="wChart" role="img"></svg><p class="src" data-t="wSrc"></p></div>
+    <div class="grid2">
+      <div><div class="card scroll"><table id="peers"></table></div><p class="src" data-t="peerSrc"></p></div>
+      <ol class="reasons" id="whyGap"></ol>
+    </div>
+  </div></section>
+
+  <section id="fair"><div class="wrap">
+    <div class="sec-n">05</div><h2 data-t="s5h"></h2><p class="lead" data-t="s5lead"></p>
+    <div class="fig"><h3 data-t="ladTitle"></h3><p class="sub" data-t="ladSub"></p><svg id="ladder" role="img"></svg></div>
+    <div class="card calc">
+      <div>
+        <h3 data-t="calcH"></h3><p class="disc" data-t="calcP"></p>
+        <label for="prem"><span data-t="calcPrem"></span> <output id="premO"></output></label><input type="range" id="prem" min="0" max="80" step="5" value="30">
+        <label for="grow"><span data-t="calcGrow"></span> <output id="growO"></output></label><input type="range" id="grow" min="0" max="25" step="1" value="8">
+        <label for="yrs"><span data-t="calcYrs"></span> <output id="yrsO"></output></label><input type="range" id="yrs" min="0" max="5" step="1" value="0">
+      </div>
+      <div class="result" aria-live="polite"><p data-t="calcRes"></p><div class="num-big" id="fairO"></div><p id="fairCmp"></p></div>
+    </div>
+    <div class="card scroll" style="margin-top:18px"><table id="fairTbl"></table></div>
+    <div class="explain" data-t="premWhy"></div>
+  </div></section>
+
+  <section id="takes"><div class="wrap">
+    <div class="sec-n">06</div><h2 data-t="s6h"></h2><p class="lead" data-t="s6lead"></p>
+    <div class="fig"><h3 data-t="gTitle"></h3><p class="sub" data-t="gSub"></p><svg id="gChart" role="img"></svg><p class="src" data-t="gSrc"></p></div>
+    <div class="card scroll"><table id="reqTbl"></table></div>
+    <div class="cond" id="cond"></div>
+    <div class="verdict"><h3 data-t="verdH"></h3><p data-t="verdP"></p></div>
+  </div></section>
+
+  <section id="investors"><div class="wrap">
+    <div class="sec-n">07</div><h2 data-t="s7h"></h2>
+    <div class="aud" id="aud"></div>
+    
+  </div></section>
+
+  <section id="method"><div class="wrap">
+    <div class="sec-n">08</div><h2 data-t="s8h"></h2>
+    <div class="grid2"><div id="risks"></div><div id="meth"></div></div>
+    <div class="card instcard"><p data-t="instP"></p><a class="btn instbtn2" href="institutional.html" data-t="inst"></a></div>
+  </div></section>
+  <section id="notice"><div class="wrap"><div class="noticebox"><h2 data-t="noticeH"></h2><p data-t="disc"></p></div></div></section>
+</main>
+<footer><div class="wrap">
+  <b data-t="srcH"></b>
+  <ul>
+    <li><a href="https://www.sharesansar.com/newsdetail/nepse-valuations-surge-pe-and-pb-ratios-near-record-highs-as-banking-sector-remains-undervalued-2025-11-02">Sharesansar: NEPSE P/E and P/B near record highs (Nov 2025)</a></li>
+    <li><a href="https://www.sharesansar.com/index.php/newsdetail/nepse-at-38-times-earnings-we-are-among-the-worlds-most-expensive-stock-markets-2026-04-10">Sharesansar: NEPSE at 38 times earnings, global survey (Apr 2026)</a></li>
+    <li><a href="https://thehimalayantimes.com/opinion/share-market-is-this-the-right-time-to-enter">The Himalayan Times: 2019 trough P/E and P/BV</a></li>
+    <li><a href="https://www.sharesansar.com/index.php/newsdetail/nepse-makes-new-all-time-high-at-319860-six-scrips-hit-10-positive-circuit-breaker-2021-08-18">Sharesansar: 2021 all-time high 3,198.60</a> · <a href="https://thehimalayantimes.com/business/nepse-hits-3111-points-posts-new-all-time-high">The Himalayan Times: Rs 4.342 trillion market cap (Aug 2021)</a></li>
+    <li><a href="https://thehimalayantimes.com/ampArticle/1038388">The Himalayan Times: Rs 4,832.84 billion market cap, 294 companies (Apr 2026)</a> · <a href="https://ictframe.com/?p=116469">ICT Frame: sector shares of market value</a></li>
+    <li><a href="https://siblisresearch.com/data/emerging-markets-valuations/">Siblis Research: global, developed and emerging P/E (Sept 2026)</a> · <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html">Damodaran: country risk premiums</a></li>
+    <li><a href="https://nepsetrading.com/blog/nepal-rastra-bank-keeps-policy-rates-unchanged-signals-gradual-shift-toward-a-narrower-interest-rate-corridor">NRB policy rates</a> · <a href="https://www.globalimebank.com/blog/monetary-policy-of-nepal-2083-84-major-highlights/">Monetary Policy 2083/84</a> · <a href="https://nepsetrading.com/insights/nepal-stock-market-liquidity-analysis">Turnover and liquidity</a> · <a href="https://en.prothomalo.com/business/local/6fkojm488r">GDP per head (ADB)</a></li>
+    <li>Company data: nepselabs.com stock pages, 23 Nov 2026 (282 operating companies) · NEPSE Valuation Lab (UNI Citizens)</li>
+  </ul>
+</div></footer>
+<div class="toast" id="toast" role="status"></div>
+<script>
+{
+const SHARE_URL = 'https://bishnupr0sah.github.io/nepse-report/';
+const T = {
+en: {
+  brand: 'UNI Citizens · Market Research', copy: 'Copy link', fb: 'Share on Facebook', copied: 'Link copied',
+  kicker: 'NEPSE Market Valuation Report · November 2026',
+  title: 'NEPSE at 2,623: <em>what is the market pricing in?</em>',
+  lede: 'Market value has climbed past its 2021 high and the price-to-earnings multiple is back near the top of its historical range. Is that supported by profits, by liquidity, or by growth still to come? This study tests NEPSE against its own cycles, against world markets and against company earnings, and asks what would have to go right for today’s level to be supported by fundamentals.',
+  byline: 'Bishnu Prasad Basyal, CFA · Data as of 23 November 2026 · The author’s independent analysis, for study and research only',
+  th: ['Cycle low', 'Cycle-normal', '2021 peak', 'NEPSE today', 'Market P/E (price ÷ earnings)'],
+  chips: [['NEPSE index', '2,623.56', '23 Nov 2026'], ['Market P/E', '36.9×', 'normalised 31.3×'], ['Model fair-value range', '1,850–2,000', 'with a 20–30% Nepal premium'], ['Profit growth implied', '9–19% a year', 'over 3 years, index flat']],
+  nav: [['summary', 'In 60 seconds'], ['today', 'Today'], ['why', 'Why so high'], ['history', 'History'], ['world', 'World'], ['fair', 'Fair value'], ['takes', 'What it takes'], ['investors', 'For investors'], ['method', 'Method']],
+  s0n: 'IN 60 SECONDS', s0h: 'Four findings in brief',
+  take: [['Valuations sit near the top of NEPSE’s historical range', 'Investors pay about Rs 37 for every Rs 1 of annual profit that listed companies earn, close to the 2021 peak. At the 2019 and 2011/12 lows they paid about Rs 12.'],
+         ['Prices have run ahead of profits', 'Since the 2021 peak, total profits of listed companies have grown only about 2.6% a year. Profit per index point is 6% lower than in 2021.'],
+         ['Fundamental models point to a lower range', 'On normalised earnings, NEPSE’s cycle-normal multiple and a 20–30% “Nepal premium”, the models give about 1,850–2,000. Markets can stay above or below model values for long periods.'],
+         ['The path to 2,623 runs through earnings', 'For today’s level to look reasonable in three years, profits would need to grow about 9–19% a year, against 2.6% a year since 2021. Falling bad loans, credit growth and maturing hydropower projects could narrow the gap.']],
+  s1h: 'How NEPSE is valued today',
+  s1lead: 'The market values Rs 120.6 Arba of annual profit at Rs 4,457 Arba: <b>36.9 times earnings</b>, for companies that earn only about <b>8.7% on shareholders’ equity</b>.',
+  stats: [['Reported P/E', '36.9×'], ['Normalised P/E', '31.3×'], ['Price to book (P/B)', '2.71×'], ['Normalised ROE', '8.7%'], ['Market cap / GDP', '~73%'], ['Companies analysed', '282']],
+  exPE: '<b>What is P/E?</b>Share price ÷ yearly profit per share. A P/E of 37 means paying Rs 37 for Rs 1 of yearly profit: about 37 years to earn your money back if profits never grow.',
+  exNorm: '<b>What are “normalised” earnings?</b>We remove one-off gains, such as banks writing back loan-loss provisions, so each valuation rests on what the business normally earns.',
+  exPB: '<b>What is P/B?</b>Share price ÷ book value (net worth) per share. In textbook theory, a market earning 8.7% on equity against a 13–14% required return would trade below 1× book. NEPSE trades at 2.71×, a sign that liquidity and expectations, not current returns, set prices.',
+  secTitle: 'Only commercial banks trade near the cycle-normal multiple', secSub: 'P/E on normalised earnings, by sector', secSrc: 'Bottom-up from 282 companies on nepselabs.com, 23 Nov 2026.',
+  sectors: ['Commercial banks', 'Trading', 'Development banks', 'Microfinance', 'Others', 'Non-life insurance', 'Hydropower', 'Finance', 'Manufacturing', 'Life insurance', 'Investment', 'Hotels & tourism'],
+  normalLbl: 'Cycle-normal 18.5×',
+  s2h: 'Why valuations are back near the 2021 peak',
+  s2lead: 'Total market value is above its 2021 peak, yet the index is 18% lower. The difference is <b>new supply</b>: companies listed since 2021 brought market value, but little profit.',
+  vs: [['NEPSE index', '3,198.60', '2,623.56', '−18%', 'dn'], ['Market capitalisation', 'Rs 4.34 trillion', 'Rs 4.83 trillion', '+11%', 'up'], ['Market value per index point', 'Rs 1.40 Arba', 'Rs 1.70 Arba', '+20%', 'up'], ['Profit per index point', '75.7', '71.0', '−6%', 'dn'], ['Market P/E', '42.3×', '36.9×', '−13%', 'dn']],
+  vsThen: '2021 peak', vsNow: 'Now',
+  reasons: [['New listings came at high prices and low profits', 'Most are hydropower companies. The sector now has 111 stocks trading at about 79 times earnings, with a median return on equity near 4%.'],
+            ['Existing companies’ profits stalled', 'Banks absorbed heavy loan-loss provisions. Insurers, microfinance and finance companies saw profits fall.'],
+            ['Cheap money came back', 'NRB’s policy rate is 4.5% and development bonds yield about 3%. With a closed capital account, savings have few places to go except shares.'],
+            ['Bonus shares feel like growth, but aren’t', 'Share counts rise and earnings per share fall, yet many investors count bonus shares as returns.']],
+  breadth: '<b>The typical stock is priced higher than in 2021.</b>Commercial banks hold the index P/E down. Without them, the rest of the market trades at about 55 times earnings, and 182 of 282 stocks sit above the 2021 peak multiple on normalised earnings.',
+  s3h: 'Every cycle bottoms near 12× and peaks on cheap money',
+  s3lead: 'NEPSE has bottomed at 12–13 times earnings in every cycle, and peaked when cheap money pushed multiples to 35–42 times. Today’s 37 times sits at the peak end.',
+  cycTitle: 'NEPSE P/E is three times its cycle lows and 87% of the 2021 peak', cycSub: 'Market P/E at each turning point (dots only; the path between them is not shown)', cycSrc: 'The Himalayan Times, Sharesansar, nepselabs.com. The 2011/12 P/E is approximate.',
+  cyc: ['2011/12 trough', 'Feb 2019 trough', 'Aug 2021 peak', 'Oct 2025', 'Now'],
+  tl: [['2008 → 2011/12', '1,175 → 292', 'Credit and real-estate boom; ended when liquidity froze. P/E fell to about 12×.'], ['2012 → 2016', '298 → 1,881', 'Post-earthquake rebuilding and a new constitution; bank P/E reached about 35×.'], ['2016 → 2019', '1,881 → 1,112', 'Correction. At the low, market P/E was 12.3× and P/B 1.78×.'], ['2020 → 2021', '~1,100 → 3,199', 'COVID-era rate cuts and a retail surge; P/E peaked at 42.3×.'], ['2021 → 2022', '3,199 → 1,807', 'Rate hikes and a margin-loan squeeze.'], ['2023 → now', '~1,800 → 2,624', 'Excess liquidity, rate cuts and new listings; P/E back to 37×.']],
+  lesson: '<b>The lesson</b>Peaks are set by liquidity, not earnings. Every boom ended when credit tightened, so interest rates are the key risk to today’s valuation.',
+  s4h: 'NEPSE against the world',
+  s4lead: 'NEPSE carries the highest valuation in this comparison, <b>above developed markets</b>, while its earnings base and income per head are among the lowest. The reasons are mostly structural, and they matter for how long the premium can last.',
+  wTitle: 'NEPSE is priced above developed markets and 3–5× its frontier peers', wSub: 'Trailing P/E', wSrc: 'Siblis Research (Sept 2026), Sharesansar global survey (Apr 2026), nepselabs.com.',
+  mk: ['NEPSE (Nepal)', 'Developed markets', 'Global', 'India', 'Vietnam', 'Emerging markets', 'MSCI Frontier', 'Sri Lanka', 'Bangladesh', 'Nigeria', 'Pakistan', 'Kenya'],
+  peerH: ['Market', 'GDP per head', 'Market cap / GDP', 'Dividend yield'],
+  peers: [['Nepal', '$1,430', '~73%', '1–2%'], ['Pakistan', '$1,580', '14–17%', '~6.8%'], ['Bangladesh', '$2,600', '6–20%', '3–4%'], ['Kenya', '$1,900', '~21%', '4–6%'], ['Sri Lanka', '$4,500', '—', '3–3.2%']],
+  peerSrc: 'Lower-income markets usually trade at lower multiples, higher yields and smaller market caps relative to GDP. Nepal reverses all three.',
+  gap: [['Not higher returns', 'Normalised return on equity is 8.7%, below the bottom-up cost of equity of about 13.8%.'], ['Not lower risk', 'Nepal’s equity risk premium is 8.89%, against 7.08% for India and 4.23% for mature markets.'], ['A closed market', 'Nepali savers cannot invest abroad and foreigners rarely buy NEPSE, so prices are set by domestic, remittance-fed liquidity.']],
+  s5h: 'What NEPSE is fairly worth',
+  s5lead: 'At a cycle-normal 18.5 times normalised earnings, NEPSE’s fair value is about <b>1,550</b>. With a 20–30% Nepal premium it is about <b>1,850–2,000</b>.',
+  ladTitle: 'Where today’s index sits against model fair-value levels', ladSub: 'NEPSE index implied by each valuation multiple, on today’s normalised earnings',
+  lad: ['Cycle low 12.3×', 'Cycle-normal 18.5×', '+20%', '+30%', '+40%', '+50%', 'Now', '2021 peak 42.3×'], fairZone: 'Fair range',
+  calcH: 'Try it yourself', calcP: 'Choose the premium you think Nepal deserves over the cycle-normal 18.5× and how fast profits grow. Fair value = today’s index × target P/E ÷ 31.3 (normalised P/E), grown with profits.',
+  calcPrem: 'Nepal premium:', calcGrow: 'Profit growth per year:', calcYrs: 'Years ahead:', calcRes: 'Fair NEPSE index',
+  cmpBelow: 'below today’s 2,623.56', cmpAbove: 'above today’s 2,623.56', yrs0: 'today', yrsN: 'in {n} years',
+  fairH: ['Valuation basis', 'Target P/E', 'Fair NEPSE (normalised)', 'vs today', 'Fair NEPSE (reported)'],
+  fairRows: ['Cycle low', 'Cycle-normal', '+20% premium', '+30% premium', '+40% premium', '+50% premium', '2021 peak'],
+  premWhy: '<b>Why allow a premium at all?</b>A closed capital account, captive remittance liquidity and near-zero real deposit rates give NEPSE real reasons to trade above frontier peers. A 20–30% premium is defensible while those conditions last. Today’s index embeds a <b>69% premium</b> on normalised earnings (100% on reported).',
+  s6h: 'What would have to go right for 2,623',
+  s6lead: 'For today’s price to be fair within three years, profits must grow <b>9–19% a year</b> with the index flat, or <b>21–32% a year</b> if investors are also to earn a normal return.',
+  gTitle: 'Profit growth implied by today’s index, against recent history', gSub: 'Annual profit growth: implied (fair case, +30% premium) vs what has happened', gSrc: 'Implied growth = (current P/E ÷ target P/E)^(1/3) − 1; with a normal return, index rises ~11% a year. GDP and credit: NRB Monetary Policy 2083/84.',
+  gBars: ['Needed: index flat (normalised)', 'Needed: index flat (reported)', 'Needed: normal return (normalised)', 'Needed: normal return (reported)', 'Actual profit growth since 2021', 'Nominal GDP growth target', 'Private credit growth (NRB)'],
+  reqH: ['Target P/E in 3 years', 'Index flat: normalised', 'Index flat: reported', 'Normal return: normalised', 'Normal return: reported'],
+  cond: [['Profit growth near GDP, or better', 'About 12% a year for three years justifies 2,623 at a 40% premium.'], ['Banks back to 13–15% ROE', 'Through lower bad loans, credit growth above 11% and stable margins.'], ['Hydropower earnings catch up', 'Projects reaching full operation and repaying debt, lifting sector ROE from about 4% to 8–10%.'], ['Liquidity stays abundant', 'Any return to double-digit deposit rates would remove the Nepal premium.']],
+  verdH: 'What to watch', verdP: 'Supporting 2,623 on fundamentals alone would take one of the strongest three-year profit runs in NEPSE’s history, with interest rates staying low. If profits grow 5–8% a year, the models suggest valuations would ease over time, either with prices moving sideways while earnings catch up, or with a move toward the 1,850–2,000 range. Liquidity, policy and sentiment can outweigh fundamentals for long periods, in either direction.',
+  s7h: 'Points for study',
+  audR: ['Questions retail investors may ask', ['What P/E am I paying? Stocks above 100× earnings, or with losses, depend most on future growth.', 'Does the company earn more than its cost of equity (roughly 12–14% on equity in NEPSE)?', 'Am I counting bonus shares as profit? Earnings per share after the bonus shows the real picture.', 'How much borrowed money is in the market? Margin loans can amplify moves in both directions.', 'The free NEPSE Valuation Lab shows any stock’s model value, cycle-low value and data flags, for study.']],
+  audI: ['Considerations for institutional analysts', ['The 1,850–2,000 model range and the 69% premium embedded on normalised earnings are reference points, not targets.', 'Banks are the least stretched large sector (18.8× normalised); hydropower, microfinance and investment companies show the widest gaps to model values.', 'Liquidity indicators (deposit rates, CD ratios, margin-loan exposure, turnover) have marked past turning points better than earnings.', 'Cycle-normal (index about 1,550) and cycle-low (about 1,030) multiples are useful stress-test scenarios. The full method is in the institutional report.']],
+  disc: '<b>Important notice.</b> This report is the author’s independent analysis, presented for study and research purposes only. It is not investment advice and is not a recommendation to buy, sell or hold any security. Markets do not move on fundamentals alone: liquidity, interest rates, government and regulatory decisions, investor sentiment, global events and many other factors affect prices, and the market may move very differently from what the models here suggest. No level, range or outcome discussed in this report is guaranteed. Readers should not be influenced by this report in making investment decisions, and should do their own research or consult a licensed investment adviser. Data may contain errors; the author accepts no liability for any loss arising from its use.',
+  s8h: 'Risks, catalysts and method',
+  risksH: 'Risks and catalysts', risks: [['Downside', 'Rate rises; forced selling from margin loans; one-off provision write-backs inflating profits; a pipeline of richly priced IPOs; turnover down 69% year on year by March 2026.'], ['Upside', 'Bank earnings recovery; hydropower projects reaching full operation and exporting power; market reforms such as foreign portfolio access and more real-sector listings.']],
+  methH: 'Method', meth: ['282 operating companies (mutual funds and preference shares excluded); data from nepselabs.com, 23 Nov 2026.', 'Normalised earnings: each company’s ROE is pulled toward its sector’s through-cycle ROE (for example 11% for banks, 8% for hydropower), with extra discounting after one-off profit swings.', 'Cycle multiples: 12.3× (2019 and 2011/12 lows), 18.5× cycle-normal (between frontier and emerging-market averages), 42.3× (2021 peak).', 'Index scaling assumes the index moves with total market value at today’s earnings. 2021 earnings are estimated from market cap ÷ P/E.'],
+  srcH: 'Sources',
+  notice: 'For study and research only. Not investment advice or a buy/sell recommendation. Markets are driven by many factors beyond fundamentals. <a href="#notice">Read the full notice</a>', inst: 'Read the full institutional report', noticeH: 'Important notice', instP: 'The institutional edition documents every formula, assumption, data step and sensitivity behind this summary, in research-paper format (English).',
+},
+np: {
+  brand: 'युनि सिटिजन्स · बजार अनुसन्धान', copy: 'लिङ्क कपी गर्नुहोस्', fb: 'फेसबुकमा सेयर गर्नुहोस्', copied: 'लिङ्क कपी भयो',
+  kicker: 'नेप्से बजार मूल्याङ्कन प्रतिवेदन · मंसिर २०८३',
+  title: '२,६२३ मा नेप्से: <em>बजारले के अपेक्षा गरिरहेको छ?</em>',
+  lede: 'बजार पूँजीकरण सन् २०२१ को उच्च बिन्दु नाघेको छ र मूल्य–आम्दानी गुणक पनि ऐतिहासिक दायराको माथिल्लो छेउमा फर्किएको छ। के यो कम्पनीको नाफाले, तरलताले वा भविष्यमा हुने वृद्धिको अपेक्षाले धानेको हो? यस अध्ययनले नेप्सेलाई यसकै विगतका चक्र, विश्व बजार र कम्पनीको आम्दानीसँग तुलना गर्दै हालको स्तर आधारभूत पक्षबाट टिक्न के–के अनुकूल हुनुपर्छ भन्ने विश्लेषण गर्छ।',
+  byline: 'विष्णुप्रसाद बस्याल, सीएफए · तथ्याङ्क मिति: ८ मंसिर २०८३ (२३ नोभेम्बर २०२६) · लेखकको स्वतन्त्र विश्लेषण, अध्ययन तथा अनुसन्धान प्रयोजनका लागि मात्र',
+  th: ['चक्रको न्यूनतम', 'चक्रीय सामान्य', 'सन् २०२१ को उच्च बिन्दु', 'हालको नेप्से', 'बजार पी/ई (मूल्य ÷ आम्दानी)'],
+  chips: [['नेप्से परिसूचक', '2,623.56', '८ मंसिर २०८३'], ['बजार पी/ई', '36.9 गुणा', 'सामान्यीकृत 31.3 गुणा'], ['मोडेलअनुसार उचित मूल्य', '1,850–2,000', '२०–३०% नेपाल प्रिमियमसहित'], ['निहित नाफा वृद्धि', 'वार्षिक 9–19%', '३ वर्ष, परिसूचक स्थिर रहँदा']],
+  nav: [['summary', '६० सेकेन्डमा'], ['today', 'वर्तमान अवस्था'], ['why', 'किन यति उच्च'], ['history', 'इतिहास'], ['world', 'विश्व तुलना'], ['fair', 'उचित मूल्य'], ['takes', 'के चाहिन्छ'], ['investors', 'लगानीकर्तालाई'], ['method', 'विधि']],
+  s0n: '६० सेकेन्डमा', s0h: 'संक्षेपमा चार निष्कर्ष',
+  take: [['मूल्याङ्कन नेप्सेको ऐतिहासिक दायराको माथिल्लो छेउमा', 'सूचीकृत कम्पनीले कमाउने प्रत्येक रु 1 वार्षिक नाफाका लागि लगानीकर्ताले करिब रु 37 तिरिरहेका छन्, जुन 2021 को उच्च बिन्दुको नजिक हो। सन् 2019 र 2011/12 को न्यूनतम बिन्दुमा यो रकम करिब रु 12 थियो।'],
+         ['मूल्य नाफाभन्दा अघि दौडिएको छ', 'सन् 2021 को उत्कर्षयता सूचीकृत कम्पनीको कुल नाफा वार्षिक करिब 2.6 प्रतिशतले मात्र बढेको छ। परिसूचकको प्रति बिन्दु नाफा 2021 को तुलनामा 6 प्रतिशत कम छ।'],
+         ['आधारभूत मोडेलले तल्लो दायरा देखाउँछन्', 'सामान्यीकृत आम्दानी, नेप्सेको चक्रीय सामान्य गुणक र 20–30 प्रतिशत “नेपाल प्रिमियम” का आधारमा मोडेलले करिब 1,850–2,000 बिन्दु देखाउँछन्। बजार लामो समयसम्म मोडेल मूल्यभन्दा माथि वा तल रहन सक्छ।'],
+         ['2,623 को आधार आम्दानी वृद्धि नै हो', 'तीन वर्षमा हालको स्तर उचित देखिन नाफा वार्षिक करिब 9–19 प्रतिशतले बढ्नुपर्छ, जबकि 2021 यता यो वार्षिक 2.6 प्रतिशत मात्र बढेको छ। खराब कर्जा घट्नु, कर्जा विस्तार र जलविद्युत आयोजना परिपक्व हुनुले यो अन्तर घटाउन सक्छन्।']],
+  s1h: 'नेप्सेको हालको मूल्याङ्कन',
+  s1lead: 'सूचीकृत कम्पनीको वार्षिक रु 120.6 अर्ब नाफालाई बजारले रु 4,457 अर्बमा मूल्याङ्कन गरिरहेको छ। यो <b>नाफाको 36.9 गुणा</b> हो, जबकि यी कम्पनीले <b>शेयरधनी कोषमा करिब 8.7 प्रतिशत</b> मात्र प्रतिफल आर्जन गर्छन्।',
+  stats: [['प्रतिवेदित पी/ई', '36.9 गुणा'], ['सामान्यीकृत पी/ई', '31.3 गुणा'], ['मूल्य–किताबी मूल्य (पी/बी)', '2.71 गुणा'], ['सामान्यीकृत आरओई', '8.7%'], ['बजार पूँजीकरण / जीडीपी', '~73%'], ['विश्लेषित कम्पनी', '282']],
+  exPE: '<b>पी/ई भनेको के हो?</b>सेयर मूल्य ÷ प्रतिसेयर वार्षिक आम्दानी। 37 पी/ई भनेको रु 1 वार्षिक नाफाका लागि रु 37 तिर्नु हो; नाफा नबढ्ने हो भने लगानी फिर्ता हुन करिब 37 वर्ष लाग्छ।',
+  exNorm: '<b>“सामान्यीकृत” आम्दानी भनेको के हो?</b>बैंकले कर्जा नोक्सानी व्यवस्था फिर्ता (राइट-ब्याक) गरेजस्ता एकपटके आम्दानी हटाइएको छ, ताकि मूल्याङ्कन व्यवसायको सामान्य आम्दानीमा आधारित होस्।',
+  exPB: '<b>पी/बी भनेको के हो?</b>सेयर मूल्य ÷ प्रतिसेयर किताबी मूल्य (खुद सम्पत्ति)। सैद्धान्तिक रूपमा, शेयरधनी कोषमा 8.7 प्रतिशत आम्दानी गर्ने र 13–14 प्रतिशत अपेक्षित प्रतिफल भएको बजार किताबी मूल्यको 1 गुणाभन्दा तल हुनुपर्ने हो। नेप्से 2.71 गुणामा छ, जसले मूल्य हालको प्रतिफलभन्दा तरलता र अपेक्षाले निर्धारण गरिरहेको सङ्केत गर्छ।',
+  secTitle: 'चक्रीय सामान्य गुणक नजिक वाणिज्य बैंक मात्र', secSub: 'क्षेत्रगत रूपमा सामान्यीकृत आम्दानीमा पी/ई', secSrc: 'नेप्सेल्याब्समा सूचीकृत 282 कम्पनीको तथ्याङ्कबाट, 8 मंसिर 2083।',
+  sectors: ['वाणिज्य बैंक', 'व्यापार', 'विकास बैंक', 'लघुवित्त', 'अन्य', 'निर्जीवन बीमा', 'जलविद्युत', 'वित्त कम्पनी', 'उत्पादन', 'जीवन बीमा', 'लगानी', 'होटल तथा पर्यटन'],
+  normalLbl: 'चक्रीय सामान्य 18.5 गुणा',
+  s2h: 'मूल्याङ्कन किन पुनः 2021 को उत्कर्ष नजिक पुग्यो',
+  s2lead: 'कुल बजार पूँजीकरण 2021 को उच्च बिन्दुभन्दा माथि छ, तर परिसूचक अझै 18 प्रतिशत तल छ। यो फरकको कारण <b>नयाँ आपूर्ति</b> हो: 2021 पछि सूचीकृत कम्पनीले बजार मूल्य त थपे, तर नाफा न्यून थपे।',
+  vs: [['नेप्से परिसूचक', '3,198.60', '2,623.56', '−18%', 'dn'], ['बजार पूँजीकरण', 'रु 43.4 खर्ब', 'रु 48.3 खर्ब', '+11%', 'up'], ['परिसूचकको प्रति बिन्दु बजार मूल्य', 'रु 1.40 अर्ब', 'रु 1.70 अर्ब', '+20%', 'up'], ['परिसूचकको प्रति बिन्दु नाफा', '75.7', '71.0', '−6%', 'dn'], ['बजार पी/ई', '42.3 गुणा', '36.9 गुणा', '−13%', 'dn']],
+  vsThen: '2021 उत्कर्ष', vsNow: 'हाल',
+  reasons: [['नयाँ सूचीकरण उच्च मूल्य तर न्यून नाफामा भए', 'तीमध्ये अधिकांश जलविद्युत कम्पनी छन्। अहिले 111 जलविद्युत सेयर आम्दानीको करिब 79 गुणामा कारोबार भइरहेका छन् र तिनको मध्यिका आरओई करिब 4 प्रतिशत मात्र छ।'],
+            ['पुराना कम्पनीको नाफा स्थिर रह्यो', 'बैंकहरूले ठूलो कर्जा नोक्सानी व्यवस्था गर्नुपर्‍यो। बीमा, लघुवित्त र वित्त कम्पनीको नाफा घट्यो।'],
+            ['सस्तो पैसा फर्कियो', 'नेपाल राष्ट्र बैंकको नीतिगत दर 4.5 प्रतिशत छ र विकास ऋणपत्रको प्रतिफल करिब 3 प्रतिशत छ। पूँजी खाता बन्द भएकाले बचतका लागि सेयरबाहेक विकल्प सीमित छन्।'],
+            ['बोनस सेयर वृद्धि जस्तो देखिन्छ, तर होइन', 'सेयर संख्या बढ्छ र प्रतिसेयर आम्दानी घट्छ, तैपनि धेरै लगानीकर्ताले बोनस सेयरलाई प्रतिफल ठान्छन्।']],
+  breadth: '<b>सामान्य सेयरको मूल्य 2021 भन्दा उच्च छ।</b>वाणिज्य बैंकले परिसूचकको पी/ई तल राखेका छन्। बैंकबाहेकको बजार आम्दानीको करिब 55 गुणामा छ, र सामान्यीकृत आम्दानीका आधारमा 282 मध्ये 182 सेयर 2021 को उच्च बिन्दुको गुणकभन्दा माथि छन्।',
+  s3h: 'हरेक चक्र 12 गुणा नजिक पिँधमा, सस्तो पैसाले उत्कर्षमा',
+  s3lead: 'नेप्से हरेक चक्रमा आम्दानीको 12–13 गुणामा पिँधमा पुगेको छ, र सस्तो पैसाले गुणक 35–42 गुणासम्म पुर्‍याउँदा उत्कर्षमा पुगेको छ। अहिलेको 37 गुणा उत्कर्षकै छेउमा छ।',
+  cycTitle: 'नेप्सेको पी/ई चक्रको न्यूनतमभन्दा तीन गुणा र 2021 उत्कर्षको 87 प्रतिशत', cycSub: 'हरेक मोडमा बजार पी/ई (बिन्दु मात्र; बीचको यात्रा देखाइएको छैन)', cycSrc: 'द हिमालयन टाइम्स, सेयरसंसार, नेप्सेल्याब्स। 2011/12 को पी/ई अनुमानित हो।',
+  cyc: ['2011/12 न्यूनतम', 'फेब 2019 न्यूनतम', 'अगस्ट 2021 उच्च बिन्दु', 'अक्टोबर 2025', 'हाल'],
+  tl: [['2008 → 2011/12', '1,175 → 292', 'कर्जा र घरजग्गा उछाल; तरलता सुकेपछि अन्त्य। पी/ई करिब 12 गुणामा झर्‍यो।'], ['2012 → 2016', '298 → 1,881', 'भूकम्पपछिको पुनर्निर्माण र नयाँ संविधान; बैंकको पी/ई करिब 35 गुणा पुग्यो।'], ['2016 → 2019', '1,881 → 1,112', 'सच्चीकरण। न्यूनतम बिन्दुमा बजार पी/ई 12.3 गुणा र पी/बी 1.78 गुणा।'], ['2020 → 2021', '~1,100 → 3,199', 'कोभिडकालीन ब्याजदर कटौती र साना लगानीकर्ताको ओइरो; पी/ई 42.3 गुणाको उत्कर्षमा।'], ['2021 → 2022', '3,199 → 1,807', 'ब्याजदर वृद्धि र मार्जिन कर्जामा कडाइ।'], ['2023 → हाल', '~1,800 → 2,624', 'अधिक तरलता, ब्याजदर कटौती र नयाँ सूचीकरण; पी/ई पुनः 37 गुणा।']],
+  lesson: '<b>पाठ</b>उत्कर्ष आम्दानीले होइन, तरलताले निर्धारण गर्छ। हरेक तेजी कर्जा कसिएपछि अन्त्य भएको छ, त्यसैले हालको मूल्याङ्कनका लागि ब्याजदर नै मुख्य जोखिम हो।',
+  s4h: 'विश्व बजारसँग नेप्सेको तुलना',
+  s4lead: 'यस तुलनामा नेप्सेको मूल्याङ्कन सबैभन्दा उच्च छ, <b>विकसित बजारभन्दा पनि माथि</b>, जबकि यसको आम्दानी आधार र प्रतिव्यक्ति आय न्यूनमध्ये पर्छन्। यसका कारण मुख्यतः संरचनागत छन्, र प्रिमियम कति समय टिक्छ भन्नेमा यिनको महत्त्व छ।',
+  wTitle: 'नेप्से विकसित बजारभन्दा महँगो र फ्रन्टियर बजारभन्दा 3–5 गुणा', wSub: 'विगत आम्दानीमा पी/ई', wSrc: 'सिब्लिस रिसर्च (सेप्टेम्बर 2026), सेयरसंसार विश्व सर्वेक्षण (अप्रिल 2026), नेप्सेल्याब्स।',
+  mk: ['नेप्से (नेपाल)', 'विकसित बजार', 'विश्व', 'भारत', 'भियतनाम', 'उदीयमान बजार', 'एमएससीआई फ्रन्टियर', 'श्रीलंका', 'बंगलादेश', 'नाइजेरिया', 'पाकिस्तान', 'केन्या'],
+  peerH: ['बजार', 'प्रतिव्यक्ति जीडीपी', 'बजार पूँजीकरण / जीडीपी', 'लाभांश प्रतिफल'],
+  peers: [['नेपाल', '$1,430', '~73%', '1–2%'], ['पाकिस्तान', '$1,580', '14–17%', '~6.8%'], ['बंगलादेश', '$2,600', '6–20%', '3–4%'], ['केन्या', '$1,900', '~21%', '4–6%'], ['श्रीलंका', '$4,500', '—', '3–3.2%']],
+  peerSrc: 'न्यून आय भएका देशका बजार सामान्यतया कम गुणक, बढी लाभांश प्रतिफल र जीडीपीको तुलनामा सानो पूँजीकरणमा हुन्छन्। नेपालमा तीनवटै उल्टो छन्।',
+  gap: [['उच्च प्रतिफलका कारण होइन', 'सामान्यीकृत आरओई 8.7 प्रतिशत छ, जुन कम्पनीगत तहबाट निकालिएको करिब 13.8 प्रतिशत इक्विटी लागतभन्दा कम हो।'], ['न्यून जोखिमका कारण होइन', 'नेपालको इक्विटी जोखिम प्रिमियम 8.89 प्रतिशत छ, जुन भारत (7.08 प्रतिशत) र परिपक्व बजार (4.23 प्रतिशत) भन्दा बढी हो।'], ['बन्द बजार', 'नेपाली बचतकर्ता विदेशमा लगानी गर्न सक्दैनन् र विदेशीले नेप्सेमा विरलै लगानी गर्छन्, त्यसैले मूल्य रेमिट्यान्सले पोषित आन्तरिक तरलताले निर्धारण गर्छ।']],
+  s5h: 'नेप्सेको उचित मूल्य कति हो',
+  s5lead: 'सामान्यीकृत आम्दानीको 18.5 गुणा (चक्रीय सामान्य गुणक) मा नेप्सेको उचित मूल्य करिब <b>1,550</b> बिन्दु हुन्छ। 20–30 प्रतिशत नेपाल प्रिमियम थप्दा यो करिब <b>1,850–2,000</b> बिन्दु हुन्छ।',
+  ladTitle: 'मोडेलका उचित मूल्य स्तरको तुलनामा हालको परिसूचक', ladSub: 'हालको सामान्यीकृत आम्दानीमा हरेक गुणकअनुसार नेप्से परिसूचक',
+  lad: ['न्यूनतम 12.3 गुणा', 'सामान्य 18.5 गुणा', '+20%', '+30%', '+40%', '+50%', 'हाल', '2021 उच्च बिन्दु 42.3 गुणा'], fairZone: 'उचित दायरा',
+  calcH: 'आफैँ हिसाब गर्नुहोस्', calcP: 'चक्रीय सामान्य 18.5 गुणामाथि नेपालले कति प्रिमियम पाउनुपर्छ र नाफा कति छिटो बढ्छ, आफैँ छान्नुहोस्। उचित मूल्य = हालको परिसूचक × लक्षित पी/ई ÷ 31.3 (सामान्यीकृत पी/ई), नाफा वृद्धिसँगै।',
+  calcPrem: 'नेपाल प्रिमियम:', calcGrow: 'वार्षिक नाफा वृद्धि:', calcYrs: 'वर्षपछि:', calcRes: 'नेप्सेको उचित परिसूचक',
+  cmpBelow: 'हालको 2,623.56 भन्दा कम', cmpAbove: 'हालको 2,623.56 भन्दा बढी', yrs0: 'आज', yrsN: '{n} वर्षपछि',
+  fairH: ['मूल्याङ्कन आधार', 'लक्षित पी/ई', 'उचित नेप्से (सामान्यीकृत)', 'हालको तुलनामा', 'उचित नेप्से (प्रतिवेदित)'],
+  fairRows: ['चक्रको न्यूनतम', 'चक्रीय सामान्य', '+20% प्रिमियम', '+30% प्रिमियम', '+40% प्रिमियम', '+50% प्रिमियम', '2021 को उच्च बिन्दु'],
+  premWhy: '<b>प्रिमियम किन दिने?</b>बन्द पूँजी खाता, रेमिट्यान्सको बन्धक तरलता र लगभग शून्य वास्तविक निक्षेप ब्याजदरका कारण नेप्सेले फ्रन्टियर बजारभन्दा माथि कारोबार गर्नुका वास्तविक कारण छन्। यी अवस्था रहुन्जेल 20–30 प्रतिशत प्रिमियम उचित मान्न सकिन्छ। हालको परिसूचकमा सामान्यीकृत आम्दानीमा <b>69 प्रतिशत प्रिमियम</b> (प्रतिवेदित आम्दानीमा 100 प्रतिशत) समाहित छ।',
+  s6h: '2,623 टिक्न के–के अनुकूल हुनुपर्छ',
+  s6lead: 'तीन वर्षभित्र हालको मूल्य उचित ठहरिन परिसूचक स्थिर रहँदा पनि नाफा <b>वार्षिक 9–19 प्रतिशत</b>ले बढ्नुपर्छ; लगानीकर्ताले सामान्य प्रतिफल पनि पाउनुपर्ने हो भने यो <b>वार्षिक 21–32 प्रतिशत</b> पुग्छ।',
+  gTitle: 'हालको परिसूचकमा निहित नाफा वृद्धि र विगतको वास्तविक वृद्धि', gSub: 'वार्षिक नाफा वृद्धि: निहित (उचित अवस्था, +30% प्रिमियम) र वास्तविक', gSrc: 'निहित वृद्धि = (हालको पी/ई ÷ लक्षित पी/ई)^(1/3) − 1; सामान्य प्रतिफलमा परिसूचक वार्षिक ~11% बढ्छ। जीडीपी र कर्जा: मौद्रिक नीति 2083/84।',
+  gBars: ['आवश्यक: परिसूचक स्थिर (सामान्यीकृत)', 'आवश्यक: परिसूचक स्थिर (प्रतिवेदित)', 'आवश्यक: सामान्य प्रतिफल (सामान्यीकृत)', 'आवश्यक: सामान्य प्रतिफल (प्रतिवेदित)', '2021 यताको वास्तविक नाफा वृद्धि', 'नाममात्र जीडीपी वृद्धि लक्ष्य', 'निजी क्षेत्र कर्जा वृद्धि (राष्ट्र बैंक)'],
+  reqH: ['3 वर्षपछिको लक्षित पी/ई', 'स्थिर परिसूचक: सामान्यीकृत', 'स्थिर परिसूचक: प्रतिवेदित', 'सामान्य प्रतिफल: सामान्यीकृत', 'सामान्य प्रतिफल: प्रतिवेदित'],
+  cond: [['जीडीपी बराबर वा बढी नाफा वृद्धि', 'तीन वर्षसम्म वार्षिक करिब 12 प्रतिशत वृद्धिले 40 प्रतिशत प्रिमियममा 2,623 जायज ठहर्‍याउँछ।'], ['बैंकको आरओई 13–15 प्रतिशतमा फर्कनु', 'खराब कर्जा घटाउने, 11 प्रतिशतभन्दा बढी कर्जा वृद्धि र स्थिर ब्याजदर अन्तरमार्फत।'], ['जलविद्युतको नाफा मूल्याङ्कनसँग मेल खानु', 'आयोजना पूर्ण सञ्चालनमा आई ऋण तिर्दै जाँदा क्षेत्रको आरओई करिब 4 बाट 8–10 प्रतिशत पुग्नुपर्छ।'], ['तरलता प्रचुर रहनु', 'निक्षेपको ब्याजदर पुनः दुई अङ्कमा पुगेमा नेपाल प्रिमियम हराउँछ।']],
+  verdH: 'निगरानी गर्नुपर्ने पक्ष', verdP: 'आधारभूत पक्षबाट मात्र 2,623 धान्न नेप्सेको इतिहासकै बलियो तीनवर्षे नाफा वृद्धि र ब्याजदर न्यून रहिरहनु आवश्यक देखिन्छ। नाफा वार्षिक 5–8 प्रतिशतले बढेमा मोडेलअनुसार मूल्याङ्कन समयक्रममा सामान्य हुँदै जान्छ: या त आम्दानीले मूल्यलाई भेट्दासम्म परिसूचक स्थिरजस्तो रहन्छ, या 1,850–2,000 को दायरातर्फ जान्छ। तरलता, नीति र लगानीकर्ताको मनोविज्ञानले लामो समयसम्म आधारभूत पक्षलाई जुनसुकै दिशामा उछिन्न सक्छ।',
+  s7h: 'अध्ययनका लागि केही बुँदा',
+  audR: ['साना लगानीकर्ताले सोध्न सक्ने प्रश्न', ['म कति पी/ई तिरिरहेको छु? 100 गुणाभन्दा माथिको पी/ई वा घाटामा रहेका सेयर भविष्यको वृद्धिमा सबैभन्दा बढी निर्भर हुन्छन्।', 'कम्पनीले आफ्नो इक्विटी लागत (नेप्सेमा करिब 12–14 प्रतिशत) भन्दा बढी प्रतिफल आर्जन गर्छ कि गर्दैन?', 'के म बोनस सेयरलाई नाफा ठानिरहेको छु? बोनसपछिको प्रतिसेयर आम्दानीले वास्तविक अवस्था देखाउँछ।', 'बजारमा कति ऋणको पैसा छ? मार्जिन कर्जाले दुवै दिशाको उतारचढावलाई बढाउन सक्छ।', 'निःशुल्क नेप्से भ्यालुएसन ल्याबमा अध्ययनका लागि कुनै पनि सेयरको मोडेल मूल्य, चक्रको न्यूनतम मूल्य र तथ्याङ्क सङ्केत हेर्न सकिन्छ।']],
+  audI: ['संस्थागत विश्लेषकका लागि विचारणीय पक्ष', ['1,850–2,000 को मोडेल दायरा र सामान्यीकृत आम्दानीमा निहित 69 प्रतिशत प्रिमियम सन्दर्भ बिन्दु मात्र हुन्, लक्ष्य होइनन्।', 'ठूला क्षेत्रमध्ये बैंकको मूल्याङ्कन सबैभन्दा कम तन्किएको छ (सामान्यीकृत 18.8 गुणा); जलविद्युत, लघुवित्त र लगानी कम्पनीमा मोडेल मूल्यसँगको अन्तर सबैभन्दा फराकिलो छ।', 'तरलताका सूचक (निक्षेप ब्याजदर, कर्जा–निक्षेप अनुपात, मार्जिन कर्जा, कारोबार रकम) ले विगतका मोड आम्दानीभन्दा राम्रोसँग देखाएका छन्।', 'चक्रीय सामान्य (परिसूचक करिब 1,550) र चक्रको न्यूनतम (करिब 1,030) गुणक दबाब परीक्षणका उपयोगी परिदृश्य हुन्। पूर्ण विधि संस्थागत प्रतिवेदनमा छ।']],
+  disc: '<b>महत्त्वपूर्ण सूचना।</b> यो प्रतिवेदन लेखकको स्वतन्त्र विश्लेषण हो र अध्ययन तथा अनुसन्धान प्रयोजनका लागि मात्र प्रस्तुत गरिएको हो। यो लगानी सल्लाह होइन, न त कुनै धितोपत्र किन्ने, बेच्ने वा राखिराख्ने सिफारिस नै हो। बजार आधारभूत पक्षले मात्र चल्दैन; तरलता, ब्याजदर, सरकारी तथा नियामकीय निर्णय, लगानीकर्ताको मनोविज्ञान, अन्तर्राष्ट्रिय घटनाक्रमलगायत धेरै कारकले मूल्यमा प्रभाव पार्छन्, र बजार यहाँ प्रस्तुत मोडेलले सङ्केत गरेभन्दा फरक दिशामा जान सक्छ। यस प्रतिवेदनमा उल्लिखित कुनै पनि स्तर, दायरा वा परिणाम हासिल हुने प्रत्याभूति छैन। पाठकले लगानी निर्णय गर्दा यो प्रतिवेदनबाट प्रभावित नहुन र आफ्नै अध्ययन गर्न वा सेबोनबाट इजाजतप्राप्त लगानी सल्लाहकारसँग परामर्श लिन अनुरोध छ। तथ्याङ्कमा त्रुटि हुन सक्छ; यसको प्रयोगबाट हुने कुनै पनि हानिनोक्सानीप्रति लेखक उत्तरदायी हुने छैन।',
+  s8h: 'जोखिम, सम्भावना र विधि',
+  risksH: 'जोखिम र सम्भावना', risks: [['जोखिम', 'ब्याजदर वृद्धि; मार्जिन कर्जाबाट हुने बाध्यात्मक बिक्री; एकपटके कर्जा नोक्सानी व्यवस्था फिर्ताले नाफा बढाइचढाइ देखाउनु; महँगो मूल्यका आईपीओको लाम; 2026 को चैतसम्म वार्षिक कारोबार 69 प्रतिशतले घटेको।'], ['सम्भावना', 'बैंकको नाफामा सुधार; जलविद्युत आयोजना पूर्ण सञ्चालनमा आई बिजुली निर्यात; विदेशी पोर्टफोलियो लगानी खुला गर्ने र वास्तविक क्षेत्रका थप कम्पनी सूचीकरण गर्नेजस्ता बजार सुधार।']],
+  methH: 'विधि', meth: ['282 सञ्चालित कम्पनी (म्युचुअल फन्ड र अग्राधिकार सेयरबाहेक); तथ्याङ्क नेप्सेल्याब्सबाट, 8 मंसिर 2083।', 'सामान्यीकृत आम्दानी: प्रत्येक कम्पनीको आरओईलाई सम्बन्धित क्षेत्रको दीर्घकालीन औसत आरओई (जस्तै बैंक 11 प्रतिशत, जलविद्युत 8 प्रतिशत) तर्फ समायोजन गरिएको छ; एकपटके नाफा उतारचढावमा थप कटौती गरिएको छ।', 'चक्रीय गुणक: 12.3 गुणा (2019 र 2011/12 को न्यूनतम), 18.5 गुणा चक्रीय सामान्य (फ्रन्टियर र उदीयमान बजारको औसतबीच), 42.3 गुणा (2021 उत्कर्ष)।', 'परिसूचक हालको आम्दानीमा कुल बजार मूल्यसँगै चल्छ भन्ने मानिएको छ। 2021 को आम्दानी बजार पूँजीकरण ÷ पी/ई बाट अनुमान गरिएको हो।'],
+  srcH: 'स्रोत',
+  notice: 'अध्ययन तथा अनुसन्धान प्रयोजनका लागि मात्र। यो लगानी सल्लाह वा किन्ने/बेच्ने सिफारिस होइन। बजार आधारभूत पक्षबाहेक धेरै कारकले चल्छ। <a href="#notice">पूर्ण सूचना पढ्नुहोस्</a>', inst: 'पूर्ण संस्थागत प्रतिवेदन पढ्नुहोस्', noticeH: 'महत्त्वपूर्ण सूचना', instP: 'संस्थागत संस्करणमा यो सारांशका पछाडिका सबै सूत्र, मान्यता, तथ्याङ्क प्रक्रिया र संवेदनशीलता विश्लेषण अनुसन्धान–पत्रको ढाँचामा (अङ्ग्रेजीमा) समेटिएका छन्।',
+}};
+let lang = 'en';
+try { lang = localStorage.getItem('nepse-rep-lang') || (location.hash === '#np' ? 'np' : 'en'); } catch (e) { }
+const $ = s => document.querySelector(s);
+const NPD = '०१२३४५६७८९';
+const dn = s => lang === 'np' ? String(s).replace(/\d/g, d => NPD[d]) : String(s);
+const L = k => T[lang][k];
+const fmt = (v, d = 0) => dn(v.toLocaleString('en-IN', { maximumFractionDigits: d, minimumFractionDigits: d }));
+const XU = () => lang === 'np' ? ' गुणा' : '×';
+
+function render() {
+  document.documentElement.lang = lang === 'np' ? 'ne' : 'en';
+  document.body.classList.toggle('np', lang === 'np');
+  document.querySelectorAll('[data-t]').forEach(el => { const v = L(el.dataset.t); if (typeof v === 'string') el.innerHTML = dn(v); });
+  document.querySelectorAll('[data-lang]').forEach(b => { b.classList.toggle('on', b.dataset.lang === lang); b.setAttribute('aria-pressed', b.dataset.lang === lang); });
+  $('#chips').innerHTML = L('chips').map(([a, b, c]) => `<div><span>${dn(a)}</span><b>${dn(b)}</b><small>${dn(c)}</small></div>`).join('');
+  $('#toc').innerHTML = L('nav').map(([id, t]) => `<a href="#${id}">${t}</a>`).join('');
+  $('#takeaways').innerHTML = L('take').map(([h, p], i) => `<div class="card"><b class="n">${dn(i + 1)}</b><h3>${dn(h)}</h3><p>${dn(p)}</p></div>`).join('');
+  $('#stats').innerHTML = L('stats').map(([a, b]) => `<div><span>${a}</span><b>${dn(b)}</b></div>`).join('');
+  $('#vs').innerHTML = L('vs').map(([a, t, n, c, cl]) => `<div class="card"><span>${a}</span><span class="then">${dn(L('vsThen'))}: ${dn(t)}</span><span class="now">${dn(n)}</span><span class="chg ${cl}">${dn(c)}</span></div>`).join('');
+  $('#reasons').innerHTML = L('reasons').map(([h, p]) => `<li><b>${dn(h)}</b>${dn(p)}</li>`).join('');
+  $('#timeline').innerHTML = L('tl').map(([y, i, p]) => `<div class="card"><span class="yr">${dn(y)}</span><span class="ix">${dn(i)}</span><p>${dn(p)}</p></div>`).join('');
+  $('#peers').innerHTML = `<thead><tr>${L('peerH').map((h, i) => `<th class="${i ? 'n' : ''}">${h}</th>`).join('')}</tr></thead><tbody>${L('peers').map((r, j) => `<tr class="${j === 0 ? 'hl' : ''}">${r.map((c, i) => `<td class="${i ? 'n' : ''}">${dn(c)}</td>`).join('')}</tr>`).join('')}</tbody>`;
+  $('#whyGap').innerHTML = L('gap').map(([h, p]) => `<li><b>${h}</b>${dn(p)}</li>`).join('');
+  const FR = [[12.3, 1030, -61, 873], [18.5, 1550, -41, 1314], [22.2, 1859, -29, 1576], [24.05, 2014, -23, 1708], [25.9, 2169, -17, 1839], [27.75, 2324, -11, 1970], [42.3, 3543, 35, 3004]];
+  $('#fairTbl').innerHTML = `<thead><tr>${L('fairH').map((h, i) => `<th class="${i ? 'n' : ''}">${h}</th>`).join('')}</tr></thead><tbody>${FR.map((r, i) => `<tr class="${i === 3 ? 'hl' : ''}"><td>${dn(L('fairRows')[i])}</td><td class="n">${fmt(r[0], 2)}${XU()}</td><td class="n">${fmt(r[1])}</td><td class="n">${dn((r[2] > 0 ? '+' : '−') + Math.abs(r[2]) + '%')}</td><td class="n">${fmt(r[3])}</td></tr>`).join('')}</tbody>`;
+  const RQ = [[18.5, 19.2, 25.9, 32.3, 39.8], [22.2, 12.2, 18.5, 24.5, 31.5], [24.05, 9.2, 15.4, 21.2, 28.1], [25.9, 6.5, 12.6, 18.3, 25.0], [27.75, 4.1, 10.0, 15.6, 22.1]];
+  $('#reqTbl').innerHTML = `<thead><tr>${L('reqH').map((h, i) => `<th class="${i ? 'n' : ''}">${h}</th>`).join('')}</tr></thead><tbody>${RQ.map((r, i) => `<tr class="${i === 2 ? 'hl' : ''}"><td>${fmt(r[0], 2)}${XU()}</td>${r.slice(1).map(v => `<td class="n">${fmt(v, 1)}%</td>`).join('')}</tr>`).join('')}</tbody>`;
+  $('#cond').innerHTML = L('cond').map(([h, p]) => `<div class="card"><h3>${dn(h)}</h3><p>${dn(p)}</p></div>`).join('');
+  const aud = k => { const [h, li] = L(k); return `<div class="card"><span class="tag">${h}</span><ul>${li.map(x => `<li>${dn(x)}</li>`).join('')}</ul></div>`; };
+  $('#aud').innerHTML = aud('audR') + aud('audI');
+  $('#risks').innerHTML = `<h3>${L('risksH')}</h3>` + L('risks').map(([h, p]) => `<p><b>${h}.</b> ${dn(p)}</p>`).join('');
+  $('#meth').innerHTML = `<h3>${L('methH')}</h3><ul>${L('meth').map(x => `<li>${dn(x)}</li>`).join('')}</ul>`;
+  drawAll(); calc();
+}
+
+/* ---------- charts ---------- */
+const svgNS = s => s;
+function therm() {
+  const s = $('#therm'), lab = L('th');
+  const W = 1000, x0 = 40, x1 = 960, mn = 8, mx = 46, X = v => x0 + (v - mn) / (mx - mn) * (x1 - x0), y = 92;
+  const stops = [[12.3, lab[0]], [18.5, lab[1]], [42.3, lab[2]]];
+  let o = `<defs><linearGradient id="tg" x1="0" x2="1"><stop offset="0" stop-color="#3fd3a1"/><stop offset=".3" stop-color="#9fe0f5"/><stop offset=".7" stop-color="#f1b24a"/><stop offset="1" stop-color="#ff5a4f"/></linearGradient></defs>`;
+  o += `<rect x="${x0}" y="${y - 10}" width="${x1 - x0}" height="20" rx="10" fill="url(#tg)" opacity=".9"/>`;
+  stops.forEach(([v, t], i) => { const ab = i === 1; o += `<line x1="${X(v)}" x2="${X(v)}" y1="${ab ? y - 14 : y + 14}" y2="${ab ? y - 26 : y + 30}" stroke="#9fc3cf"/><text x="${X(v)}" y="${ab ? y - 34 : y + 50}" text-anchor="${i === 2 ? 'end' : 'middle'}" fill="#cfe7ef" font-size="17">${dn(t)} ${dn(v)}${XU()}</text>`; });
+  const now = 36.9, nx = X(now);
+  o += `<circle cx="${nx}" cy="${y}" r="17" fill="#ff2e7e" stroke="#fff" stroke-width="4"/><line x1="${nx}" x2="${nx}" y1="${y - 20}" y2="${y - 44}" stroke="#ff2e7e" stroke-width="3"/><text x="${nx}" y="${y - 52}" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">${dn(lab[3])}: ${dn(36.9)}${XU()}</text>`;
+  o += `<text x="${x0}" y="${y - 52}" fill="#9fc3cf" font-size="15">${dn(lab[4])}</text>`;
+  s.innerHTML = o;
+}
+function hbars(sel, rows, opt) {
+  const s = $(sel), W = 760, rh = opt.rh || 30, x0 = opt.x0 || 190, x1 = W - 70, y0 = 10, H = y0 + rows.length * rh + 34;
+  const mx = opt.max, X = v => x0 + v / mx * (x1 - x0);
+  s.setAttribute('viewBox', `0 0 ${W} ${H}`); s.setAttribute('aria-label', opt.title);
+  let o = '';
+  rows.forEach((r, i) => {
+    const y = y0 + i * rh;
+    o += `<text x="${x0 - 10}" y="${y + rh / 2 + 5}" text-anchor="end" font-size="14" fill="${r.hl ? '#ff2e7e' : 'var(--ink)'}" font-weight="${r.hl ? 700 : 400}">${dn(r.label)}</text>`;
+    o += `<rect x="${x0}" y="${y + 5}" width="${Math.max(2, X(r.v) - x0)}" height="${rh - 11}" rx="3" fill="${r.hl ? '#ff2e7e' : r.c || 'var(--bar)'}"><title>${dn(r.label)}: ${dn(r.v)}${opt.unit}</title></rect>`;
+    o += `<text x="${X(r.v) + 6}" y="${y + rh / 2 + 5}" font-size="14" fill="var(--mut)">${fmt(r.v, opt.dec ?? 1)}${opt.unit}</text>`;
+  });
+  if (opt.ref) { const rx = X(opt.ref.v); o += `<line x1="${rx}" x2="${rx}" y1="${y0}" y2="${y0 + rows.length * rh}" stroke="var(--ink)" stroke-dasharray="4 4" opacity=".55"/><text x="${rx}" y="${H - 10}" text-anchor="middle" font-size="13" fill="var(--mut)">${dn(opt.ref.label)}</text>`; }
+  s.innerHTML = o;
+}
+function cycles() {
+  const s = $('#cycChart'), W = 760, H = 330, x0 = 54, x1 = 720, y0 = 30, y1 = 280, tMin = 2011, tMax = 2027.5;
+  const X = t => x0 + (t - tMin) / (tMax - tMin) * (x1 - x0), Y = v => y1 - v / 45 * (y1 - y0), n = L('cyc');
+  const pts = [[2012.2, 12, 292, 0, 40, 'start'], [2019.1, 12.27, 1112, 0, 40, 'middle'], [2021.6, 42.28, 3199, -12, -2, 'end'], [2025.8, 38.32, 2600, 0, 0, null], [2026.9, 36.95, 2624, 0, 38, 'end']];
+  s.setAttribute('viewBox', `0 0 ${W} ${H}`); s.setAttribute('aria-label', L('cycTitle'));
+  let o = '';
+  [0, 10, 20, 30, 40].forEach(v => o += `<line x1="${x0}" x2="${x1}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${x0 - 8}" y="${Y(v) + 4}" text-anchor="end" font-size="13" fill="var(--mut)">${dn(v)}${XU()}</text>`);
+  [2012, 2015, 2018, 2021, 2024, 2027].forEach(y => o += `<text x="${X(y)}" y="${y1 + 22}" text-anchor="middle" font-size="13" fill="var(--mut)">${dn(y)}</text>`);
+  o += `<line x1="${x0}" x2="${x1}" y1="${Y(18.5)}" y2="${Y(18.5)}" stroke="var(--ink)" stroke-dasharray="5 4" opacity=".5"/><text x="${x0 + 6}" y="${Y(18.5) - 7}" font-size="13" fill="var(--mut)">${dn(L('normalLbl'))}</text>`;
+  pts.forEach(([t, pe, ix, lx, ly, anc], i) => {
+    const now = i === pts.length - 1;
+    o += `<circle cx="${X(t)}" cy="${Y(pe)}" r="${now ? 8 : 6}" fill="${now ? '#ff2e7e' : 'var(--bar)'}"><title>${dn(n[i])}: ${dn(pe)}${XU()}, NEPSE ${dn(ix)}</title></circle>`;
+    if (anc) o += `<text x="${X(t) + lx}" y="${Y(pe) + ly}" text-anchor="${anc}" font-size="14" font-weight="600" fill="${now ? '#ff2e7e' : 'var(--ink)'}">${dn(n[i])}: ${fmt(pe, pe % 1 ? 2 : 0)}${XU()}</text><text x="${X(t) + lx}" y="${Y(pe) + ly + 16}" text-anchor="${anc}" font-size="13" fill="var(--mut)">NEPSE ${fmt(ix)}</text>`;
+  });
+  s.innerHTML = o;
+}
+function ladder() {
+  const s = $('#ladder'), W = 760, H = 220, x0 = 30, x1 = 730, mn = 800, mx = 3700, X = v => x0 + (v - mn) / (mx - mn) * (x1 - x0), y = 120, lab = L('lad');
+  const P = [[1030, 0], [1550, 1], [1859, 2], [2014, 3], [2169, 4], [2324, 5], [2624, 6], [3543, 7]];
+  s.setAttribute('viewBox', `0 0 ${W} ${H}`); s.setAttribute('aria-label', L('ladTitle'));
+  let o = `<rect x="${X(1859)}" y="${y - 26}" width="${X(2014) - X(1859)}" height="52" rx="6" fill="#3fd3a1" opacity=".25"/><text x="${(X(1859) + X(2014)) / 2}" y="${y - 66}" text-anchor="middle" font-size="13" font-weight="700" fill="var(--up)">${dn(L('fairZone'))}</text>`;
+  o += `<line x1="${x0}" x2="${x1}" y1="${y}" y2="${y}" stroke="var(--line)" stroke-width="4" stroke-linecap="round"/>`;
+  [1000, 1500, 2000, 2500, 3000, 3500].forEach(v => o += `<text x="${X(v)}" y="${H - 8}" text-anchor="middle" font-size="12" fill="var(--mut)">${fmt(v)}</text>`);
+  P.forEach(([v, i]) => {
+    const now = i === 6, up = i % 2 === 0 || now; const ly = now ? y - 50 : up ? y + 46 : y - 30;
+    o += `<circle cx="${X(v)}" cy="${y}" r="${now ? 11 : 7}" fill="${now ? '#ff2e7e' : i === 7 ? 'var(--dn)' : 'var(--ink)'}" stroke="var(--paper)" stroke-width="3"><title>${dn(lab[i])}: ${fmt(v)}</title></circle>`;
+    o += `<text x="${X(v)}" y="${ly}" text-anchor="middle" font-size="13" font-weight="${now ? 700 : 500}" fill="${now ? '#ff2e7e' : 'var(--ink)'}">${dn(lab[i])}</text><text x="${X(v)}" y="${ly + 16}" text-anchor="middle" font-size="13" fill="var(--mut)">${fmt(v)}</text>`;
+  });
+  s.innerHTML = o;
+}
+function drawAll() {
+  therm(); cycles(); ladder();
+  const sp = [18.8, 20.3, 23.3, 35.3, 35.6, 38.4, 48.5, 49.3, 52.6, 54.2, 66.7, 103.5];
+  hbars('#secChart', L('sectors').map((l, i) => ({ label: l, v: sp[i], hl: i === 0 })), { max: 110, unit: XU(), title: L('secTitle'), ref: { v: 18.5, label: L('normalLbl') }, x0: 170 });
+  const wp = [36.95, 22.96, 21.6, 20, 16, 15.95, 13.3, 11, 10.1, 10, 8.7, 7.3];
+  hbars('#wChart', L('mk').map((l, i) => ({ label: l, v: wp[i], hl: i === 0 })), { max: 40, unit: XU(), title: L('wTitle'), ref: { v: 18.5, label: L('normalLbl') }, x0: 150, rh: 28 });
+  const gv = [9.2, 15.4, 21.2, 28.1, 2.6, 12.5, 11];
+  hbars('#gChart', L('gBars').map((l, i) => ({ label: l, v: gv[i], hl: false, c: i < 4 ? '#ff2e7e' : 'var(--bar)' })), { max: 32, unit: '%', title: L('gTitle'), x0: 270, rh: 30 });
+}
+/* ---------- calculator ---------- */
+function calc() {
+  const pr = +$('#prem').value, g = +$('#grow').value, y = +$('#yrs').value, now = 2623.56;
+  const fair = now * 18.5 * (1 + pr / 100) / 31.32 * Math.pow(1 + g / 100, y), d = fair / now - 1;
+  $('#premO').textContent = dn(pr + '%'); $('#growO').textContent = dn(g + '%'); $('#yrsO').textContent = y ? dn(L('yrsN').replace('{n}', y)) : L('yrs0');
+  $('#fairO').textContent = fmt(Math.round(fair));
+  $('#fairCmp').innerHTML = `<span class="pill ${d < 0 ? 'dn' : 'up'}">${dn((d > 0 ? '+' : '−') + Math.abs(d * 100).toFixed(0) + '%')}</span> ${d < 0 ? L('cmpBelow') : L('cmpAbove')}`.replace(/2,623\.56/, dn('2,623.56'));
+}
+['prem', 'grow', 'yrs'].forEach(id => $('#' + id).addEventListener('input', calc));
+document.querySelectorAll('[data-lang]').forEach(b => b.addEventListener('click', () => { lang = b.dataset.lang; try { localStorage.setItem('nepse-rep-lang', lang); } catch (e) { } render(); }));
+$('#copy').addEventListener('click', () => { navigator.clipboard.writeText(SHARE_URL).then(() => toast(L('copied')), () => toast(SHARE_URL)); });
+function toast(t) { const el = $('#toast'); el.textContent = t; el.classList.add('show'); setTimeout(() => el.classList.remove('show'), 2200); }
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) document.querySelectorAll('#toc a').forEach(a => a.classList.toggle('cur', a.hash === '#' + e.target.id)); }), { rootMargin: '-40% 0px -55% 0px' });
+document.querySelectorAll('main section').forEach(s => io.observe(s));
+render();
+}
+</script>
+</body>
+</html>
